@@ -1,0 +1,120 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      3454,        111]
+NotebookOptionsPosition[      3051,         94]
+NotebookOutlinePosition[      3396,        109]
+CellTagsIndexPosition[      3353,        106]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{"Bogdan", " ", "Chwali\:0144ski"}], "\[IndentingNewLine]", 
+ RowBox[{"Zestaw", " ", "6", " ", "zadanie", " ", "5"}]}], "Input",
+ CellChangeTimes->{3.5997318746796265`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "x_", "]"}], ":=", 
+   RowBox[{
+    SuperscriptBox["x", "3"], "+", 
+    RowBox[{"3", 
+     SuperscriptBox["x", "2"]}], "-", 
+    RowBox[{"5", "x"}], "+", "3"}]}], ";"}]], "Input",
+ CellChangeTimes->{3.5997301421975346`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"MetodaodHalleya", "[", "z_", "]"}], ":=", 
+   RowBox[{"z", "-", 
+    FractionBox[
+     RowBox[{"2", "*", 
+      RowBox[{"f", "[", "z", "]"}], "*", 
+      RowBox[{
+       RowBox[{"f", "'"}], "[", "z", "]"}]}], 
+     RowBox[{
+      RowBox[{"2", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"f", "'"}], "[", "z", "]"}], ")"}], "2"]}], "-", 
+      RowBox[{
+       RowBox[{"f", "[", "z", "]"}], "*", 
+       RowBox[{
+        RowBox[{"f", "''"}], "[", "z", "]"}]}]}]]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.535575049171875*^9, 3.535575104015625*^9}, {
+  3.535575293*^9, 3.535575308671875*^9}, {3.5997301004041443`*^9, 
+  3.5997301041983614`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ListDensityPlot", "[", 
+  RowBox[{
+   RowBox[{"Table", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"-", 
+      RowBox[{"Length", "[", 
+       RowBox[{"FixedPointList", "[", 
+        RowBox[{"MetodaodHalleya", ",", 
+         RowBox[{"N", "[", 
+          RowBox[{"a", "+", 
+           RowBox[{"b", " ", "I"}]}], "]"}], ",", "20"}], "]"}], "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"b", ",", 
+       RowBox[{"-", "2"}], ",", "2", ",", ".01"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"a", ",", 
+       RowBox[{"-", "2"}], ",", "2", ",", ".01"}], "}"}]}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Mesh", "\[Rule]", "False"}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.535575134125*^9, 3.53557516334375*^9}, {
+   3.5355754655625*^9, 3.53557546759375*^9}, {3.53557556521875*^9, 
+   3.535575592640625*^9}, {3.53557566659375*^9, 3.535575667796875*^9}, {
+   3.53557576596875*^9, 3.535575766953125*^9}, {3.535575889515625*^9, 
+   3.53557589021875*^9}, 3.5997298000279636`*^9, 3.5997299243470745`*^9, {
+   3.599730110190704*^9, 3.599730133172018*^9}}],
+
+Cell["\<\
+Wykres jak poprzednio w oddzielnym pliku.\
+\>", "Text",
+ CellChangeTimes->{{3.5997318799169264`*^9, 3.5997318862682896`*^9}}]
+},
+WindowSize->{615, 527},
+WindowMargins->{{427, Automatic}, {Automatic, 67}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 195, 3, 52, "Input"],
+Cell[743, 25, 279, 9, 31, "Input"],
+Cell[1025, 36, 729, 22, 49, "Input"],
+Cell[1757, 60, 1152, 27, 132, "Input"],
+Cell[2912, 89, 135, 3, 30, "Text"]
+}
+]
+*)
+
+(* End of internal cache information *)

@@ -1,0 +1,96 @@
+.liquid {
+	width:100%;
+	padding:10px 0px 0px 20px;
+}
+.liquid .previous {
+	position:absolute;height:44px; top:85px; left:0px; z-index:999;
+	background-image:url('../images/prev.png');
+	width:41px;
+}
+.liquid .next {
+	position:absolute;height:44px; top:85px; left:910px; z-index:999;
+	background-image:url('../images/next.png');
+	width:41px; 
+}
+.previous:hover{
+	background-image:url('../images/prev.png') ;
+	background-position: 0px -44px;
+}
+.next:hover {
+	background-image:url('../images/next.png');
+	background-position: 0px -44px;
+}
+.liquid ul li {
+	width:135px;
+	padding:0 2px;
+	margin:0;
+}
+.liquid ul li a img {
+border-radius: 15px !important;
+	-moz-box-shadow: 5px 5px 3px #222;
+   	-webkit-box-shadow: 5px 5px 3px #222;
+   	box-shadow: 5px 5px 3px #222;
+}
+
+.carousel_box{height:280px; overflow:hidden; position:relative; width:1000px; !important; }
+.inner_box{ background:url(../images/carousel_box.jpg) no-repeat; margin: 0 5px 0 ; height:200px; padding:22px 29px 0 0px; overflow:hidden; position:relative; width:921px !important;}
+.carousel_box .title{font-size: 24px; line-height: 29px; color:#fff; font-weight:600; padding:0px 0px 0 29px;}
+.carousel_box .title span{ color:#eb1e1e;}
+
+
+.to-top{
+    text-align:center;
+	height:44px;
+	width:41px;z-index:999;
+}
+#scroll-to-top{
+	height:42px;
+	width:44px;
+    display:none;
+    position:fixed;
+    bottom:65px;
+    right:20px;
+    opacity:0.8;z-index:999;
+	background-image:url('../images/up.png');
+	overflow: hidden;
+	margin-right: 10px;
+}
+#scroll-to-top:hover{
+    opacity:1;
+	height:42px;
+	width:44px;
+	background-image:url('../images/up.png') no-repeat;
+	background-position: -44px 0px;
+}
+.to-bottom a{
+    text-align:center;
+	height:44px;
+	width:41px;z-index:999;
+}
+#scroll-to-bottom a{
+	height:42px;
+	width:45px;
+	background-position: 1px 0px;
+    position:fixed;
+    bottom:15px;
+    right:20px;
+    opacity:0.8;z-index:999;
+	background-image:url('../images/up.png');
+	overflow: hidden;
+	margin-right: 10px;
+	transform:rotate(180deg); -webkit-transform:rotate(180deg); 
+-moz-transform:rotate(180deg); -o-transform:rotate(180deg);
+}
+#scroll-to-bottom a:hover{
+    opacity:1;
+	height:42px;
+	width:45px;
+	background-image:url('../images/up.png') no-repeat;
+	background-position: -43px 0px;
+	transform:rotate(180deg); 
+	-webkit-transform:rotate(180deg); 
+	-moz-transform:rotate(180deg); 
+	-o-transform:rotate(180deg);
+}
+
+

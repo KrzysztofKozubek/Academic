@@ -1,0 +1,59 @@
+import java.io.file;
+import java.io.fileinputstream;
+import java.io.fileoutputstream;
+import java.io.ioexception;
+import java.util.list;
+import java.util.Vector;
+import java.util.zip.zipentry;
+import java.util.zip.zipinputstream;
+
+
+public class decompresion {
+
+    list<string> filelist;
+
+    public void readcode(file file) throws ioexception {
+
+        unzipit(file.getname(), file.getname());
+    }
+
+    public void unzipit(string zipfile, string outputfolder) {
+
+        byte[] buffer = new byte[1024];
+
+        try {
+
+            file folder = new file(outputfolder);
+            if (!folder.exists()) {
+                folder.mkdir();
+            }
+
+            zipinputstream zis = new zipinputstream(new fileinputstream(zipfile));
+            zipentry ze = zis.getnextentry();
+
+            while (ze != null) {
+
+                string filename = ze.getname();
+                file newfile = new file(outputfolder + file.separator + filename);
+
+                new file(newfile.getparent()).mkdirs();
+
+                fileoutputstream fos = new fileoutputstream(newfile);
+
+                int len;
+                while ((len = zis.read(buffer)) > 0) {
+                    fos.write(buffer, 0, len);
+                }
+
+                fos.close();
+                ze = zis.getnextentry();
+            }
+
+            zis.closeentry();
+            zis.close();
+
+        } catch (ioexception ex) {
+            ex.printstacktrace();
+        }
+    }
+}

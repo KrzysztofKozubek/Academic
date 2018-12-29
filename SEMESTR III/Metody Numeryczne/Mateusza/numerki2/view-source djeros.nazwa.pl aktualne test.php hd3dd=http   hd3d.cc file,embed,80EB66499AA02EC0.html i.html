@@ -1,0 +1,52 @@
+
+
+<script type="text/javascript" src="http://djeros.nazwa.pl/aktualne/flowplayer/flowplayer-3.2.12.min.js"></script>	
+<div class="flowplayer" style="width: 600px; height: 400px; float: left;" href="http://stream.streamo.tv/?scode=wZFC9paoQAIZ2LQIYqSq5ARIDgTnHS0nOSUomI2peVQGi4JrPyJnzqwrlZTAbEHAVcTZjRJrTMGqAARE0uzD3HHEFIHGBuQHTWmZ3ZxMexyr6uyM1VIHfkxoAMaMm9lHaIxIgyxZjgFMjx1GluxAQMHA2NUBFczo2WKLjjzEFExLCWIGRE0MSEwZm12DuSGJkqmFncJDMuyIKMQGGcIFzM2HyyIH3cRZ54HFHq3MAy1IugxL4gPnx1TpakRH5xmAYIaJjDIr4uGGmpRJkSHMbcSBdWHATuUB18Jn1ERGmqSJWqRMRcaZ48xJaqTr49JDmSyD3fvFfAGGnIJJi0HH2bzAWE1HJAmHaM1HkyyEMgHEBEyLcIGMnAJMhOwM3HRAHqxElHTI3MIrJumFUSUoD1xAeMHr4p2qw9REucIJaqIHIgzpJqyEhMKIyWRMRAKMOM2FiIyF4ImHykJDEqKMJ9JrjRSISqxI3VQpPqIJkWHqyOQETEwFOSwM2OIn51TMMSJpXqInAMIJhMUBLkHJicJI4MyqeuyLPAKIKqRrvESn6OIpitSrWWRruIxMyyyD0LRrJISM" file="flp"></div>
+<script type="text/javascript">		
+	flowplayer(".flowplayer", { src: "http://djeros.nazwa.pl/aktualne/flowplayer/flowplayer-3.2.16.swf", wmode: "opaque"}, {
+		clip: {
+			autoPlay: false,
+			autoBuffering: false,
+			bufferLength: 10,
+			scaling: 'scale',
+			url: 'http://stream.streamo.tv/?scode=wZFC9paoQAIZ2LQIYqSq5ARIDgTnHS0nOSUomI2peVQGi4JrPyJnzqwrlZTAbEHAVcTZjRJrTMGqAARE0uzD3HHEFIHGBuQHTWmZ3ZxMexyr6uyM1VIHfkxoAMaMm9lHaIxIgyxZjgFMjx1GluxAQMHA2NUBFczo2WKLjjzEFExLCWIGRE0MSEwZm12DuSGJkqmFncJDMuyIKMQGGcIFzM2HyyIH3cRZ54HFHq3MAy1IugxL4gPnx1TpakRH5xmAYIaJjDIr4uGGmpRJkSHMbcSBdWHATuUB18Jn1ERGmqSJWqRMRcaZ48xJaqTr49JDmSyD3fvFfAGGnIJJi0HH2bzAWE1HJAmHaM1HkyyEMgHEBEyLcIGMnAJMhOwM3HRAHqxElHTI3MIrJumFUSUoD1xAeMHr4p2qw9REucIJaqIHIgzpJqyEhMKIyWRMRAKMOM2FiIyF4ImHykJDEqKMJ9JrjRSISqxI3VQpPqIJkWHqyOQETEwFOSwM2OIn51TMMSJpXqInAMIJhMUBLkHJicJI4MyqeuyLPAKIKqRrvESn6OIpitSrWWRruIxMyyyD0LRrJISM',
+			provider: 'lighttpd'
+		},
+		play: {
+			replayLabel: 'KONIEC' ,
+		},
+                                    showErrors: false,
+
+                	onError: function(errorCode) {
+		
+  	 // errorCode 200 means the file is not found
+		if (errorCode == 200) {
+			this.play("http://djerosv1.nazwa.pl/usun.png");
+		}	
+	},
+
+                canvas: {
+			backgroundGradient: 'none',
+			backgroundColor: "#333CC3"
+
+		},
+		plugins: {
+			controls: {
+				url: "http://djeros.nazwa.pl/aktualne/flowplayer/flowplayer.controls-3.2.15.swf",
+				height: 32,
+				backgroundColor: "transparent",
+				backgroundGradient: "none",
+				mute: true,
+				sliderColor: "#666666",
+				bufferColor: "#333333",
+				progressColor: "#dddddd",
+				buttonColor: "#333333",
+				timeColor: "#00a2ff",
+				buttonOverColor: "#00a2ff"
+			},
+			lighttpd: {
+				url: 'http://djeros.nazwa.pl/aktualne/flowplayer/flowplayer.pseudostreaming-3.2.12.swf'
+			}
+		},
+	});
+</script>

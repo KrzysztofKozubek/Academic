@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  section.mainpage
+    if komentarze.length > 0
+      each val in komentarze.length ? komentarze : ['There are no values']
+        section
+          article
+            h1 #{val.nick}
+            h2 #{val.email}
+            p #{val.komentarz}
+  .koment
+    form#the-form(method='post', action='/nowy')
+      table
+        tr
+          td
+            input.inkom(type='text', name='nick', placeholder='nick')
+        tr
+          td
+            input.inkom(type='text', name='email', placeholder='email')
+        tr
+          td
+            textarea.inkom(type='text', name='komentarz', placeholder='komentarz')
+        tr
+          td
+            input.inkom.button(type='submit', value='Save')

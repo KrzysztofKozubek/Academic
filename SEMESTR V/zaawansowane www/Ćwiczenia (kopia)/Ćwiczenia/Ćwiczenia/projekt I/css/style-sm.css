@@ -1,0 +1,48 @@
+#mosaic, #slider > section, header, header > nav, #work, #contact, footer {
+	min-width: 44em;
+}
+
+#contact > section {
+	width: 22em;
+}
+
+header > nav {
+	position: relative;
+	height: 50px;
+}
+
+nav > ul > li > img {
+	height: 50px;
+}
+
+#slider > section > section {
+	min-width: 36em;
+}
+
+#slider p, #dane p {
+	font-size: 1.2em;
+	line-height: 1.2em;
+}
+
+button {
+	height: 2.1em;
+	line-height: 2.1em;
+	font-size: 0.8em;
+}
+
+nav ul li a {
+	font-size: 0.9em;
+}
+
+h1 {
+	font-size: 1.4em;
+	line-height: 1.5em;
+}
+
+h3 {
+	font-size: 5.4em;
+}
+
+#work > section > article {
+	visibility: visible;
+}

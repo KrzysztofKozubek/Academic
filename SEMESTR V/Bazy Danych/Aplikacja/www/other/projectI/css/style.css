@@ -1,0 +1,212 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic,700");
+
+body{
+    background-color: #ffffff;
+}
+
+/* Basic */
+*{margin: 0px; padding: 0px;}
+
+    /* Nav */
+    #nav{
+        background-color: #333333;
+        color: #656565;
+        text-align: center;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+    #nav > ul > li{
+        vertical-align: middle;
+    }
+    #nav li{
+        display: inline-block;
+    }
+    #nav a{
+        color: #ffffff;
+        text-decoration: none;
+        margin: 0px 30px;
+        font-size: 26px;
+    }
+    #nav a:hover{
+        color: #cccccc; !important;
+    }
+    #nav #current a {
+        color: #282828;
+        background-color: #282828;
+    }
+    #nav > ul > li > img{
+        height: 80px;
+    }
+
+    /* Containers */
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Home */
+    .style1{
+        background-image: url("../images/dark_mosaic.png") !important;
+        color: #FFD400;
+        background-repeat: repeat !important;
+        background-size: auto !important;
+        -moz-background-size: auto  !important;
+    }
+    .style2{
+        background-color: #fff !important;
+        color: #131313;
+        background-image: none !important;
+    }
+
+    .mainContent {
+        text-align: center;
+        margin-top: 9%;
+    }
+    .contentAboutMe,.contentHobby, .contentContact {
+        border-radius: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        padding: 3% 5%;
+        margin-bottom: 3%;
+        overflow: hidden;
+    }
+    .contentHobby, .contentAboutMe{
+        text-align: center;
+        line-height: 3em;
+        margin: 10px 0 10px 0;
+        padding: 15px;
+    }
+    .contentHobby h2{
+        font-size: 2.5em;
+    }
+    .contentHobby content p{
+        margin: 20px 0px;
+    }
+    .content {
+        width: 100%;
+        float: inherit;
+        border-radius: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        background-image: url("../images/sliderBackground.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        -moz-background-size: 100% 100%;
+    }
+
+    .row{
+        width: 100%;
+        display: inline-block;
+    }
+    .rowImageProfil{
+        width: 30%;
+        margin-left: 15%;
+        float: left;
+        vertical-align: middle;
+    }
+    .rowImageProfil > img, .row > img{
+        width: 100%;
+        border-radius: 50%;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+    }
+    .splitText{
+        display: block;
+        overflow: hidden;
+        padding-top: 10%;
+        padding-bottom: 10%;
+        width: 50%;
+    }
+    .splitText header{
+        line-height: 4em;
+    }
+    .splitText p{
+        font-size: 1.5em;
+        color: #616161;
+        margin-bottom: 35px;
+    }
+
+    .figureHobby{
+        display: inline-block;
+        margin: 5px;
+        padding: 5px;
+        max-width: 300px;
+        -moz-box-shadow: 0 0 5px #888;
+        -webkit-box-shadow: 0 0 5px#888;
+        box-shadow: 0 0 5px #888;
+        border-radius: 5px;
+    }
+    .figureHobby img{
+        width: 90%;
+        margin: 10px;
+    }
+
+    .left{
+        text-align: left;
+    }
+    h1{
+        font-size: 3.25em;
+    }
+    h2{
+
+    }
+
+
+.box{
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 1px 3px #666666;
+    -moz-box-shadow: 0px 1px 3px #666666;
+    box-shadow: 0px 1px 3px #666666;
+    font-family: Arial;
+    background-color: transparent;
+    background-color: rgba(40, 40, 40, 0.2);
+    padding: 5px;
+    margin: 30px;
+}
+.btn {
+    background: #3498db;
+    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+    background-image: -o-linear-gradient(top, #3498db, #2980b9);
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 1px 3px #666666;
+    -moz-box-shadow: 0px 1px 3px #666666;
+    box-shadow: 0px 1px 3px #666666;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 10% 10px 10%;
+    text-decoration: none;
+}
+.btn:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+}
+.send{
+    display: inline;
+    margin: 20px 20px;
+}
+.mainfooter {
+    width: 100%;
+    float: left;
+    padding-left: 0;
+    color: white;
+}
+.mainfooter p {
+    width: 91%;
+    margin: 2% auto;
+}
+

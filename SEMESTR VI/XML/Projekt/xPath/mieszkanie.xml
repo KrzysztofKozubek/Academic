@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mieszkania>
+    <mieszkanie id="1">
+        <lokalizacja>Kraków</lokalizacja>
+        <powierzchnia>40m2</powierzchnia>
+        <liczbaPokoi>3</liczbaPokoi>
+        <rokOddania>1998</rokOddania>
+        <cena>150 000zł</cena>
+    </mieszkanie>
+    <mieszkanie id="2">
+        <lokalizacja>Kraków</lokalizacja>
+        <powierzchnia>60m2</powierzchnia>
+        <liczbaPokoi>4</liczbaPokoi>
+        <rokOddania>2008</rokOddania>
+        <cena>190 000zł</cena>
+    </mieszkanie>
+    <mieszkanie id="3">
+        <lokalizacja>Kraków</lokalizacja>
+        <powierzchnia>20m2</powierzchnia>
+        <liczbaPokoi>2</liczbaPokoi>
+        <rokOddania>2000</rokOddania>
+        <cena>170 000zł</cena>
+    </mieszkanie>
+    <mieszkanie id="4">
+        <lokalizacja>Kraków</lokalizacja>
+        <powierzchnia>40m2</powierzchnia>
+        <liczbaPokoi>3</liczbaPokoi>
+        <rokOddania>1995</rokOddania>
+        <cena>100 000zł</cena>
+    </mieszkanie>
+</mieszkania>

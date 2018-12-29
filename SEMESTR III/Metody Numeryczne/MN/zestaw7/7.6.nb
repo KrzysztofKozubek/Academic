@@ -1,0 +1,179 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      5590,        169]
+NotebookOptionsPosition[      5160,        150]
+NotebookOutlinePosition[      5505,        165]
+CellTagsIndexPosition[      5462,        162]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{"Bogdan", " ", "Chwali\:0144ski"}], "\[IndentingNewLine]", 
+ RowBox[{"Zestaw", " ", "7", " ", "zadanie", " ", "6"}]}], "Input",
+ CellChangeTimes->{{3.599730689015811*^9, 3.5997306963632307`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "t_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"Cos", "[", 
+     FractionBox[
+      RowBox[{"1", "+", "t"}], 
+      RowBox[{
+       SuperscriptBox["t", "2"], "+", "0.04"}]], "]"}], 
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{"-", 
+      SuperscriptBox["t", "2"]}]]}]}], ";"}]], "Input",
+ CellChangeTimes->{3.5997307106250467`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"Simpson", "[", 
+     RowBox[{"aa_", ",", "bb_", ",", "m_"}], "]"}], ":=", 
+    "\[IndentingNewLine]", "\t\t", 
+    RowBox[{"Module", "[", "\[IndentingNewLine]", "\t\t\t", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"a", "=", 
+         RowBox[{"N", "[", "aa", "]"}]}], ",", 
+        RowBox[{"mm", "=", "m"}], ",", 
+        RowBox[{"b", "=", 
+         RowBox[{"N", "[", "bb", "]"}]}], ",", "k", ",", ",", "X"}], "}"}], 
+      ",", "\[IndentingNewLine]", "\t\t\t", 
+      RowBox[{
+       RowBox[{"Return", "[", " ", 
+        RowBox[{
+         FractionBox[
+          RowBox[{"b", "-", "a"}], "6"], 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"f", "[", "a", "]"}], "+", 
+           RowBox[{"f", "[", "b", "]"}], "+", 
+           RowBox[{"4", 
+            RowBox[{"f", "[", 
+             FractionBox[
+              RowBox[{"a", "+", "b"}], "2"], "]"}]}]}], ")"}]}], " ", "]"}], 
+       ";"}]}], " ", "\[IndentingNewLine]", "\t\t", "]"}]}], ";"}], 
+  " "}]], "Input",
+ CellChangeTimes->{{3.5997309676017447`*^9, 3.599730997602461*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"fdokwadratury", "[", 
+    RowBox[{"a_", ",", "b_", ",", "dokladnosc_"}], "]"}], ":=", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Module", "[", "\[IndentingNewLine]", "\t", 
+    RowBox[{
+     RowBox[{"{", "c", "}"}], ",", "\[IndentingNewLine]", "\t", 
+     RowBox[{
+      RowBox[{"c", "=", 
+       FractionBox[
+        RowBox[{"a", "+", "b"}], "2"]}], ";", " ", "\[IndentingNewLine]", 
+      "\t", 
+      RowBox[{"ab", "=", 
+       RowBox[{"Simpson", "[", 
+        RowBox[{"a", ",", "b", ",", "dokladnosc"}], "]"}]}], ";", " ", 
+      "\[IndentingNewLine]", "\t", 
+      RowBox[{"ac", "=", 
+       RowBox[{"Simpson", "[", 
+        RowBox[{"a", ",", "c", ",", "dokladnosc"}], "]"}]}], ";", " ", 
+      "\[IndentingNewLine]", "\t", 
+      RowBox[{"cb", "=", 
+       RowBox[{"Simpson", "[", 
+        RowBox[{"c", ",", "b", ",", "dokladnosc"}], "]"}]}], ";", " ", 
+      "\[IndentingNewLine]", "\t", 
+      RowBox[{"If", "[", " ", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Abs", "[", 
+          RowBox[{"ab", "-", "ac", "-", "cb"}], "]"}], "<", "dokladnosc"}], 
+        ",", "\[IndentingNewLine]", "\t\t", 
+        RowBox[{"Return", "[", " ", 
+         RowBox[{"ac", "+", "cb"}], " ", "]"}], ",", "\[IndentingNewLine]", 
+        "\t\t", 
+        RowBox[{"Return", "[", "\[IndentingNewLine]", "\t", 
+         RowBox[{
+          RowBox[{"fdokwadratury", "[", 
+           RowBox[{"a", ",", "c", ",", 
+            FractionBox["dokladnosc", "2"]}], "]"}], "+", 
+          RowBox[{"fdokwadratury", "[", 
+           RowBox[{"c", ",", "b", ",", 
+            FractionBox["dokladnosc", "2"]}], "]"}]}], "]"}]}], 
+       "\[IndentingNewLine]", "\t\t", "]"}], ";"}]}], " ", 
+    "\[IndentingNewLine]", "\t\t", "]"}]}], "\[IndentingNewLine]", 
+  " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{
+   "\"\<\!\(\*SubscriptBox[\(lim\), \(x \[Rule] \[Infinity]\)]\)f(x)= \>\"", 
+    ",", " ", 
+    RowBox[{"fdokwadratury", "[", 
+     RowBox[{
+      RowBox[{"-", "20"}], ",", "20", ",", "0.00000001"}], "]"}]}], "]"}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{
+  3.5997310170515733`*^9, {3.5997310477053266`*^9, 3.5997310643122764`*^9}, {
+   3.5997313484045258`*^9, 3.5997314673743305`*^9}, {3.599731730904403*^9, 
+   3.5997317723067713`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\!\\(\\*SubscriptBox[\\(lim\\), \\(x \[Rule] \
+\[Infinity]\\)]\\)f(x)= \"\>", "\[InvisibleSpace]", "0.21961195167117747`"}],
+  SequenceForm[
+  "\!\(\*SubscriptBox[\(lim\), \(x \[Rule] \[Infinity]\)]\)f(x)= ", 
+   0.21961195167117747`],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.599731018486655*^9, {3.5997310490544033`*^9, 3.5997310654483414`*^9}, 
+   3.5997313681166534`*^9, {3.599731438752693*^9, 3.599731468291383*^9}, 
+   3.5997317761349907`*^9}]
+}, Open  ]]
+},
+WindowSize->{707, 637},
+WindowMargins->{{Automatic, 409}, {Automatic, 51}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 219, 3, 52, "Input"],
+Cell[779, 25, 392, 13, 47, "Input"],
+Cell[1174, 40, 1129, 32, 143, "Input"],
+Cell[CellGroupData[{
+Cell[2328, 76, 2301, 58, 384, "Input"],
+Cell[4632, 136, 512, 11, 23, "Print"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

@@ -1,0 +1,264 @@
+<html>
+<head>
+<title>LU.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; }
+.s0 { color: rgb(169,183,198); }
+.s1 { color: rgb(204,120,50); }
+.s2 { color: rgb(104,151,187); }
+.s3 { color: rgb(128,128,128); }
+.s4 { color: rgb(106,135,89); }
+</style>
+</head>
+<BODY BGCOLOR="#2b2b2b">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#C0C0C0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+LU.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+
+<span class="s0"> 
+</span><span class="s1">import </span><span class="s0">java.util.InputMismatchException</span><span class="s1">;</span><span class="s0"> 
+</span><span class="s1">import </span><span class="s0">java.util.Scanner</span><span class="s1">;</span><span class="s0"> 
+ 
+</span><span class="s1">import static </span><span class="s0">java.lang.Math.*</span><span class="s1">;</span><span class="s0"> 
+ 
+</span><span class="s1">public class </span><span class="s0">LU { 
+ 
+    </span><span class="s1">public double</span><span class="s0">[][] matrix</span><span class="s1">;</span><span class="s0"> 
+ 
+    </span><span class="s1">public int </span><span class="s0">row</span><span class="s1">;</span><span class="s0"> 
+    </span><span class="s1">public int </span><span class="s0">column</span><span class="s1">;</span><span class="s0"> 
+ 
+    </span><span class="s1">public int </span><span class="s0">pivoting</span><span class="s1">;</span><span class="s0"> 
+    </span><span class="s1">public int</span><span class="s0">[] pivot</span><span class="s1">;</span><span class="s0"> 
+ 
+    </span><span class="s1">public static int </span><span class="s0">indexK</span><span class="s1">;</span><span class="s0"> 
+    </span><span class="s1">public static int </span><span class="s0">indexJ</span><span class="s1">;</span><span class="s0"> 
+ 
+    </span><span class="s1">public </span><span class="s0">LU(Matrix paramMatrix) { 
+ 
+        </span><span class="s1">this</span><span class="s0">.matrix = paramMatrix.getArrayCopy()</span><span class="s1">;</span><span class="s0"> 
+        </span><span class="s1">this</span><span class="s0">.row = paramMatrix.getRowDimension()</span><span class="s1">;</span><span class="s0"> 
+        </span><span class="s1">this</span><span class="s0">.column = paramMatrix.getColumnDimension()</span><span class="s1">;</span><span class="s0"> 
+        </span><span class="s1">this</span><span class="s0">.pivot = </span><span class="s1">new int</span><span class="s0">[row]</span><span class="s1">;</span><span class="s0"> 
+ 
+        repleacePivot(pivot</span><span class="s1">, </span><span class="s0">row)</span><span class="s1">;</span><span class="s0"> 
+        </span><span class="s1">this</span><span class="s0">.pivoting = </span><span class="s2">1</span><span class="s1">;</span><span class="s0"> 
+ 
+        </span><span class="s1">double</span><span class="s0">[] vector = </span><span class="s1">new double</span><span class="s0">[row]</span><span class="s1">;</span><span class="s0"> 
+        initialization(vector)</span><span class="s1">;</span><span class="s0"> 
+    } 
+ 
+ 
+    </span><span class="s1">public void </span><span class="s0">initialization(</span><span class="s1">double</span><span class="s0">[] vector) { 
+ 
+        </span><span class="s1">for </span><span class="s0">(</span><span class="s1">int </span><span class="s0">j = </span><span class="s2">0</span><span class="s1">; </span><span class="s0">j &lt; column</span><span class="s1">; </span><span class="s0">j++) { 
+            </span><span class="s1">for </span><span class="s0">(</span><span class="s1">int </span><span class="s0">k = </span><span class="s2">0</span><span class="s1">; </span><span class="s0">k &lt; row</span><span class="s1">; </span><span class="s0">k++) 
+                vector[k] = matrix[k][j]</span><span class="s1">;</span><span class="s0"> 
+ 
+            </span><span class="s1">double </span><span class="s0">d = determination(vector</span><span class="s1">, </span><span class="s0">j)</span><span class="s1">;</span><span class="s0"> 
+ 
+            indexK = j</span><span class="s1">;</span><span class="s0"> 
+            </span><span class="s1">for </span><span class="s0">(</span><span class="s1">int </span><span class="s0">i1 = j + </span><span class="s2">1</span><span class="s1">; </span><span class="s0">i1 &lt; </span><span class="s1">this</span><span class="s0">.row</span><span class="s1">; </span><span class="s0">i1++) 
+                </span><span class="s1">if </span><span class="s0">(abs(vector[i1]) &gt; abs(vector[indexK])) indexK = i1</span><span class="s1">;</span><span class="s0"> 
+ 
+ 
+            </span><span class="s1">if </span><span class="s0">(indexK != j) { 
+                </span><span class="s1">for </span><span class="s0">(indexJ = </span><span class="s2">0</span><span class="s1">; </span><span class="s0">indexJ &lt; </span><span class="s1">this</span><span class="s0">.column</span><span class="s1">; </span><span class="s0">indexJ++) { 
+                    d = </span><span class="s1">this</span><span class="s0">.matrix[indexK][indexJ]</span><span class="s1">;</span><span class="s0"> 
+                    </span><span class="s1">this</span><span class="s0">.matrix[indexK][indexJ] = </span><span class="s1">this</span><span class="s0">.matrix[j][indexJ]</span><span class="s1">;</span><span class="s0"> 
+                    </span><span class="s1">this</span><span class="s0">.matrix[j][indexJ] = d</span><span class="s1">;</span><span class="s0"> 
+                } 
+ 
+                indexJ = </span><span class="s1">this</span><span class="s0">.pivot[indexK]</span><span class="s1">;</span><span class="s0"> 
+                </span><span class="s1">this</span><span class="s0">.pivot[indexK] = </span><span class="s1">this</span><span class="s0">.pivot[j]</span><span class="s1">;</span><span class="s0"> 
+                </span><span class="s1">this</span><span class="s0">.pivot[j] = indexJ</span><span class="s1">;</span><span class="s0"> 
+                </span><span class="s1">this</span><span class="s0">.pivoting = (-</span><span class="s1">this</span><span class="s0">.pivoting)</span><span class="s1">;</span><span class="s0"> 
+            } 
+ 
+ 
+            </span><span class="s1">if </span><span class="s0">(((j &lt; </span><span class="s1">this</span><span class="s0">.row ? </span><span class="s2">1 </span><span class="s0">: </span><span class="s2">0</span><span class="s0">) &amp; (</span><span class="s1">this</span><span class="s0">.matrix[j][j] != </span><span class="s2">0.0D </span><span class="s0">? </span><span class="s2">1 </span><span class="s0">: </span><span class="s2">0</span><span class="s0">)) != </span><span class="s2">0</span><span class="s0">) 
+                </span><span class="s1">for </span><span class="s0">(indexJ = j + </span><span class="s2">1</span><span class="s1">; </span><span class="s0">indexJ &lt; </span><span class="s1">this</span><span class="s0">.row</span><span class="s1">; </span><span class="s0">indexJ++) 
+                    </span><span class="s1">this</span><span class="s0">.matrix[indexJ][j] /= </span><span class="s1">this</span><span class="s0">.matrix[j][j]</span><span class="s1">;</span><span class="s0"> 
+        } 
+    } 
+ 
+    </span><span class="s1">public double </span><span class="s0">determination(</span><span class="s1">double</span><span class="s0">[] vector</span><span class="s1">, int </span><span class="s0">j) { 
+ 
+        </span><span class="s1">double </span><span class="s0">result = </span><span class="s2">0</span><span class="s1">;</span><span class="s0"> 
+        </span><span class="s1">for </span><span class="s0">(indexK = </span><span class="s2">0</span><span class="s1">; </span><span class="s0">indexK &lt; row</span><span class="s1">; </span><span class="s0">indexK++) { 
+            </span><span class="s1">double</span><span class="s0">[] arrayOfDouble1 = matrix[indexK]</span><span class="s1">;</span><span class="s0"> 
+ 
+ 
+            indexJ = min(indexK</span><span class="s1">, </span><span class="s0">j)</span><span class="s1">;</span><span class="s0"> 
+            result = </span><span class="s2">0.0D</span><span class="s1">;</span><span class="s0"> 
+            </span><span class="s1">for </span><span class="s0">(</span><span class="s1">int </span><span class="s0">i2 = </span><span class="s2">0</span><span class="s1">; </span><span class="s0">i2 &lt; indexJ</span><span class="s1">; </span><span class="s0">i2++) 
+                result += arrayOfDouble1[i2] * vector[i2]</span><span class="s1">;</span><span class="s0"> 
+ 
+            </span><span class="s1">int </span><span class="s0">tmp = indexK</span><span class="s1">;</span><span class="s0"> 
+            </span><span class="s1">double</span><span class="s0">[] tmp_array = vector</span><span class="s1">;</span><span class="s0"> 
+            </span><span class="s1">double </span><span class="s0">tmp2 = (tmp_array[tmp] - result)</span><span class="s1">;</span><span class="s0"> 
+            tmp_array[tmp] = tmp2</span><span class="s1">;</span><span class="s0"> 
+            arrayOfDouble1[j] = tmp2</span><span class="s1">;</span><span class="s0"> 
+        } 
+ 
+        </span><span class="s1">return </span><span class="s0">result</span><span class="s1">;</span><span class="s0"> 
+    } 
+ 
+    </span><span class="s1">public static void </span><span class="s0">repleacePivot(</span><span class="s1">int</span><span class="s0">[] pivot</span><span class="s1">, int </span><span class="s0">row) { 
+ 
+        </span><span class="s1">for </span><span class="s0">(</span><span class="s1">int </span><span class="s0">i = </span><span class="s2">0</span><span class="s1">; </span><span class="s0">i &lt; row</span><span class="s1">; </span><span class="s0">i++) pivot[i] = i</span><span class="s1">;</span><span class="s0"> 
+    } 
+ 
+    </span><span class="s1">public </span><span class="s0">Matrix getL() { 
+ 
+        Matrix result = </span><span class="s1">new </span><span class="s0">Matrix(row</span><span class="s1">, </span><span class="s0">column)</span><span class="s1">;</span><span class="s0"> 
+        </span><span class="s1">double</span><span class="s0">[][] arrayOfDouble = result.getArray()</span><span class="s1">;</span><span class="s0"> 
+ 
+        </span><span class="s1">for </span><span class="s0">(</span><span class="s1">int </span><span class="s0">i = </span><span class="s2">0</span><span class="s1">; </span><span class="s0">i &lt; row</span><span class="s1">; </span><span class="s0">i++) { 
+            </span><span class="s1">for </span><span class="s0">(</span><span class="s1">int </span><span class="s0">j = </span><span class="s2">0</span><span class="s1">; </span><span class="s0">j &lt; column</span><span class="s1">; </span><span class="s0">j++) { 
+                </span><span class="s1">if </span><span class="s0">(i &gt; j) { 
+                    arrayOfDouble[i][j] = matrix[i][j]</span><span class="s1">;</span><span class="s0"> 
+                } </span><span class="s1">else if </span><span class="s0">(i == j) { 
+                    arrayOfDouble[i][j] = </span><span class="s2">1.0D</span><span class="s1">;</span><span class="s0"> 
+                } </span><span class="s1">else </span><span class="s0">{ 
+                    arrayOfDouble[i][j] = </span><span class="s2">0.0D</span><span class="s1">;</span><span class="s0"> 
+                } 
+            } 
+        } 
+        </span><span class="s1">return </span><span class="s0">result</span><span class="s1">;</span><span class="s0"> 
+    } 
+ 
+    </span><span class="s1">public </span><span class="s0">Matrix getU() { 
+ 
+        Matrix result = </span><span class="s1">new </span><span class="s0">Matrix(column</span><span class="s1">, </span><span class="s0">column)</span><span class="s1">;</span><span class="s0"> 
+        </span><span class="s1">double</span><span class="s0">[][] arrayOfDouble = result.getArray()</span><span class="s1">;</span><span class="s0"> 
+ 
+        </span><span class="s1">for </span><span class="s0">(</span><span class="s1">int </span><span class="s0">i = </span><span class="s2">0</span><span class="s1">; </span><span class="s0">i &lt; column</span><span class="s1">; </span><span class="s0">i++) { 
+            </span><span class="s1">for </span><span class="s0">(</span><span class="s1">int </span><span class="s0">j = </span><span class="s2">0</span><span class="s1">; </span><span class="s0">j &lt; column</span><span class="s1">; </span><span class="s0">j++) { 
+                </span><span class="s1">if </span><span class="s0">(i &lt;= j) { 
+                    arrayOfDouble[i][j] = matrix[i][j]</span><span class="s1">;</span><span class="s0"> 
+                } </span><span class="s1">else </span><span class="s0">{ 
+                    arrayOfDouble[i][j] = </span><span class="s2">0.0D</span><span class="s1">;</span><span class="s0"> 
+                } 
+            } 
+        } 
+        </span><span class="s1">return </span><span class="s0">result</span><span class="s1">;</span><span class="s0"> 
+    } 
+ 
+    </span><span class="s1">public int</span><span class="s0">[] getPivot() { 
+ 
+        </span><span class="s1">int</span><span class="s0">[] result = </span><span class="s1">new int</span><span class="s0">[row]</span><span class="s1">;</span><span class="s0"> 
+ 
+        </span><span class="s1">for </span><span class="s0">(</span><span class="s1">int </span><span class="s0">i = </span><span class="s2">0</span><span class="s1">; </span><span class="s0">i &lt; row</span><span class="s1">; </span><span class="s0">i++) { 
+            result[i] = pivot[i]</span><span class="s1">;</span><span class="s0"> 
+        } 
+        </span><span class="s1">return </span><span class="s0">result</span><span class="s1">;</span><span class="s0"> 
+    } 
+ 
+    </span><span class="s1">public static double </span><span class="s0">multiplicationIndex(</span><span class="s1">double</span><span class="s0">[][] matrix1</span><span class="s1">, double</span><span class="s0">[][] matrix2</span><span class="s1">, int </span><span class="s0">x</span><span class="s1">, int </span><span class="s0">y) { 
+ 
+        </span><span class="s1">int </span><span class="s0">size = matrix1.length</span><span class="s1">;</span><span class="s0"> 
+        </span><span class="s1">double </span><span class="s0">result = </span><span class="s2">0</span><span class="s1">;</span><span class="s0"> 
+        </span><span class="s1">for </span><span class="s0">(</span><span class="s1">int </span><span class="s0">i = </span><span class="s2">0</span><span class="s1">; </span><span class="s0">i &lt; size</span><span class="s1">; </span><span class="s0">i++) { 
+ 
+            result += matrix1[x][i] * matrix2[i][y]</span><span class="s1">;</span><span class="s0"> 
+        } 
+ 
+        </span><span class="s1">return </span><span class="s0">result</span><span class="s1">;</span><span class="s0"> 
+    } 
+ 
+    </span><span class="s1">public static double</span><span class="s0">[][] multiplication(</span><span class="s1">double</span><span class="s0">[][] matrix1</span><span class="s1">, double</span><span class="s0">[][] matrix2) { 
+ 
+        </span><span class="s1">int </span><span class="s0">size = matrix1.length</span><span class="s1">;</span><span class="s0"> 
+        </span><span class="s1">double</span><span class="s0">[][] result = </span><span class="s1">new double</span><span class="s0">[size][size]</span><span class="s1">;</span><span class="s0"> 
+ 
+        </span><span class="s1">for </span><span class="s0">(</span><span class="s1">int </span><span class="s0">i = </span><span class="s2">0</span><span class="s1">; </span><span class="s0">i &lt; size</span><span class="s1">; </span><span class="s0">i++) { 
+            </span><span class="s1">for </span><span class="s0">(</span><span class="s1">int </span><span class="s0">j = </span><span class="s2">0</span><span class="s1">; </span><span class="s0">j &lt; size</span><span class="s1">; </span><span class="s0">j++) { 
+ 
+                result[i][j] = multiplicationIndex(matrix1</span><span class="s1">, </span><span class="s0">matrix2</span><span class="s1">, </span><span class="s0">i</span><span class="s1">, </span><span class="s0">j)</span><span class="s1">;</span><span class="s0"> 
+            } 
+        } 
+        </span><span class="s1">return </span><span class="s0">result</span><span class="s1">;</span><span class="s0"> 
+    } 
+ 
+    </span><span class="s1">public static void </span><span class="s0">correctPUL(</span><span class="s1">double</span><span class="s0">[][] matrixP</span><span class="s1">, double</span><span class="s0">[][] matrixL</span><span class="s1">, double</span><span class="s0">[][] matrixU) { 
+ 
+        </span><span class="s3">//double[][] result = multiplication(matrixL, matrixU);</span><span class="s0"> 
+        </span><span class="s3">//result = multiplication(matrixP, result);</span><span class="s0"> 
+ 
+        Matrix.showMatrix((multiplication( 
+                multiplication(matrixP</span><span class="s1">, </span><span class="s0">matrixL)</span><span class="s1">, </span><span class="s0">matrixU))</span><span class="s1">, </span><span class="s4">&quot;Check question:&quot;</span><span class="s0">)</span><span class="s1">;</span><span class="s0"> 
+    } 
+ 
+    </span><span class="s1">public static double</span><span class="s0">[][] preaperDate() { 
+ 
+        </span><span class="s1">boolean </span><span class="s0">correct = </span><span class="s1">true;</span><span class="s0"> 
+        </span><span class="s1">double</span><span class="s0">[][] result</span><span class="s1">;</span><span class="s0"> 
+        </span><span class="s1">int </span><span class="s0">size = </span><span class="s2">0</span><span class="s1">;</span><span class="s0"> 
+        Scanner input</span><span class="s1">;</span><span class="s0"> 
+ 
+        </span><span class="s1">do </span><span class="s0">{ 
+            input = </span><span class="s1">new </span><span class="s0">Scanner(System.in)</span><span class="s1">;</span><span class="s0"> 
+            </span><span class="s1">try </span><span class="s0">{ 
+                System.out.print(</span><span class="s4">&quot;Please get size matrix: &quot;</span><span class="s0">)</span><span class="s1">;</span><span class="s0"> 
+                size = input.nextInt()</span><span class="s1">;</span><span class="s0"> 
+            } </span><span class="s1">catch </span><span class="s0">(InputMismatchException ex) { 
+                correct = </span><span class="s1">false;</span><span class="s0"> 
+            } 
+        } </span><span class="s1">while </span><span class="s0">(!correct)</span><span class="s1">;</span><span class="s0"> 
+ 
+        result = </span><span class="s1">new double</span><span class="s0">[size][size]</span><span class="s1">;</span><span class="s0"> 
+ 
+ 
+        correct = </span><span class="s1">false;</span><span class="s0"> 
+        </span><span class="s1">while </span><span class="s0">(!correct) { 
+ 
+            input = </span><span class="s1">new </span><span class="s0">Scanner(System.in)</span><span class="s1">;</span><span class="s0"> 
+            correct = </span><span class="s1">true;</span><span class="s0"> 
+            </span><span class="s1">int </span><span class="s0">how = (</span><span class="s1">int</span><span class="s0">) Math.pow(size</span><span class="s1">, </span><span class="s2">2</span><span class="s0">)</span><span class="s1">;</span><span class="s0"> 
+            </span><span class="s1">for </span><span class="s0">(</span><span class="s1">int </span><span class="s0">i = </span><span class="s2">0</span><span class="s1">; </span><span class="s0">i &lt; size &amp;&amp; correct == </span><span class="s1">true; </span><span class="s0">i++) { 
+                </span><span class="s1">for </span><span class="s0">(</span><span class="s1">int </span><span class="s0">j = </span><span class="s2">0</span><span class="s1">; </span><span class="s0">j &lt; size &amp;&amp; correct == </span><span class="s1">true; </span><span class="s0">j++) { 
+ 
+                    </span><span class="s1">try </span><span class="s0">{ 
+                        System.out.print(</span><span class="s4">&quot;Please get value matrix &quot; </span><span class="s0">+ how + </span><span class="s4">&quot; yet: &quot;</span><span class="s0">)</span><span class="s1">;</span><span class="s0"> 
+                        result[i][j] = input.nextDouble()</span><span class="s1">;</span><span class="s0"> 
+                    } </span><span class="s1">catch </span><span class="s0">(InputMismatchException ex) { 
+                        correct = </span><span class="s1">false;</span><span class="s0"> 
+                    } 
+ 
+                    how--</span><span class="s1">;</span><span class="s0"> 
+                } 
+            } 
+        } 
+ 
+        </span><span class="s1">return </span><span class="s0">result</span><span class="s1">;</span><span class="s0"> 
+    } 
+ 
+    </span><span class="s1">public static </span><span class="s0">String LUDecomposition(</span><span class="s1">double</span><span class="s0">[][] array) { 
+ 
+        Matrix A = </span><span class="s1">new </span><span class="s0">Matrix(array)</span><span class="s1">;</span><span class="s0"> 
+        LU lu = </span><span class="s1">new </span><span class="s0">LU(A)</span><span class="s1">;</span><span class="s0"> 
+ 
+        Matrix L = lu.getL()</span><span class="s1">;</span><span class="s0"> 
+        Matrix U = lu.getU()</span><span class="s1">;</span><span class="s0"> 
+        </span><span class="s1">int</span><span class="s0">[] p = lu.getPivot()</span><span class="s1">;</span><span class="s0"> 
+ 
+        </span><span class="s1">double</span><span class="s0">[][] printL = L.getArray()</span><span class="s1">;</span><span class="s0"> 
+        </span><span class="s1">double</span><span class="s0">[][] printU = U.getArray()</span><span class="s1">;</span><span class="s0"> 
+ 
+        Matrix.showPivot(p)</span><span class="s1">;</span><span class="s0"> 
+        L.showMatrix(</span><span class="s4">&quot;Matrix L&quot;</span><span class="s0">)</span><span class="s1">;</span><span class="s0"> 
+        U.showMatrix(</span><span class="s4">&quot;Matrix U&quot;</span><span class="s0">)</span><span class="s1">;</span><span class="s0"> 
+ 
+        </span><span class="s3">//correctPUL(Matrix.getPivot(p, U.determinationU()), printL, printL);</span><span class="s0"> 
+ 
+        </span><span class="s1">return </span><span class="s4">&quot;END&quot;</span><span class="s1">;</span><span class="s0"> 
+    } 
+} 
+</span></pre>
+</body>
+</html>

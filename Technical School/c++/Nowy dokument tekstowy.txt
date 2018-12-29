@@ -1,0 +1,47 @@
+#include <cstdio>
+#include <iostream> 
+#include <conio.h>
+
+using namespace std;
+
+int Function1(int a, int b)
+{
+	return (a+b)*(a-b);
+}
+int Function2(int x, int y)
+{
+	return x*(y-3);
+}
+int Function3(int n)
+{
+	if(n>0)
+		return n* Function3(n-1);
+	else 
+		return 1;
+}
+int Function4(int x, int a, int b, int c)
+{
+	if(x>0)
+		return ((a*b*x*x*x)-(b*c*x*x)+(c*x)+2);
+	else 
+		return (a*b*c*x*x*x*x*x);
+}
+
+int main()
+{
+	int a=2;
+	int b=3;
+	int x=3;
+	int y=2;
+	int n=2;
+	
+	cout << "F(a,b): " << Function1(a,b) <<endl;
+	cout << "F(x,y): " << Function2(x,y) <<endl;
+	cout << "F(n): " << Function3(n) <<endl;
+	cout << "F(x, a, b, c): " << Function3(x, a, b ,c) <<endl;
+
+	system("pause");
+	return 0;
+}
+
+

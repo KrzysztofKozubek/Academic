@@ -1,0 +1,86 @@
+
+
+.mainContent {
+	text-align: center;
+	line-height: 25px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	margin: 60px 3% 3% 3%;
+}
+
+/* Nav */
+#nav ul {
+	background-color: #333333;
+	width: 100%;
+	padding: 5px 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#nav li {
+	margin: 0 auto;
+	display: none;
+}
+#nav .first{
+	display: block;
+	border-bottom: none;
+}
+#nav a {
+	display: block;
+	padding: 5px 5px 5px 0px;
+	text-align: center;
+}
+#nav #current a {
+	border-radius: 5px;
+}
+#nav ul:hover {
+}
+#nav ul:hover .first, #nav li{
+	border-bottom: solid 1px #484848;
+}
+#nav ul:hover li {
+	display: block;
+	margin: 0 auto;
+}
+#nav li{
+	width: 80%;
+}
+#nav .last{
+	border-bottom: none;
+}
+.logo{
+	display: none;
+}
+
+/* Top */
+.rowImageProfil > img{
+	display: none;
+}
+.splitText{
+	width: 100%;
+}
+
+/* About me*/
+.contentHobby{
+	line-height: 20px;
+}
+.contentHobby h2{
+	font-size: 1.5em;
+	line-height: 2em;
+}
+.mobileAll{
+	width:100% !important;
+}
+.mobileAll a{
+	display:block !important;
+}
+.send{
+	width:100% !important;
+}
+.send a{
+	display:block !important;
+}
+.figureHobby{
+	max-width: 200px;
+}

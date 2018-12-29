@@ -1,0 +1,791 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="93aebe43-f6d3-40a7-b12b-8f4576497f2d" name="Default" comment="" />
+    <ignored path="Project.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="Project" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://C:/xampp/htdocs/Project/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.807693">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding>
+                <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#button#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#p#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#1;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#a#0;n#div#0;n#div#1;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="myFunctions.js" pinned="false" current-in-tab="false">
+        <entry file="file://C:/xampp/htdocs/Project/js/myFunctions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="239" column="1" selection-start-line="239" selection-start-column="1" selection-end-line="239" selection-end-column="1" />
+              <folding>
+                <element signature="n#!!block;n#setWeatherNow#0" expanded="false" />
+                <element signature="n#!!block;n#setWeatherTomorrow#0" expanded="false" />
+                <element signature="n#!!block;n#setWeatherTwoDay#0" expanded="false" />
+                <element signature="n#!!block;n#getTemperatureToChart#0" expanded="false" />
+                <element signature="e#350#412#0" expanded="false" />
+                <element signature="n#!!block;n#getTimeToChart#0" expanded="false" />
+                <element signature="e#562#604#0" expanded="false" />
+                <element signature="n#!!block;n#getGrndLevelToChart#0" expanded="false" />
+                <element signature="e#756#812#0" expanded="false" />
+                <element signature="n#!!block;n#getHumidityToChart#0" expanded="false" />
+                <element signature="e#966#1019#0" expanded="false" />
+                <element signature="n#!!block;n#getPressureToChart#0" expanded="false" />
+                <element signature="e#1172#1225#0" expanded="false" />
+                <element signature="n#!!block;n#getSeaLevelToChart#0" expanded="false" />
+                <element signature="e#1378#1432#0" expanded="false" />
+                <element signature="n#!!block;n#getTempKfToChart#0" expanded="false" />
+                <element signature="e#1581#1631#0" expanded="false" />
+                <element signature="n#!!block;n#getTempMaxToChart#0" expanded="false" />
+                <element signature="e#1780#1851#0" expanded="false" />
+                <element signature="n#!!block;n#getTempMinToChart#0" expanded="false" />
+                <element signature="e#2001#2072#0" expanded="false" />
+                <element signature="n#!!block;n#getWeatherDescriptionToChart#0" expanded="false" />
+                <element signature="e#2245#2317#0" expanded="false" />
+                <element signature="n#!!block;n#getSpeedWindToChart#0" expanded="false" />
+                <element signature="e#2482#2533#0" expanded="false" />
+                <element signature="n#!!block;n#getDegreeWindToChart#0" expanded="false" />
+                <element signature="e#2691#2741#0" expanded="false" />
+                <element signature="n#!!block;n#getTextToWeather#0" expanded="false" />
+                <element signature="n#!!block;n#getWeather#0" expanded="false" />
+                <element signature="e#2961#2984#0" expanded="false" />
+                <element signature="e#3331#4049#0" expanded="false" />
+                <element signature="e#3342#3403#0" expanded="false" />
+                <element signature="n#!!block;n#buttonClick#0" expanded="false" />
+                <element signature="n#!!block;n#getShowChart#0" expanded="false" />
+                <element signature="e#4340#4510#0" expanded="false" />
+                <element signature="e#4406#4504#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="weather.js" pinned="false" current-in-tab="true">
+        <entry file="file://C:/xampp/htdocs/Project/js/weather.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.2915952">
+              <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+              <folding>
+                <element signature="e#79#132#0" expanded="false" />
+                <element signature="e#248#917#0" expanded="false" />
+                <element signature="e#296#912#0" expanded="false" />
+                <element signature="e#643#790#0" expanded="false" />
+                <element signature="e#966#1020#0" expanded="false" />
+                <element signature="e#1066#1094#0" expanded="false" />
+                <element signature="e#1144#1343#0" expanded="false" />
+                <element signature="e#1292#1338#0" expanded="false" />
+                <element signature="e#1400#1641#0" expanded="false" />
+                <element signature="e#1589#1636#0" expanded="false" />
+                <element signature="e#1689#1860#0" expanded="false" />
+                <element signature="e#1707#1816#0" expanded="false" />
+                <element signature="e#1764#1809#0" expanded="false" />
+                <element signature="e#1822#1858#0" expanded="false" />
+                <element signature="e#1923#2128#0" expanded="false" />
+                <element signature="e#1965#2093#0" expanded="false" />
+                <element signature="e#2031#2071#0" expanded="false" />
+                <element signature="e#2191#2396#0" expanded="false" />
+                <element signature="e#2233#2361#0" expanded="false" />
+                <element signature="e#2299#2339#0" expanded="false" />
+                <element signature="e#2455#2644#0" expanded="false" />
+                <element signature="e#2682#2726#0" expanded="false" />
+                <element signature="e#2778#2864#0" expanded="false" />
+                <element signature="e#2914#3000#0" expanded="false" />
+                <element signature="e#3052#3106#0" expanded="false" />
+                <element signature="e#3154#3326#0" expanded="false" />
+                <element signature="e#3253#3289#0" expanded="false" />
+                <element signature="e#3375#3548#0" expanded="false" />
+                <element signature="e#3475#3511#0" expanded="false" />
+                <element signature="e#3604#3810#0" expanded="false" />
+                <element signature="e#3615#3807#0" expanded="false" />
+                <element signature="e#3666#3802#0" expanded="false" />
+                <element signature="e#3765#3796#0" expanded="false" />
+                <element signature="e#3847#3870#0" expanded="false" />
+                <element signature="e#3925#3966#0" expanded="false" />
+                <element signature="e#4020#4074#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Chart.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://C:/xampp/htdocs/Project/js/Chart.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="materialize.css" pinned="false" current-in-tab="false">
+        <entry file="file://C:/xampp/htdocs/Project/css/materialize.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="963" column="1" selection-start-line="981" selection-start-column="1" selection-end-line="981" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://C:/xampp/htdocs/Project/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="44" column="3" selection-start-line="44" selection-start-column="3" selection-end-line="44" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/a/index.html" />
+        <option value="$PROJECT_DIR$/js/a.js" />
+        <option value="$PROJECT_DIR$/js/weather.js" />
+        <option value="$PROJECT_DIR$/js/a.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$USER_HOME$/Desktop/MUN/index.html" />
+        <option value="C:/xampp/htdocs/Project/css/style.css" />
+        <option value="C:/xampp/htdocs/Project/index.html" />
+        <option value="C:/xampp/htdocs/Project/js/myFunctions.js" />
+        <option value="C:/xampp/htdocs/Project/js/weather.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="last_opened_file_path" value="C:/xampp/htdocs/Project" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\3.UJ(LICENCJAT)\SEMESTR VI\XML\Projekt\Project\a" />
+      <recent name="D:\3.UJ(LICENCJAT)\SEMESTR VI\XML\Projekt\Project" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="93aebe43-f6d3-40a7-b12b-8f4576497f2d" name="Default" comment="" />
+      <created>1463493801225</created>
+      <option name="number" value="Default" />
+      <updated>1463493801225</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18601191" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/js/weather.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="50" column="141" selection-start-line="50" selection-start-column="2" selection-end-line="50" selection-end-column="141" />
+          <folding>
+            <element signature="e#79#132#0" expanded="false" />
+            <element signature="e#248#917#0" expanded="false" />
+            <element signature="e#296#912#0" expanded="false" />
+            <element signature="e#643#790#0" expanded="false" />
+            <element signature="e#966#1020#0" expanded="false" />
+            <element signature="e#1066#1094#0" expanded="false" />
+            <element signature="e#1144#1343#0" expanded="false" />
+            <element signature="e#1292#1338#0" expanded="false" />
+            <element signature="e#1682#1853#0" expanded="false" />
+            <element signature="e#1700#1809#0" expanded="false" />
+            <element signature="e#1757#1802#0" expanded="false" />
+            <element signature="e#1815#1851#0" expanded="false" />
+            <element signature="e#1916#2121#0" expanded="false" />
+            <element signature="e#1958#2086#0" expanded="false" />
+            <element signature="e#2024#2064#0" expanded="false" />
+            <element signature="e#2184#2389#0" expanded="false" />
+            <element signature="e#2226#2354#0" expanded="false" />
+            <element signature="e#2292#2332#0" expanded="false" />
+            <element signature="e#2448#2637#0" expanded="false" />
+            <element signature="e#2771#2857#0" expanded="false" />
+            <element signature="e#2907#2993#0" expanded="false" />
+            <element signature="e#3045#3099#0" expanded="false" />
+            <element signature="e#3147#3319#0" expanded="false" />
+            <element signature="e#3246#3282#0" expanded="false" />
+            <element signature="e#3368#3541#0" expanded="false" />
+            <element signature="e#3468#3504#0" expanded="false" />
+            <element signature="e#3597#3803#0" expanded="false" />
+            <element signature="e#3608#3800#0" expanded="false" />
+            <element signature="e#3659#3795#0" expanded="false" />
+            <element signature="e#3758#3789#0" expanded="false" />
+            <element signature="e#3840#3863#0" expanded="false" />
+            <element signature="e#3918#3959#0" expanded="false" />
+            <element signature="e#4013#4067#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/xampp/htdocs/Project/js/weather.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="50" column="141" selection-start-line="50" selection-start-column="141" selection-end-line="50" selection-end-column="141" />
+          <folding>
+            <element signature="e#79#132#0" expanded="false" />
+            <element signature="e#248#917#0" expanded="false" />
+            <element signature="e#296#912#0" expanded="false" />
+            <element signature="e#643#790#0" expanded="false" />
+            <element signature="e#966#1020#0" expanded="false" />
+            <element signature="e#1066#1094#0" expanded="false" />
+            <element signature="e#1144#1343#0" expanded="false" />
+            <element signature="e#1292#1338#0" expanded="false" />
+            <element signature="e#1400#1641#0" expanded="false" />
+            <element signature="e#1589#1636#0" expanded="false" />
+            <element signature="e#1689#1860#0" expanded="false" />
+            <element signature="e#1707#1816#0" expanded="false" />
+            <element signature="e#1764#1809#0" expanded="false" />
+            <element signature="e#1822#1858#0" expanded="false" />
+            <element signature="e#1923#2128#0" expanded="false" />
+            <element signature="e#1965#2093#0" expanded="false" />
+            <element signature="e#2031#2071#0" expanded="false" />
+            <element signature="e#2191#2396#0" expanded="false" />
+            <element signature="e#2233#2361#0" expanded="false" />
+            <element signature="e#2299#2339#0" expanded="false" />
+            <element signature="e#2455#2644#0" expanded="false" />
+            <element signature="e#2682#2726#0" expanded="false" />
+            <element signature="e#2778#2864#0" expanded="false" />
+            <element signature="e#2914#3000#0" expanded="false" />
+            <element signature="e#3052#3106#0" expanded="false" />
+            <element signature="e#3154#3326#0" expanded="false" />
+            <element signature="e#3253#3289#0" expanded="false" />
+            <element signature="e#3375#3548#0" expanded="false" />
+            <element signature="e#3475#3511#0" expanded="false" />
+            <element signature="e#3604#3810#0" expanded="false" />
+            <element signature="e#3615#3807#0" expanded="false" />
+            <element signature="e#3666#3802#0" expanded="false" />
+            <element signature="e#3765#3796#0" expanded="false" />
+            <element signature="e#3847#3870#0" expanded="false" />
+            <element signature="e#3925#3966#0" expanded="false" />
+            <element signature="e#4020#4074#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="17" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
+          <folding>
+            <element signature="n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#button#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#p#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#a#0;n#div#0;n#div#1;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <marker date="1463512950413" expanded="false" signature="6260:7189" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/xampp/htdocs/Project/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#button#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#p#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#a#0;n#div#0;n#div#1;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/a.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="77" column="43" selection-start-line="77" selection-start-column="43" selection-end-line="77" selection-end-column="43" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#body#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/weather.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="50" column="141" selection-start-line="50" selection-start-column="2" selection-end-line="50" selection-end-column="141" />
+          <folding>
+            <element signature="e#79#132#0" expanded="false" />
+            <element signature="e#248#917#0" expanded="false" />
+            <element signature="e#296#912#0" expanded="false" />
+            <element signature="e#643#790#0" expanded="false" />
+            <element signature="e#966#1020#0" expanded="false" />
+            <element signature="e#1066#1094#0" expanded="false" />
+            <element signature="e#1144#1343#0" expanded="false" />
+            <element signature="e#1292#1338#0" expanded="false" />
+            <element signature="e#1682#1853#0" expanded="false" />
+            <element signature="e#1700#1809#0" expanded="false" />
+            <element signature="e#1757#1802#0" expanded="false" />
+            <element signature="e#1815#1851#0" expanded="false" />
+            <element signature="e#1916#2121#0" expanded="false" />
+            <element signature="e#1958#2086#0" expanded="false" />
+            <element signature="e#2024#2064#0" expanded="false" />
+            <element signature="e#2184#2389#0" expanded="false" />
+            <element signature="e#2226#2354#0" expanded="false" />
+            <element signature="e#2292#2332#0" expanded="false" />
+            <element signature="e#2448#2637#0" expanded="false" />
+            <element signature="e#2771#2857#0" expanded="false" />
+            <element signature="e#2907#2993#0" expanded="false" />
+            <element signature="e#3045#3099#0" expanded="false" />
+            <element signature="e#3147#3319#0" expanded="false" />
+            <element signature="e#3246#3282#0" expanded="false" />
+            <element signature="e#3368#3541#0" expanded="false" />
+            <element signature="e#3468#3504#0" expanded="false" />
+            <element signature="e#3597#3803#0" expanded="false" />
+            <element signature="e#3608#3800#0" expanded="false" />
+            <element signature="e#3659#3795#0" expanded="false" />
+            <element signature="e#3758#3789#0" expanded="false" />
+            <element signature="e#3840#3863#0" expanded="false" />
+            <element signature="e#3918#3959#0" expanded="false" />
+            <element signature="e#4013#4067#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/a.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="77" column="43" selection-start-line="77" selection-start-column="43" selection-end-line="77" selection-end-column="43" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#body#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/MUN/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.61041296">
+          <caret line="79" column="57" selection-start-line="79" selection-start-column="57" selection-end-line="79" selection-end-column="57" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.030520646">
+          <caret line="39" column="17" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
+          <folding>
+            <element signature="n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#button#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#p#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#a#0;n#div#0;n#div#1;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <marker date="1463512950413" expanded="false" signature="6260:7189" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/xampp/htdocs/Project/css/materialize.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="963" column="1" selection-start-line="981" selection-start-column="1" selection-end-line="981" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/xampp/htdocs/Project/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="3" selection-start-line="44" selection-start-column="3" selection-end-line="44" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/xampp/htdocs/Project/js/Chart.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/xampp/htdocs/Project/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.807693">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#button#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#p#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#a#0;n#div#0;n#div#1;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/xampp/htdocs/Project/js/myFunctions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="239" column="1" selection-start-line="239" selection-start-column="1" selection-end-line="239" selection-end-column="1" />
+          <folding>
+            <element signature="n#!!block;n#setWeatherNow#0" expanded="false" />
+            <element signature="n#!!block;n#setWeatherTomorrow#0" expanded="false" />
+            <element signature="n#!!block;n#setWeatherTwoDay#0" expanded="false" />
+            <element signature="n#!!block;n#getTemperatureToChart#0" expanded="false" />
+            <element signature="e#350#412#0" expanded="false" />
+            <element signature="n#!!block;n#getTimeToChart#0" expanded="false" />
+            <element signature="e#562#604#0" expanded="false" />
+            <element signature="n#!!block;n#getGrndLevelToChart#0" expanded="false" />
+            <element signature="e#756#812#0" expanded="false" />
+            <element signature="n#!!block;n#getHumidityToChart#0" expanded="false" />
+            <element signature="e#966#1019#0" expanded="false" />
+            <element signature="n#!!block;n#getPressureToChart#0" expanded="false" />
+            <element signature="e#1172#1225#0" expanded="false" />
+            <element signature="n#!!block;n#getSeaLevelToChart#0" expanded="false" />
+            <element signature="e#1378#1432#0" expanded="false" />
+            <element signature="n#!!block;n#getTempKfToChart#0" expanded="false" />
+            <element signature="e#1581#1631#0" expanded="false" />
+            <element signature="n#!!block;n#getTempMaxToChart#0" expanded="false" />
+            <element signature="e#1780#1851#0" expanded="false" />
+            <element signature="n#!!block;n#getTempMinToChart#0" expanded="false" />
+            <element signature="e#2001#2072#0" expanded="false" />
+            <element signature="n#!!block;n#getWeatherDescriptionToChart#0" expanded="false" />
+            <element signature="e#2245#2317#0" expanded="false" />
+            <element signature="n#!!block;n#getSpeedWindToChart#0" expanded="false" />
+            <element signature="e#2482#2533#0" expanded="false" />
+            <element signature="n#!!block;n#getDegreeWindToChart#0" expanded="false" />
+            <element signature="e#2691#2741#0" expanded="false" />
+            <element signature="n#!!block;n#getTextToWeather#0" expanded="false" />
+            <element signature="n#!!block;n#getWeather#0" expanded="false" />
+            <element signature="e#2961#2984#0" expanded="false" />
+            <element signature="e#3331#4049#0" expanded="false" />
+            <element signature="e#3342#3403#0" expanded="false" />
+            <element signature="n#!!block;n#buttonClick#0" expanded="false" />
+            <element signature="n#!!block;n#getShowChart#0" expanded="false" />
+            <element signature="e#4340#4510#0" expanded="false" />
+            <element signature="e#4406#4504#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/xampp/htdocs/Project/js/weather.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2915952">
+          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+          <folding>
+            <element signature="e#79#132#0" expanded="false" />
+            <element signature="e#248#917#0" expanded="false" />
+            <element signature="e#296#912#0" expanded="false" />
+            <element signature="e#643#790#0" expanded="false" />
+            <element signature="e#966#1020#0" expanded="false" />
+            <element signature="e#1066#1094#0" expanded="false" />
+            <element signature="e#1144#1343#0" expanded="false" />
+            <element signature="e#1292#1338#0" expanded="false" />
+            <element signature="e#1400#1641#0" expanded="false" />
+            <element signature="e#1589#1636#0" expanded="false" />
+            <element signature="e#1689#1860#0" expanded="false" />
+            <element signature="e#1707#1816#0" expanded="false" />
+            <element signature="e#1764#1809#0" expanded="false" />
+            <element signature="e#1822#1858#0" expanded="false" />
+            <element signature="e#1923#2128#0" expanded="false" />
+            <element signature="e#1965#2093#0" expanded="false" />
+            <element signature="e#2031#2071#0" expanded="false" />
+            <element signature="e#2191#2396#0" expanded="false" />
+            <element signature="e#2233#2361#0" expanded="false" />
+            <element signature="e#2299#2339#0" expanded="false" />
+            <element signature="e#2455#2644#0" expanded="false" />
+            <element signature="e#2682#2726#0" expanded="false" />
+            <element signature="e#2778#2864#0" expanded="false" />
+            <element signature="e#2914#3000#0" expanded="false" />
+            <element signature="e#3052#3106#0" expanded="false" />
+            <element signature="e#3154#3326#0" expanded="false" />
+            <element signature="e#3253#3289#0" expanded="false" />
+            <element signature="e#3375#3548#0" expanded="false" />
+            <element signature="e#3475#3511#0" expanded="false" />
+            <element signature="e#3604#3810#0" expanded="false" />
+            <element signature="e#3615#3807#0" expanded="false" />
+            <element signature="e#3666#3802#0" expanded="false" />
+            <element signature="e#3765#3796#0" expanded="false" />
+            <element signature="e#3847#3870#0" expanded="false" />
+            <element signature="e#3925#3966#0" expanded="false" />
+            <element signature="e#4020#4074#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

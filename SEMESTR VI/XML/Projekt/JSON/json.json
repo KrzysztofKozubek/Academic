@@ -1,0 +1,56 @@
+{
+  "FILMY": {
+    "FILM": [
+      {
+        "tytul": "Zielona mila",
+        "ocena": " 8 / 10 ",
+        "opis": "Emerytowany strażnik więzienny opowiada przyjaciółce o niezwykłym mężczyźnie, którego skazano na śmierć za zabójstwo dwóch 9-letnich dziewczynek."
+      },
+      {
+        "tytul": "Forrest Gump",
+        "ocena": " 6 / 10 ",
+        "opis": "Historia życia Forresta, chłopca o niskim ilorazie inteligencji z niedowładem kończyn, który staje się miliarderem i bohaterem wojny w Wietnamie."
+      },
+      {
+        "tytul": "Skazani na Shawshank",
+        "ocena": " 7 / 10 ",
+        "opis": "Adaptacja opowiadania Stephena Kinga. Historia niesłusznie skazanego na dożywocie bankiera, który musi przeżyć w brutalnym świecie rządzonym przez strażników i współwięźniów."
+      },
+      {
+        "tytul": "Matrix",
+        "ocena": " 8 / 10 ",
+        "opis": "Haker komputerowy Neo dowiaduje się od tajemniczych rebeliantów, że świat, w którym żyje, jest tylko obrazem przesyłanym do jego mózgu przez roboty."
+      },
+      {
+        "tytul": "Leon zawodowiec",
+        "ocena": " 8 / 10 ",
+        "opis": "Płatny morderca ratuje dwunastoletnią dziewczynkę, której rodzina została zabita przez skorumpowanych policjantów."
+      },
+      {
+        "tytul": "Shrek",
+        "ocena": " 8 / 10 ",
+        "opis": "By odzyskać swój dom, brzydki ogr z gadatliwym osłem wyruszają uwolnić piękną księżniczkę."
+      },
+      {
+        "tytul": "Avatar",
+        "ocena": " 8 / 10 ",
+        "opis": "Jake, sparaliżowany były komandos, otrzymuje misję i zostaje wysłany na planetę Pandora, gdzie zaprzyjaźnia się z lokalną społecznością oraz postanawia jej pomóc. "
+      },
+      {
+        "tytul": "Titanic",
+        "ocena": " 8 / 10 ",
+        "opis": "Rok 1912, brytyjski statek Titanic wyrusza w swój dziewiczy rejs do USA. Na pokładzie emigrant Jack przypadkowo spotyka arystokratkę Rose. "
+      },
+      {
+        "tytul": "Gladiator",
+        "ocena": " 8 / 10 ",
+        "opis": "Generał Maximus - prawa ręka cesarza, szczęśliwy mąż i ojciec - w jednej chwili traci wszystko. Jako niewolnik-gladiator musi walczyć na arenie o przeżycie."
+      },
+      {
+        "tytul": "Kac Vegas",
+        "ocena": " 8 / 10 ",
+        "opis": "Czterech przyjaciół spędza wieczór kawalerski w Las Vegas. Następnego dnia okazuje się, że zgubili pana młodego i nic nie pamiętają."
+      }
+    ]
+  }
+}

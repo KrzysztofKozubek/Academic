@@ -1,0 +1,133 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      4066,        123]
+NotebookOptionsPosition[      3635,        104]
+NotebookOutlinePosition[      3979,        119]
+CellTagsIndexPosition[      3936,        116]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"In", "[", "1", "]"}], ":=", 
+  RowBox[{"m", ":=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "4", ",", "1", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "4", ",", "1", ",", "0", ",", "0", ",", "0", ",", "0"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "1", ",", "4", ",", "1", ",", "0", ",", "0", ",", "0"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "1", ",", "4", ",", "1", ",", "0", ",", "0"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "1", ",", "4", ",", "1", ",", "0"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "1", ",", "4", ",", "1"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "1", ",", "4"}], 
+      "}"}]}], "}"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"In", "[", "2", "]"}], ":=", 
+  RowBox[{"Eigenvalues", "[", 
+   RowBox[{"N", "[", "m", "]"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Out", "[", "2", "]"}], "="}]}], "Input",
+ CellChangeTimes->{{3.59438307072773*^9, 3.5943830891346397`*^9}, {
+  3.59438372247178*^9, 3.594383816541973*^9}, {3.594384183900179*^9, 
+  3.594384192056795*^9}, {3.5943846787454844`*^9, 3.594384736423642*^9}, {
+  3.594384794097499*^9, 3.59438479862891*^9}, {3.594384908952298*^9, 
+  3.594384914887659*^9}, {3.5943852004301805`*^9, 3.5943853100273094`*^9}},
+ EmphasizeSyntaxErrors->True],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"SetDelayed", "::", "write"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Tag \[NoBreak]\\!\\(In\\)\[NoBreak] in \
+\[NoBreak]\\!\\(In[1]\\)\[NoBreak] is Protected. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/write\\\", ButtonNote -> \
+\\\"SetDelayed::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5943847371892724`*^9, 3.594384803972888*^9, 
+  3.5943849206507792`*^9, 3.594385242626207*^9}],
+
+Cell[BoxData["$Failed"], "Output",
+ CellChangeTimes->{3.594384737204896*^9, 3.594384803972888*^9, 
+  3.594384920653783*^9, 3.594385242628209*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"SetDelayed", "::", "write"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Tag \[NoBreak]\\!\\(In\\)\[NoBreak] in \
+\[NoBreak]\\!\\(In[2]\\)\[NoBreak] is Protected. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/write\\\", ButtonNote -> \
+\\\"SetDelayed::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5943847371892724`*^9, 3.594384803972888*^9, 
+  3.5943849206507792`*^9, 3.594385242675253*^9}],
+
+Cell[BoxData["$Failed"], "Output",
+ CellChangeTimes->{3.594384737204896*^9, 3.594384803972888*^9, 
+  3.594384920653783*^9, 3.5943852426773014`*^9}]
+}, Open  ]]
+},
+WindowSize->{962, 504},
+WindowMargins->{{28, Automatic}, {55, Automatic}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 1634, 45, 92, "Input"],
+Cell[2216, 69, 551, 11, 21, "Message"],
+Cell[2770, 82, 145, 2, 31, "Output"],
+Cell[2918, 86, 551, 11, 21, "Message"],
+Cell[3472, 99, 147, 2, 31, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

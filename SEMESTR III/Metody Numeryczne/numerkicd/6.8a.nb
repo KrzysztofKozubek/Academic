@@ -1,0 +1,416 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     13227,        407]
+NotebookOptionsPosition[     11834,        356]
+NotebookOutlinePosition[     12358,        376]
+CellTagsIndexPosition[     12315,        373]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{"Bogdan", " ", "Chwali\:0144ski"}], "\[IndentingNewLine]", 
+ RowBox[{"Zestaw", " ", "6", " ", "zadanie", " ", "8", "a"}]}], "Input",
+ CellChangeTimes->{{3.600537760566222*^9, 3.600537770997819*^9}, 
+   3.600538203400551*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"doiteracji", "[", 
+    RowBox[{"wielomian_", ",", 
+     RowBox[{"{", 
+      RowBox[{"x_", ",", "x0_"}], "}"}]}], "]"}], ":=", 
+   RowBox[{"Module", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"P", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"Function", "[", 
+            RowBox[{"x", ",", "#"}], "]"}], "[", "x0", "]"}], "&"}], "/@", 
+         RowBox[{"NestList", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"D", "[", 
+             RowBox[{"#", ",", "x"}], "]"}], "&"}], ",", "wielomian", ",", 
+           "2"}], "]"}]}]}], ",", "\[IndentingNewLine]", "g", ",", "h", ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"n", "=", 
+        RowBox[{"Exponent", "[", 
+         RowBox[{"wielomian", ",", "x"}], "]"}]}]}], "\[IndentingNewLine]", 
+      "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Abs", "[", 
+         RowBox[{"P", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "]"}], "<", 
+        RowBox[{"10", "^", 
+         RowBox[{"-", "10"}]}]}], ",", "\[IndentingNewLine]", "0", ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"g", "=", 
+         RowBox[{
+          RowBox[{"P", "[", 
+           RowBox[{"[", "2", "]"}], "]"}], "/", 
+          RowBox[{"P", "[", 
+           RowBox[{"[", "1", "]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"h", "=", 
+         RowBox[{
+          RowBox[{"g", "^", "2"}], "-", 
+          RowBox[{
+           RowBox[{"P", "[", 
+            RowBox[{"[", "3", "]"}], "]"}], "/", 
+           RowBox[{"P", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}]}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"Check", "[", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Sort", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               RowBox[{"n", "/", 
+                RowBox[{"(", 
+                 RowBox[{"g", "+", 
+                  RowBox[{"#", " ", 
+                   RowBox[{"Sqrt", "[", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"n", "-", "1"}], ")"}], 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"n", " ", "h"}], "-", 
+                    RowBox[{"g", "^", "2"}]}], ")"}]}], "]"}]}]}], ")"}]}], 
+               "&"}], "/@", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"-", "1"}], ",", "1"}], "}"}]}], ",", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"Abs", "[", "#1", "]"}], "<", 
+               RowBox[{"Abs", "[", "#2", "]"}]}], "&"}]}], "]"}], "[", 
+           RowBox[{"[", "1", "]"}], "]"}], ",", "\[IndentingNewLine]", "0"}], 
+         "]"}]}]}], "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", 
+    "]"}]}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"MetodaLaguerrea", "[", 
+   RowBox[{"wielomian_", ",", 
+    RowBox[{"{", 
+     RowBox[{"x_", ",", "x0_"}], "}"}], ",", "n_"}], "]"}], ":=", 
+  RowBox[{"FixedPointList", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"#", "-", 
+      RowBox[{"doiteracji", "[", 
+       RowBox[{"wielomian", ",", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", "#"}], "}"}]}], "]"}]}], "&"}], ",", "x0", ",", 
+    "n"}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.6005377897128897`*^9, 3.6005378255939417`*^9}, {
+  3.600537866417277*^9, 3.6005379506010914`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"naszwielomian", "=", 
+   RowBox[{
+    RowBox[{"z", "^", "10"}], "+", 
+    RowBox[{"z", "^", "9"}], "+", 
+    RowBox[{"3", 
+     RowBox[{"z", "^", "8"}]}], "+", 
+    RowBox[{"2", 
+     RowBox[{"z", "^", "7"}]}], "-", 
+    RowBox[{"z", "^", "6"}], "-", 
+    RowBox[{"3", 
+     RowBox[{"z", "^", "5"}]}], "-", 
+    RowBox[{"11", 
+     RowBox[{"z", "^", "4"}]}], "-", 
+    RowBox[{"8", 
+     RowBox[{"z", "^", "3"}]}], "-", 
+    RowBox[{"12", 
+     RowBox[{"z", "^", "2"}]}], "-", 
+    RowBox[{"4", "z"}], "-", "4"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6005276751483765`*^9, 3.6005276765114546`*^9}, {
+   3.6005279595356426`*^9, 3.6005280383131485`*^9}, 3.6005280684298706`*^9, {
+   3.6005281786531754`*^9, 3.6005282243077865`*^9}, {3.6005379625507755`*^9, 
+   3.600537970121208*^9}}],
+
+Cell["\<\
+Wszystkie miejsca wielomianu. Dla pomocy gdzie szuka\[CAcute].\
+\>", "Text",
+ CellChangeTimes->{{3.6005380469146004`*^9, 3.6005380618654556`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{
+   RowBox[{"Roots", "[", 
+    RowBox[{
+     RowBox[{"naszwielomian", "\[Equal]", "0"}], ",", "z"}], "]"}], ",", 
+   "20"}], "]"}]], "Input",
+ CellChangeTimes->{{3.600528278234871*^9, 3.600528279545946*^9}, {
+  3.600529263706237*^9, 3.600529275707923*^9}, {3.6005294943314276`*^9, 
+  3.6005294945694413`*^9}, {3.60053041890631*^9, 3.6005304201683826`*^9}, {
+  3.600538281951044*^9, 3.60053828572726*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"z", "\[Equal]", 
+   RowBox[{
+    RowBox[{"-", "0.5`19.84948500216801"}], "-", 
+    RowBox[{
+    "0.866025403784438646763723170752936183471402626905190314028`20.\
+088045629527844", " ", "\[ImaginaryI]"}]}]}], "||", 
+  RowBox[{"z", "\[Equal]", 
+   RowBox[{
+    RowBox[{"-", "0.5`19.84948500216801"}], "+", 
+    RowBox[{
+    "0.866025403784438646763723170752936183471402626905190314028`20.\
+088045629527844", " ", "\[ImaginaryI]"}]}]}], "||", 
+  RowBox[{"z", "\[Equal]", 
+   RowBox[{
+   "1.414213562373095048801688724209698078569671875376948073177`20.", " ", 
+    "\[ImaginaryI]"}]}], "||", 
+  RowBox[{"z", "\[Equal]", 
+   RowBox[{
+    RowBox[{
+    "-", "1.414213562373095048801688724209698078569671875376948073177`20."}], 
+    " ", "\[ImaginaryI]"}]}], "||", 
+  RowBox[{"z", "\[Equal]", 
+   RowBox[{"1.`20.", " ", "\[ImaginaryI]"}]}], "||", 
+  RowBox[{"z", "\[Equal]", 
+   RowBox[{"1.`20.", " ", "\[ImaginaryI]"}]}], "||", 
+  RowBox[{"z", "\[Equal]", 
+   RowBox[{
+    RowBox[{"-", "1.`20."}], " ", "\[ImaginaryI]"}]}], "||", 
+  RowBox[{"z", "\[Equal]", 
+   RowBox[{
+    RowBox[{"-", "1.`20."}], " ", "\[ImaginaryI]"}]}], "||", 
+  RowBox[{
+  "z", "\[Equal]", 
+   "1.414213562373095048801688724209698078569671875376948073177`20."}], "||", 
+  RowBox[{"z", "\[Equal]", 
+   RowBox[{
+   "-", "1.414213562373095048801688724209698078569671875376948073177`20."}]}]}\
+]], "Output",
+ CellChangeTimes->{
+  3.600528280409995*^9, {3.600529253366645*^9, 3.6005292761679497`*^9}, 
+   3.600529495087471*^9, 3.600530420750416*^9, 3.6005382871463413`*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input"],
+
+Cell["I na przyk\[LSlash]ad:", "Text",
+ CellChangeTimes->{{3.600538084518751*^9, 3.600538088503979*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MetodaLaguerrea", "[", 
+   RowBox[{"naszwielomian", ",", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", 
+      RowBox[{"-", "2."}]}], "}"}], ",", "100"}], "]"}], " ", "//", " ", 
+  "InputForm"}]], "Input",
+ CellChangeTimes->{3.6005380779103737`*^9, 3.6005381196787624`*^9}],
+
+Cell["\<\
+{-2., -1.3524620387001527, -1.4143743864370295, -1.4142135623705387, 
+ -1.414213562373095, -1.414213562373095}\
+\>", "Output",
+ CellChangeTimes->{{3.600538092624215*^9, 3.600538120173791*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MetodaLaguerrea", "[", 
+   RowBox[{"naszwielomian", ",", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", "2."}], "}"}], ",", "100"}], "]"}], " ", "//", " ", 
+  "InputForm"}]], "Input",
+ CellChangeTimes->{{3.600538128096244*^9, 3.600538131136418*^9}}],
+
+Cell["\<\
+{2., 1.3726732425945072, 1.414241882510786, 1.4142135623730867, 
+ 1.4142135623730867}\
+\>", "Output",
+ CellChangeTimes->{3.60053813169945*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MetodaLaguerrea", "[", 
+   RowBox[{"naszwielomian", ",", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", 
+      RowBox[{"-", "1."}]}], "}"}], ",", "100"}], "]"}], " ", "//", " ", 
+  "InputForm"}]], "Input",
+ CellChangeTimes->{{3.600538135420663*^9, 3.600538143611131*^9}}],
+
+Cell["\<\
+{-1., -0.5411008116644116, -0.4925292694941289 + 0.545120847457079*I, 
+ -0.43081010096077454 + 0.825597451630556*I, 
+ -0.5021117531526037 + 0.8652865474347139*I, 
+ -0.5000000392177305 + 0.8660254090558487*I, 
+ -0.5000000000000002 + 0.8660254037844387*I, 
+ -0.5000000000000002 + 0.8660254037844387*I}\
+\>", "Output",
+ CellChangeTimes->{3.6005381440701575`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MetodaLaguerrea", "[", 
+   RowBox[{"naszwielomian", ",", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", "1."}], "}"}], ",", "100"}], "]"}], " ", "//", " ", 
+  "InputForm"}]], "Input",
+ CellChangeTimes->{{3.600538149291456*^9, 3.6005381532376823`*^9}}],
+
+Cell["\<\
+{1., 0.5931576462276323, 0.23924415191728932 + 1.0969655403069785*I, 
+ 0.035293478542454876 + 1.029585964577908*I, 
+ 0.010094368321727151 + 1.008265790108787*I, 
+ 0.0028810852784211067 + 1.0023522887456844*I, 
+ 0.0008228312528951341 + 1.0006714088393558*I, 
+ 0.00023506514205975677 + 1.0001917779178613*I, 
+ 0.00006715901230665527 + 1.0000547893893557*I, 
+ 0.000019188086303503277 + 1.0000156537614082*I, 
+ 5.4822994294074884*^-6 + 1.0000044724840893*I, 
+ 1.566343384926203*^-6 + 1.0000012778340486*I, 
+ 1.566343384926203*^-6 + 1.0000012778340486*I}\
+\>", "Output",
+ CellChangeTimes->{3.60053815390272*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MetodaLaguerrea", "[", 
+   RowBox[{"naszwielomian", ",", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", 
+      RowBox[{"-", "4."}]}], "}"}], ",", "100"}], "]"}], " ", "//", " ", 
+  "InputForm"}]], "Input",
+ CellChangeTimes->{{3.60053817069168*^9, 3.6005381735698447`*^9}}],
+
+Cell["\<\
+{-4., -0.4520755727431762 + 1.2765023606742676*I, 
+ -0.007602281052297211 + 1.3711972899008555*I, 
+ -0.0001471259489606927 + 1.4139866358007*I, 
+ -5.120038738142853*^-11 + 1.4142135623803453*I, 
+ -4.1728528471395133*^-16 + 1.4142135623730954*I, 
+ -4.1728528471395133*^-16 + 1.4142135623730954*I}\
+\>", "Output",
+ CellChangeTimes->{3.6005381744608955`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MetodaLaguerrea", "[", 
+   RowBox[{"naszwielomian", ",", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", "4."}], "}"}], ",", "100"}], "]"}], " ", "//", " ", 
+  "InputForm"}]], "Input",
+ CellChangeTimes->{{3.6005381795921893`*^9, 3.6005381831103907`*^9}}],
+
+Cell["\<\
+{4., -0.0032726591781875314 + 0.8687056889001215*I, 
+ -0.0001300203788962423 + 0.9618640431756569*I, 
+ 0.000050927751251251754 + 0.9890487820138951*I, 
+ 0.000021143548518503348 + 0.9968681614281103*I, 
+ 6.5551704722588295*^-6 + 0.9991050053464753*I, 
+ 1.91424529555708*^-6 + 0.9997442736564649*I, 
+ 5.502873379812624*^-7 + 0.9999269342551796*I, 
+ 1.5749857567113797*^-7 + 0.9999791239868402*I, 
+ 4.502116442680087*^-8 + 0.9999940354164386*I, 
+ 1.285004276640263*^-8 + 0.9999982958312676*I, 
+ 1.285004276640263*^-8 + 0.9999982958312676*I}\
+\>", "Output",
+ CellChangeTimes->{3.6005381838764343`*^9}]
+}, Open  ]]
+},
+WindowSize->{707, 637},
+WindowMargins->{{Automatic, 438}, {33, Automatic}},
+PrintingCopies->1,
+PrintingPageRange->{32000, 32000},
+PrintingOptions->{"Magnification"->1.,
+"PaperOrientation"->"Portrait",
+"PaperSize"->{595.1999999999999, 841.6800000000001}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 248, 4, 52, "Input"],
+Cell[808, 26, 3546, 97, 392, "Input"],
+Cell[4357, 125, 821, 23, 52, "Input"],
+Cell[5181, 150, 156, 3, 30, "Text"],
+Cell[CellGroupData[{
+Cell[5362, 157, 448, 10, 31, "Input"],
+Cell[5813, 169, 1569, 42, 164, "Output"]
+}, Open  ]],
+Cell[7397, 214, 26, 0, 31, "Input"],
+Cell[7426, 216, 104, 1, 30, "Text"],
+Cell[CellGroupData[{
+Cell[7555, 221, 303, 8, 31, "Input"],
+Cell[7861, 231, 202, 4, 62, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8100, 240, 279, 7, 31, "Input"],
+Cell[8382, 249, 152, 4, 62, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8571, 258, 301, 8, 31, "Input"],
+Cell[8875, 268, 369, 8, 130, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9281, 281, 281, 7, 31, "Input"],
+Cell[9565, 290, 616, 13, 215, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10218, 308, 302, 8, 31, "Input"],
+Cell[10523, 318, 365, 8, 130, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10925, 331, 283, 7, 31, "Input"],
+Cell[11211, 340, 607, 13, 215, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

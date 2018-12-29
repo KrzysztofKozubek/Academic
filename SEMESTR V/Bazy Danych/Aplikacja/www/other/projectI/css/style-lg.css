@@ -1,0 +1,19 @@
+
+.content{
+    margin-bottom: 0px;
+}
+
+.box{
+    margin: 15px 0;
+}
+
+.contentAboutMe {
+    padding: 5px;
+    margin-top: 0px;
+}
+.figureHobby{
+    font-size: 1.5em;
+}
+.contentHobby > header > p{
+    font-size: 1.5em;
+}

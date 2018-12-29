@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feedback>
+ <message severity="info">Analysis started...</message>
+ <nop/>
+ <message severity="info">Result file: /home/imiolek_1102507/Materialy/PRiR/7/insp/r001mi3/r001mi3.inspxe </message>
+ <nop/>
+ <message severity="info">Analysis started for /home/imiolek_1102507/Materialy/PRiR/7/a.out (pid = 4779) </message>
+ <nop/>
+ <message severity="info">Loaded module: /home/imiolek_1102507/Materialy/PRiR/7/a.out, address range [0x400000-0x603f8f] </message>
+ <nop/>
+ <message severity="info">Loaded module: /lib64/ld-linux-x86-64.so.2, address range [0x7fdf4d10b000-0x7fdf4d32c1c7], minimal analysis </message>
+ <nop/>
+ <message severity="info">Loaded module: /usr/lib/x86_64-linux-gnu/libstdc++.so.6, address range [0x7fdf3955d000-0x7fdf398634bf] </message>
+ <nop/>
+ <message severity="info">Loaded module: /lib/x86_64-linux-gnu/libm.so.6, address range [0x7fdf39259000-0x7fdf394da0e7] </message>
+ <nop/>
+ <message severity="info">Loaded module: /usr/lib/x86_64-linux-gnu/libgomp.so.1, address range [0x7fdf3901a000-0x7fdf39227dbf] </message>
+ <nop/>
+ <message severity="info">Loaded module: /lib/x86_64-linux-gnu/libgcc_s.so.1, address range [0x7fdf38e04000-0x7fdf39019677] </message>
+ <nop/>
+ <message severity="info">Loaded module: /lib/x86_64-linux-gnu/libpthread.so.0, address range [0x7fdf38b4c000-0x7fdf38d6739f] </message>
+ <nop/>
+ <message severity="info">Loaded module: /lib/x86_64-linux-gnu/libc.so.6, address range [0x7fdf387bf000-0x7fdf38b4b837] </message>
+ <nop/>
+ <message severity="info">Loaded module: /lib/x86_64-linux-gnu/librt.so.1, address range [0x7fdf385b7000-0x7fdf387bebd7] </message>
+ <nop/>
+ <message severity="info">Application exit code: 137 </message>
+ <nop/>
+ <message severity="info">Result file: /home/imiolek_1102507/Materialy/PRiR/7/insp/r001mi3/r001mi3.inspxe </message>
+ <nop/>
+ <message severity="info">Analysis canceled by user</message>
+ <nop/>
+</feedback>

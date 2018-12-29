@@ -1,0 +1,5 @@
+<!ELEMENT FILMY (FILM*)>
+<!ELEMENT FILM (tytul?, ocena?, opis?)>
+<!ELEMENT tytul (#PCDATA)>
+<!ELEMENT ocena (#PCDATA)>
+<!ELEMENT opis (#PCDATA)>

@@ -1,0 +1,514 @@
+/* Przykłady z książki (te do zrobienia są niżej): */
+
+interface Shape
+{
+    void draw();
+}
+
+class Line implements Shape
+{
+    Point startPoint;
+    Point endPoint;
+    
+    void draw();
+}
+
+class Circle implements Shape
+{
+    int radius;
+    
+    void draw();
+}
+
+class Rectangle implements Shape
+{
+    Point upperLeftCorner;
+    Point lowerRightCorner;
+    
+    void draw();
+}
+
+class CADApp
+{
+    void drawShapes (Graphics graphics, Shape shapes[])
+    {
+        for (int i = 0; i < shapes.length; i++)
+        {
+            shapes[i].draw();
+        }
+    }
+}
+
+class UserAccount
+{
+    UserType userType;
+    String id;
+    String name;
+    String password;
+    Date dateOfLastPasswdChange;
+
+    UserType getType ()
+    {
+        return userType;
+    }
+}
+
+class UserType
+{
+    int passwordMaxAgeInDays;
+    boolean allowedToPrintReport;
+
+    UserType (int passwordMaxAgeInDays, boolean allowedToPrintReport)
+    {
+        this.passwordMaxAgeInDays = passwordMaxAgeInDays;
+        this.allowedToPrintReport = allowedToPrintReport;
+    }
+
+    int getPasswordMaxAgeInDays ()
+    {
+        return passwordMaxAgeInDays;
+    }
+
+    boolean canPrintReport ()
+    {
+        return allowedToPrintReport;
+    }
+    static UserType normalUserType = new UserType(90, true);
+    static UserType adminUserType = new UserType(30, true);
+    static UserType guestUserType = new UserType(Integer.MAX_VALUE, false);
+}
+
+class InventoryApp
+{
+    void login (UserAccount userLoggingIn, String password)
+    {
+        if (userLoggingIn.checkPassword(password))
+        {
+            GregorianCalendar today = new GregorianCalendar();
+            GregorianCalendar expiryDate = getAccountExpiryDate(userLoggingIn);
+            if (today.after(expiryDate))
+            {
+                //prompt the user to change password...
+         }
+      }
+   }
+   GregorianCalendar getAccountExpiryDate (UserAccount account)
+    {
+        int passwordMaxAgeInDays = getPasswordMaxAgeInDays(account);
+        GregorianCalendar expiryDate = new GregorianCalendar();
+        expiryDate.setTime(account.dateOfLastPasswdChange);
+        expiryDate.add(Calendar.DAY_OF_MONTH, passwordMaxAgeInDays);
+        return expiryDate;
+    }
+
+    int getPasswordMaxAgeInDays (UserAccount account)
+    {
+        return account.getType().getPasswordMaxAgeInDays();
+    }
+
+    void printReport (UserAccount currentUser)
+    {
+        boolean canPrint;
+        canPrint = currentUser.getType().canPrintReport();
+        if (!canPrint)
+        {
+            throw new SecurityException("You have no right");
+        }
+        //print the report.
+    }
+}
+
+/* Nr 1. */
+
+class Course {
+    static final int WEEKLY=0;
+    static final int RANGE=1;
+    static final int LIST=2;
+    String courseTitle;
+    int scheduleType; // WEEKLY, RANGE, or LIST
+    int noWeeks; // For WEEKLY.
+    Date fromDate; // for WEEKLY and RANGE.
+    Date toDate; // for RANGE.
+    Date dateList[]; // for LIST.
+    int getDurationInDays() {
+        switch (scheduleType) {
+        case WEEKLY:
+            return noWeeks;
+        case RANGE:
+            int msInOneDay = 24*60*60*1000;
+            return (int)((toDate.getTime()-fromDate.getTime())/msInOneDay);
+        case LIST:
+            return dateList.length;
+        default:
+            return 0; // unknown schedule type!
+        }
+    }
+    void printSchedule() {
+        switch (scheduleType) {
+            case WEEKLY:
+                //...
+            case RANGE:
+                //...
+            case LIST:
+                //...
+        }
+    }
+}
+
+
+
+/* Nr 2. */
+
+class Payment {
+    final static String FOC = "FOC"; //free of charge.
+    final static String TT = "TT"; //paid by telegraphic transfer.
+    final static String CHEQUE = "Cheque"; //paid by cheque.
+    final static String CREDIT_CARD = "CreditCard"; //paid by credit card.
+    final static String CASH = "Cash"; //paid by cash.
+    //type of payment. Must be one of the above constant.
+    String paymentType;
+    Date paymentDate; //if FOC, the date the fee is waived.
+    int actualPayment; //if FOC, it is 0.
+    int discount; //if FOC, the amount that is waived.
+    String bankName; //if it is by TT, cheque or credit card.
+    String chequeNumber; //if it is by cheque.
+    //if it is by credit card.
+    String creditCardType;
+    String creditCardHolderName;
+    String creditCardNumber;
+    Date creditCardExpiryDate;
+    int getNominalPayment() {
+        return actualPayment+discount;
+    }
+    String getBankName() {
+        if (paymentType.equals(TT) ||
+            paymentType.equals(CHEQUE) ||
+            paymentType.equals(CREDIT_CARD)) {
+            return bankName;
+        } else {
+            throw new Exception("bank name is undefined for this payment type");
+        }
+    }
+}
+
+
+/* Nr 3. */
+
+class Currency {
+    final public int USD=0;
+    final public int RMB=1;
+    final public int ESCUDO=2; //Portuguese currency
+    private int currencyCode;
+    public Currency(int currencyCode) {
+        this.currencyCode=currencyCode;
+    }
+    public String format(int amount) {
+        switch (currencyCode) {
+            case USD:
+                //return something like $1,200
+            case RMB:
+                //return something like RMB1,200
+            case ESCUDO:
+                //return something like $1.200
+        }
+    }
+}
+
+/* Nr 4. */
+
+            throw new Exception("bank name is undefined for this payment type");
+class SurveyData
+{
+    String path; //save the data to this file.
+    boolean hidden; //should the file be hidden?
+    //set the path to save the data according to the type of data (t).
+
+    void setSavePath (int t)
+    {
+        if (t == 0)
+        { //raw data.
+            path = "c:/application/data/raw.dat";
+            hidden = true;
+        }
+        else
+        {
+            if (t == 1)
+            { //cleaned up data.
+                path = "c:/application/data/cleanedUp.dat";
+                hidden = true;
+            }
+            else
+            {
+                if (t == 2)
+                { //processed data.
+                    path = "c:/application/data/processed.dat";
+                    hidden = true;
+                }
+                else
+                {
+                    if (t == 3)
+                    { //data ready for publication.
+                        path = "c:/application/data/publication.dat";
+                        hidden = false;
+                    }
+                }
+            }
+        }
+       
+
+
+
+
+
+
+
+/* Nr 1. */
+
+class Course {
+    static final int WEEKLY=0;
+    static final int RANGE=1;
+    static final int LIST=2;
+    String courseTitle;
+    int scheduleType; // WEEKLY, RANGE, or LIST
+    int noWeeks; // For WEEKLY.
+    Date fromDate; // for WEEKLY and RANGE.
+    Date toDate; // for RANGE.
+    Date dateList[]; // for LIST.
+    int getDurationInDays() {
+        switch (scheduleType) {
+        case WEEKLY:
+            return noWeeks;
+        case RANGE:
+            int msInOneDay = 24*60*60*1000;
+            return (int)((toDate.getTime()-fromDate.getTime())/msInOneDay);
+        case LIST:
+            return dateList.length;
+        default:
+            return 0; // unknown schedule type!
+        }
+    }
+    void printSchedule() {
+        switch (scheduleType) {
+            case WEEKLY:
+                //...
+            case RANGE:
+                //...
+            case LIST:
+                //...
+        }
+    }
+}
+
+
+
+/* Nr 2. */
+
+class Payment {
+    final static String FOC = "FOC"; //free of charge.
+    final static String TT = "TT"; //paid by telegraphic transfer.
+    final static String CHEQUE = "Cheque"; //paid by cheque.
+    final static String CREDIT_CARD = "CreditCard"; //paid by credit card.
+    final static String CASH = "Cash"; //paid by cash.
+    //type of payment. Must be one of the above constant.
+    String paymentType;
+    Date paymentDate; //if FOC, the date the fee is waived.
+    int actualPayment; //if FOC, it is 0.
+    int discount; //if FOC, the amount that is waived.
+    String bankName; //if it is by TT, cheque or credit card.
+    String chequeNumber; //if it is by cheque.
+    //if it is by credit card.
+    String creditCardType;
+    String creditCardHolderName;
+    String creditCardNumber;
+    Date creditCardExpiryDate;
+    int getNominalPayment() {
+        return actualPayment+discount;
+    }
+    String getBankName() {
+        if (paymentType.equals(TT) ||
+            paymentType.equals(CHEQUE) ||
+            paymentType.equals(CREDIT_CARD)) {
+            return bankName;
+        } else {
+            throw new Exception("bank name is undefined for this payment type");
+        }
+    }
+}
+
+
+/* Nr 3. */
+
+class Currency {
+    final public int USD=0;
+    final public int RMB=1;
+    final public int ESCUDO=2; //Portuguese currency
+    private int currencyCode;
+    public Currency(int currencyCode) {
+        this.currencyCode=currencyCode;
+    }
+    public String format(int amount) {
+        switch (currencyCode) {
+            case USD:
+                //return something like $1,200
+            case RMB:
+                //return something like RMB1,200
+            case ESCUDO:
+                //return something like $1.200
+        }
+    }
+}
+
+
+// Poprawione:
+
+/* Nr 1. */
+
+interface Schedule {
+    int getDurationInDays();
+    void printSchedule();
+}
+
+class WeeklySchedule implements Schedule
+{
+    int noWeeks;
+    Date fromDate;
+    
+    int getDurationInDays()
+    {
+        return noWeeks;
+    }
+    void printSchedule()
+    {
+        //...
+    }
+    
+    // Konstruktor, destruktor, akcesory.
+}
+
+class RangeSchedule implements Schedule
+{
+    Date fromDate;
+    Date toDate;
+    
+    int getDurationInDays()
+    {
+        int msInOneDay = 24*60*60*1000;
+        return (int)((toDate.getTime()-fromDate.getTime())/msInOneDay);
+    }
+    void printSchedule()
+    {
+        //...
+    }
+    
+    // Konstruktor, destruktor, akcesory.
+}
+
+class ListSchedule implements Schedule
+{
+    Date dateList[];
+    
+    int getDurationInDays()
+    {
+        return dateList.length;
+    }
+    void printSchedule()
+    {
+        //...
+    }
+    
+    // Konstruktor, destruktor, akcesory.
+}
+
+class Course {
+    String courseTitle;
+    
+    Schedule schedule = new RangeSchedule();
+}
+
+
+/* Nr 2. */
+
+interface Payment throws Exception {
+    int getNominalPayment();
+    String getBankName();
+}
+
+class FOCPayment throws Exception
+{
+    int getNominalPayment() {
+        return 0;
+    }
+    String getBankName() {
+        throw new Exception("bank name is undefined for this payment type");
+    }
+}
+
+class CashPayment throws Exception
+{
+    int actualPayment;
+    int discount;
+    
+    int getNominalPayment() {
+        return actualPayment+discount;
+    }
+    String getBankName() {
+        throw new Exception("bank name is undefined for this payment type");
+    }
+}
+
+class TTPayment throws Exception
+{
+    int actualPayment;
+    int discount;
+    String bankName;
+    
+    int getNominalPayment() {
+        return actualPayment+discount;
+    }
+    String getBankName() {
+        return bankName;
+    }
+}
+
+class ChequePayment throws Exception
+{
+    int actualPayment;
+    int discount;
+    String bankName;
+    
+    int getNominalPayment() {
+        return actualPayment+discount;
+    }
+    String getBankName() {
+        return bankName;
+    }
+}
+
+class CreditCardPayment throws Exception
+{
+    int actualPayment;
+    int discount;
+    String bankName;
+    
+    int getNominalPayment() {
+        return actualPayment+discount;
+    }
+    String getBankName() {
+        return bankName;
+    }
+}
+
+
+/* Nr 3. */
+
+class Currency {
+    String currencyCode;
+    
+    public Currency(String currencyCode) {
+        this.currencyCode=currencyCode;
+    }
+    public String format(int amount) {
+        return currencyCode + amount;
+    }
+}
+

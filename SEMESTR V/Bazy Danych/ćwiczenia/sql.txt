@@ -1,0 +1,19 @@
+CREATE TABLE IF NOT EXISTS `mieszkania` (
+  `miasto` varchar(6) DEFAULT NULL,
+  `ulica` varchar(61) DEFAULT NULL,
+  `pokoi` varchar(5) DEFAULT NULL,
+  `powierzchnia` varchar(12) DEFAULT NULL,
+  `pietro` varchar(6) DEFAULT NULL,
+  `cena` varchar(7) DEFAULT NULL,
+  `cenam2` varchar(6) DEFAULT NULL,
+  `dzielnica` varchar(21) DEFAULT NULL,
+  `data` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+LOAD DATA INFILE 'D:\mieszk.txt' 
+INTO TABLE mieszkania
+FIELDS TERMINATED BY ';' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<diags major="2" minor="0">
+
+<diag id="1">
+	<type>233</type>
+	<message>
+		<timestamp>102702890</timestamp>
+		<thread>
+			<thrname></thrname>
+			<threadid>4779</threadid>
+			<stackstamp>102706246</stackstamp>
+			<stacktrace>
+			<loc>
+			<mod>/lib64/ld-linux-x86-64.so.2</mod>
+			<rva>0xaf0</rva>
+			</loc>
+			</stacktrace>
+		</thread>
+	</message>
+</diag>
+
+<diag id="2">
+	<type>233</type>
+	<message>
+		<timestamp>121262329873</timestamp>
+		<thread>
+			<thrname></thrname>
+			<threadid>4805</threadid>
+			<stackstamp>121262334276</stackstamp>
+			<stacktrace>
+			<loc>
+			<mod>/usr/lib/x86_64-linux-gnu/libgomp.so.1</mod>
+			<rva>0x8fb0</rva>
+			</loc>
+			</stacktrace>
+		</thread>
+	</message>
+</diag>
+
+<diag id="3">
+	<type>233</type>
+	<message>
+		<timestamp>121314796155</timestamp>
+		<thread>
+			<thrname></thrname>
+			<threadid>4806</threadid>
+			<stackstamp>121314799153</stackstamp>
+			<stacktrace>
+			<loc>
+			<mod>/usr/lib/x86_64-linux-gnu/libgomp.so.1</mod>
+			<rva>0x8fb0</rva>
+			</loc>
+			</stacktrace>
+		</thread>
+	</message>
+</diag>
+
+<diag id="4">
+	<type>233</type>
+	<message>
+		<timestamp>121317531357</timestamp>
+		<thread>
+			<thrname></thrname>
+			<threadid>4807</threadid>
+			<stackstamp>121317534195</stackstamp>
+			<stacktrace>
+			<loc>
+			<mod>/usr/lib/x86_64-linux-gnu/libgomp.so.1</mod>
+			<rva>0x8fb0</rva>
+			</loc>
+			</stacktrace>
+		</thread>
+	</message>
+</diag>
+
+<diag id="5">
+	<type>233</type>
+	<message>
+		<timestamp>121319536747</timestamp>
+		<thread>
+			<thrname></thrname>
+			<threadid>4808</threadid>
+			<stackstamp>121319540647</stackstamp>
+			<stacktrace>
+			<loc>
+			<mod>/usr/lib/x86_64-linux-gnu/libgomp.so.1</mod>
+			<rva>0x8fb0</rva>
+			</loc>
+			</stacktrace>
+		</thread>
+	</message>
+</diag>
+
+<diag id="6">
+	<type>233</type>
+	<message>
+		<timestamp>121321644987</timestamp>
+		<thread>
+			<thrname></thrname>
+			<threadid>4809</threadid>
+			<stackstamp>121321647855</stackstamp>
+			<stacktrace>
+			<loc>
+			<mod>/usr/lib/x86_64-linux-gnu/libgomp.so.1</mod>
+			<rva>0x8fb0</rva>
+			</loc>
+			</stacktrace>
+		</thread>
+	</message>
+</diag>
+
+<diag id="7">
+	<type>233</type>
+	<message>
+		<timestamp>121323604114</timestamp>
+		<thread>
+			<thrname></thrname>
+			<threadid>4810</threadid>
+			<stackstamp>121323607880</stackstamp>
+			<stacktrace>
+			<loc>
+			<mod>/usr/lib/x86_64-linux-gnu/libgomp.so.1</mod>
+			<rva>0x8fb0</rva>
+			</loc>
+			</stacktrace>
+		</thread>
+	</message>
+</diag>
+
+<diag id="8">
+	<type>233</type>
+	<message>
+		<timestamp>121325536253</timestamp>
+		<thread>
+			<thrname></thrname>
+			<threadid>4811</threadid>
+			<stackstamp>121325540112</stackstamp>
+			<stacktrace>
+			<loc>
+			<mod>/usr/lib/x86_64-linux-gnu/libgomp.so.1</mod>
+			<rva>0x8fb0</rva>
+			</loc>
+			</stacktrace>
+		</thread>
+	</message>
+</diag>

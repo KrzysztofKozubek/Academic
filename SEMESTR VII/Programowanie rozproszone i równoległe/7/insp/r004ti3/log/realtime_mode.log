@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feedback>
+ <message severity="info">Analysis started...</message>
+ <nop/>
+ <message severity="info">Result file: /home/imiolek_1102507/Materialy/PRiR/7/insp/r004ti3/r004ti3.inspxe </message>
+ <nop/>
+ <message severity="info">Found target process /home/imiolek_1102507/Materialy/PRiR/7/a.out (PID = 6744). Analysis started... </message>
+ <nop/>
+ <message severity="info">Loaded module: /home/imiolek_1102507/Materialy/PRiR/7/a.out. </message>
+ <nop/>
+ <message severity="info">Loaded module: /lib64/ld-linux-x86-64.so.2. </message>
+ <nop/>
+ <message severity="info">Loaded module: /app/intel/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libimf.so. </message>
+ <nop/>
+ <message severity="info">Loaded module: /app/intel/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libsvml.so. </message>
+ <nop/>
+ <message severity="info">Loaded module: /app/intel/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libirng.so. </message>
+ <nop/>
+ <message severity="info">Loaded module: /lib/x86_64-linux-gnu/libm.so.6. </message>
+ <nop/>
+ <message severity="info">Loaded module: /app/intel/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libiomp5.so. </message>
+ <nop/>
+ <message severity="info">Loaded module: /usr/lib/x86_64-linux-gnu/libstdc++.so.6. </message>
+ <nop/>
+ <message severity="info">Loaded module: /lib/x86_64-linux-gnu/libgcc_s.so.1. </message>
+ <nop/>
+ <message severity="info">Loaded module: /app/intel/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libintlc.so.5. </message>
+ <nop/>
+ <message severity="info">Loaded module: /lib/x86_64-linux-gnu/libpthread.so.0. </message>
+ <nop/>
+ <message severity="info">Loaded module: /lib/x86_64-linux-gnu/libc.so.6. </message>
+ <nop/>
+ <message severity="info">Loaded module: /lib/x86_64-linux-gnu/libdl.so.2. </message>
+ <nop/>
+ <message severity="info">Loaded module: /app/intel/inspector_xe_2016.1.0.423441/lib64/runtime/libittnotify.so. </message>
+ <nop/>
+ <message severity="warning">One or more threads in the application accessed the stack of another thread. This may indicate one or more bugs in your application. Setting the Inspector to detect data races on stack accesses and running another analysis may help you locate these and other bugs.</message>
+ <nop/>
+ <message severity="info">Unloaded module: /home/imiolek_1102507/Materialy/PRiR/7/a.out. </message>
+ <nop/>
+ <message severity="info">Unloaded module: /lib64/ld-linux-x86-64.so.2. </message>
+ <nop/>
+ <message severity="info">Unloaded module: /app/intel/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libimf.so. </message>
+ <nop/>
+ <message severity="info">Unloaded module: /app/intel/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libsvml.so. </message>
+ <nop/>
+ <message severity="info">Unloaded module: /app/intel/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libirng.so. </message>
+ <nop/>
+ <message severity="info">Unloaded module: /lib/x86_64-linux-gnu/libm.so.6. </message>
+ <nop/>
+ <message severity="info">Unloaded module: /app/intel/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libiomp5.so. </message>
+ <nop/>
+ <message severity="info">Unloaded module: /usr/lib/x86_64-linux-gnu/libstdc++.so.6. </message>
+ <nop/>
+ <message severity="info">Unloaded module: /lib/x86_64-linux-gnu/libgcc_s.so.1. </message>
+ <nop/>
+ <message severity="info">Unloaded module: /app/intel/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libintlc.so.5. </message>
+ <nop/>
+ <message severity="info">Unloaded module: /lib/x86_64-linux-gnu/libpthread.so.0. </message>
+ <nop/>
+ <message severity="info">Unloaded module: /lib/x86_64-linux-gnu/libc.so.6. </message>
+ <nop/>
+ <message severity="info">Unloaded module: /lib/x86_64-linux-gnu/libdl.so.2. </message>
+ <nop/>
+ <message severity="info">Unloaded module: /app/intel/inspector_xe_2016.1.0.423441/lib64/runtime/libittnotify.so. </message>
+ <nop/>
+ <message severity="info">Process /home/imiolek_1102507/Materialy/PRiR/7/a.out (PID = 6744) has terminated. </message>
+ <nop/>
+ <message severity="info">Application exit code: 0 </message>
+ <nop/>
+ <message severity="info">Result file: /home/imiolek_1102507/Materialy/PRiR/7/insp/r004ti3/r004ti3.inspxe </message>
+ <nop/>
+ <message severity="info">Analysis completed</message>
+ <nop/>
+</feedback>

@@ -1,0 +1,39 @@
+
+=== Start: [2017/01/17 10:47:52] === 
+Analysis started...
+Result file: /home/imiolek_1102507/Materialy/PRiR/7/insp/r003ti3/r003ti3.inspxe 
+Found target process /home/imiolek_1102507/Materialy/PRiR/6/a.out (PID = 6556). Analysis started... 
+Loaded module: /home/imiolek_1102507/Materialy/PRiR/6/a.out. 
+Loaded module: /lib64/ld-linux-x86-64.so.2. 
+Loaded module: /app/intel/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libimf.so. 
+Loaded module: /app/intel/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libsvml.so. 
+Loaded module: /app/intel/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libirng.so. 
+Loaded module: /lib/x86_64-linux-gnu/libm.so.6. 
+Loaded module: /app/intel/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libiomp5.so. 
+Loaded module: /usr/lib/x86_64-linux-gnu/libstdc++.so.6. 
+Loaded module: /lib/x86_64-linux-gnu/libgcc_s.so.1. 
+Loaded module: /app/intel/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libintlc.so.5. 
+Loaded module: /lib/x86_64-linux-gnu/libpthread.so.0. 
+Loaded module: /lib/x86_64-linux-gnu/libc.so.6. 
+Loaded module: /lib/x86_64-linux-gnu/libdl.so.2. 
+Loaded module: /app/intel/inspector_xe_2016.1.0.423441/lib64/runtime/libittnotify.so. 
+Warning: One or more threads in the application accessed the stack of another thread. This may indicate one or more bugs in your application. Setting the Inspector to detect data races on stack accesses and running another analysis may help you locate these and other bugs.
+Unloaded module: /home/imiolek_1102507/Materialy/PRiR/6/a.out. 
+Unloaded module: /lib64/ld-linux-x86-64.so.2. 
+Unloaded module: /app/intel/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libimf.so. 
+Unloaded module: /app/intel/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libsvml.so. 
+Unloaded module: /app/intel/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libirng.so. 
+Unloaded module: /lib/x86_64-linux-gnu/libm.so.6. 
+Unloaded module: /app/intel/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libiomp5.so. 
+Unloaded module: /usr/lib/x86_64-linux-gnu/libstdc++.so.6. 
+Unloaded module: /lib/x86_64-linux-gnu/libgcc_s.so.1. 
+Unloaded module: /app/intel/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libintlc.so.5. 
+Unloaded module: /lib/x86_64-linux-gnu/libpthread.so.0. 
+Unloaded module: /lib/x86_64-linux-gnu/libc.so.6. 
+Unloaded module: /lib/x86_64-linux-gnu/libdl.so.2. 
+Unloaded module: /app/intel/inspector_xe_2016.1.0.423441/lib64/runtime/libittnotify.so. 
+Process /home/imiolek_1102507/Materialy/PRiR/6/a.out (PID = 6556) has terminated. 
+Application exit code: 0 
+Result file: /home/imiolek_1102507/Materialy/PRiR/7/insp/r003ti3/r003ti3.inspxe 
+Analysis completed
+=== End: [2017/01/17 10:50:19] === 

@@ -1,0 +1,235 @@
+import java.rmi.Remote;
+import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+import java.rmi.server.ExportException;
+import java.rmi.server.UnicastRemoteObject;
+import java.util.*;
+
+/**
+ * Created by kris on 26.12.16.
+ */
+
+class Start {
+
+	private static void registerOramus() {
+        try {
+            Registry registry = LocateRegistry.getRegistry("localhost", 1099);
+            AbstractWard s = (AbstractWard) UnicastRemoteObject.exportObject(new Ward(), 0);
+            registry.rebind("WARD", s);
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
+	}
+
+	private static void registerMy() {
+		try {
+            Registry reg = LocateRegistry.createRegistry(1099);
+            Ward ward = new Ward();
+            AbstractWard s = (AbstractWard) UnicastRemoteObject.exportObject(ward, 0);
+            reg.rebind("WARD", s);
+
+            System.out.println("server is ready");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+	}
+
+    public static void main(String[] args) {
+
+        registerOramus();
+		//registerMy();
+    }
+}
+
+class Ward implements AbstractWard {
+
+    /* Rooms<nrRooms, Room<nrBeds, isFree> */
+    TreeMap<Integer, Room> rooms = new TreeMap<>();
+    /* zbior idPacjentow i nrPokoju */
+    Map<Long, Integer> patients = new TreeMap<>();
+
+    /* pacjenci znajdujacy sie w osrodku */
+    Set<Patient> patientsOnWard = new HashSet<>();
+    /* aktualne zapelnienie osrodka */
+    Map<Integer, Integer> actualWard = new TreeMap<>();
+    /* historia pacjentow przyjmowanych */
+    List<Patient> historyWard = new ArrayList<>();
+
+    @Override
+    public void setLimits(Map<Integer, Integer> max) throws RemoteException {
+        synchronized (this) {
+            rooms.clear();
+            patients.clear();
+            patientsOnWard.clear();
+            actualWard.clear();
+            historyWard.clear();
+
+            Iterator it = max.entrySet().iterator();
+            while(it.hasNext()){
+                Map.Entry var = (Map.Entry) it.next();
+                Room room = new Room((Integer)var.getKey(), (Integer)var.getValue());
+
+                rooms.put((Integer)var.getKey(), room);
+                actualWard.put((Integer)var.getKey(), 0);
+            }
+        }
+    }
+
+    public boolean checkRoom(int room){
+
+        synchronized (this){
+
+            Iterator it = actualWard.entrySet().iterator();
+            while(it.hasNext()){
+                Map.Entry var = (Map.Entry) it.next();
+                if((Integer)var.getKey() == room) return false;
+            }
+            return true;
+        }
+    }
+
+    @Override
+    public boolean patientAdmission(Patient patient, int room) throws RemoteException {
+
+        int i = 0;
+        try {
+            synchronized (this) {
+                i++;
+                if (checkRoom(room)) return false;
+                i++;
+                if (containsPatient(patient)) return false;
+                i++;
+                if (rooms.get(room).addPatient(patient)) {
+                    i++;
+                    patients.put(new Long(patient.getID()), new Integer(room));
+                    i++;
+                    patientsOnWard.add(patient);
+                    i++;
+                    actualWard.put(room, actualWard.get(room) + 1);
+                    i++;
+                    historyWard.add(patient);
+                    i++;
+                    return true;
+                }
+                i++;
+                return false;
+            }
+        }catch (Exception e){
+            System.out.println(i);
+            new RemoteException();
+        }
+        return false;
+    }
+
+    private boolean containsPatient(Patient patient) throws RemoteException {
+        synchronized (this) {
+            Iterator<Patient> it = patientsOnWard.iterator();
+            while(it.hasNext()){
+                Patient var = it.next();
+                if(var.getID() == patient.getID()) return true;
+            }
+            return false;
+        }
+    }
+
+    @Override
+    public boolean patientDischarge(Patient patient) throws RemoteException {
+
+        synchronized (this) {
+            if(checkRoom(patients.get(patient.getID()))) return false;
+            if (!containsPatient(patient)) return false;
+            if (rooms.get(patients.get(patient.getID())).removePatientID(patient.getID())) {
+                actualWard.put(patients.get(patient.getID()), actualWard.get(patients.get(patient.getID())) - 1);
+                removePatientFromWord(patient.getID());
+                patients.remove(patient.getID());
+                return true;
+            }
+            return false;
+        }
+    }
+
+
+    @Override
+    public Set<Patient> getPatients() throws RemoteException { synchronized (this) {return patientsOnWard; }}
+    @Override
+    public Set<Patient> getPatients(int room) throws RemoteException { synchronized (this) {return rooms.get(room).getPatients(); }}
+    @Override
+    public Map<Integer, Integer> getRoomsState() throws RemoteException { synchronized (this) {return actualWard; }}
+    @Override
+    public List<Patient> getAdmissionHistory() throws RemoteException { synchronized (this) {return historyWard; }}
+
+    private void removePatientFromWord(long id) throws RemoteException {
+        synchronized (this) {
+
+            Iterator<Patient> it = patientsOnWard.iterator();
+            while(it.hasNext()){
+                Patient var = it.next();
+                if (id == var.getID()) it.remove();
+
+            }
+        }
+    }
+
+    public Ward() throws RemoteException { super(); }
+}
+
+class Room{
+
+    int room;
+    /* beds<nrBeds, isFree> */
+    HashSet<Bed> beds = new HashSet();
+
+    public Room(int room, int nBeds) { synchronized (this) {this.room = room; for(int i = 0; i < nBeds; i++) addBed(i);}}
+
+    private void addBed(int bed){ synchronized (this) {beds.add(new Bed(bed)); }}
+
+    boolean removePatientID(long id){
+        synchronized (this) {
+            Iterator<Bed> it = beds.iterator();
+            while(it.hasNext()){
+                Bed var = it.next();
+                if (var.idPatient == id) {
+                    var.idPatient = 0;
+                    var.patient = null;
+                    return true;
+                }
+            }
+            return false;
+        }
+    }
+
+    boolean addPatient(Patient patient){
+        synchronized (this) {
+            Iterator<Bed> it = beds.iterator();
+            while(it.hasNext()){
+                Bed var = it.next();
+                if (var.patient == null) {
+                    var.idPatient = patient.getID();
+                    var.patient = patient;
+                    return true;
+                }
+            }
+            return false;
+        }
+    }
+
+    Set<Patient> getPatients(){
+        synchronized (this) {
+            Set<Patient> result = new HashSet<>();
+            for (Bed var : beds) {
+                if (var.patient != null) result.add(var.patient);
+            }
+            return result;
+        }
+    }
+}
+
+class Bed {
+
+    int bed;
+    long idPatient;
+    Patient patient;
+
+    public Bed(int bed) { this.bed = bed; }
+}

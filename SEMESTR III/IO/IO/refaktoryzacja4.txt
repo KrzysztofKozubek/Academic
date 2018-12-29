@@ -1,0 +1,140 @@
+//wersja przed refakto
+
+class ZipMainFrame extends Frame {
+StatusBar sb;
+void makeZip() {
+String zipFilePath;
+String srcFilePaths[];
+//setup zipFilePath and srcFilePaths according to the UI.
+//...
+ZipEngine ze = new ZipEngine();
+ze.makeZip(zipFilePath, srcFilePaths, this);
+}
+void setStatusBarText(String statusText) {
+sb.setText(statusText);
+}
+
+
+}
+ class ZipEngine {
+void makeZip(String zipFilePath, String srcFilePaths[], ZipMainFrame f) {
+//create zip file at the path.
+//...
+for (int i = 0; i < srcFilePaths.length; i++) {
+//add the file srcFilePaths[i] into the zip file.
+//...
+f.setStatusBarText("Zipping "+srcFilePaths[i]);
+}
+}
+}
+
+
+//refakto:
+interface MessageDisplay {
+void showMessage(String msg);
+}
+
+class ZipEngine {
+void makeZip(String zipFilePath, String srcFilePaths[], MessageDisplay
+msgDisplay) {
+//create zip file at the path.
+...
+for (int i = 0; i < srcFilePaths.length; i++) {
+//add the file srcFilePaths[i] into the zip file.
+...
+msgDisplay.showMessage("Zipping "+srcFilePaths[i]);
+}
+}
+}
+
+
+class ZipMainFrameMessageDisplay implements MessageDisplay {
+ZipMainFrame f;
+ZipMainFrameMessageDisplay(ZipMainFrame f) {
+this.f = f;
+} void showMessage(String msg) {
+f.setStatusBarText(msg);
+}
+
+}
+ class SystemOutMessageDisplay implements MessageDisplay {
+void showMessage(String msg) {
+System.out.println(msg);
+}
+}
+///
+
+
+class ZipMainFrame extends Frame {
+StatusBar sb;
+void makeZip() {
+String zipFilePath;
+String srcFilePaths[];
+//setup zipFilePath and srcFilePaths according to the UI.
+...
+ZipEngine ze = new ZipEngine();
+ze.makeZip(zipFilePath, srcFilePaths, new ZipMainFrameMessageDisplay(this));
+}
+void setStatusBarText(String statusText) {
+sb.setText(statusText);
+}
+
+}
+class TextModeApp {
+void makeZip() {
+String zipFilePath;
+String srcFilePaths[];
+...
+ZipEngine ze = new ZipEngine();
+ze.makeZip(zipFilePath, srcFilePaths, new SystemOutMessageDisplay());
+}
+}
+
+//ostatecznie:
+interface MessageDisplay {
+void showMessage(String msg);
+}
+
+class ZipEngine {
+void makeZip(String zipFilePath, String srcFilePaths[], MessageDisplay
+msgDisplay) {
+//create zip file at the path.
+...
+for (int i = 0; i < srcFilePaths.length; i++) {
+//add the file srcFilePaths[i] into the zip file.
+...
+msgDisplay.showMessage("Zipping "+srcFilePaths[i]);
+}
+}
+}
+class ZipMainFrame extends Frame {
+StatusBar sb;
+void makeZip() {
+String zipFilePath;
+String srcFilePaths[];
+//setup zipFilePath and srcFilePaths according to the UI.
+...
+ZipEngine ze = new ZipEngine();
+ze.makeZip(zipFilePath, srcFilePaths, new MessageDisplay() {
+void showMessage(String msg) {
+setStatusBarText(msg);
+}
+});
+}
+void setStatusBarText(String statusText) {
+sb.setText(statusText);
+}
+}
+class TextModeApp {
+void makeZip() {
+String zipFilePath;
+String srcFilePaths[];
+...
+ZipEngine ze = new ZipEngine();
+ze.makeZip(zipFilePath, srcFilePaths, new MessageDisplay() {
+void showMessage(String msg) {
+System.out.println(msg);
+}
+});
+}
+}

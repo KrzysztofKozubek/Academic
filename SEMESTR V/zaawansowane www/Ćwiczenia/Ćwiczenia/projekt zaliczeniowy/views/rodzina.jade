@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  section.articles
+    each item in articles
+      article.cd-holder
+        section.cd-section
+          img(src='#{item.picurl}', alt='1', style='width: 180px; height: 180px;')
+          h1.it #{item.title}
+          p.it #{item.place}, #{item.city}
+          p.it #{item.date}
+          div.cd-modal-action
+            a.btn(href='#', data-type='modal-trigger') Więcej
+            span.cd-modal-bg
+          div.cd-modal
+            div.cd-modal-content
+              section
+                section
+                  img(src='#{item.picurl}', alt='1', style='width: 180px; height: 180px;')
+                section
+                  h1 #{item.title}
+                  p #{item.place}, #{item.city}
+                  p #{item.date}
+              section
+                p #{item.des1}
+                p #{item.des2}
+                p #{item.des3}
+          a.cd-modal-close(href='#') Close

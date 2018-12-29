@@ -1,0 +1,69 @@
+7951	mov $0x1, %eax
+7956	addq  -0xd0(%rbp), %rax
+7963	movq  %rax, -0xd0(%rbp)
+7970	movq  -0xd0(%rbp), %rax
+7977	movq  -0x98(%rbp), %rdx
+7984	cmp %rdx, %rax
+7987	jnle 0x1d7b
+7993	movq  $0x0, -0x88(%rbp)
+8004	movq  -0x88(%rbp), %rax
+8011	movq  -0xd0(%rbp), %rdx
+8018	cmp %rdx, %rax
+8021	jl 0x1ff0
+8027	jmp 0x1f0f
+8029	movsdq  -0x80(%rbp), %xmm0
+8034	callq  0x1710 <sqrt>
+8039	movsdq  %xmm0, -0x78(%rbp)
+8044	movsdq  -0x78(%rbp), %xmm0
+8049	movsdq  0x32c7(%rip), %xmm1
+8057	mulsd %xmm1, %xmm0
+8061	cvttsd2si %xmm0, %eax
+8065	movsxd %eax, %rax
+8068	imul $0x8, %rax, %rax
+8072	addq  -0xe0(%rbp), %rax
+8079	movsdq  0x32b1(%rip), %xmm0
+8087	movsdq  (%rax), %xmm1
+8091	addsd %xmm0, %xmm1
+8095	movsdq  -0x78(%rbp), %xmm0
+8100	movsdq  0x3294(%rip), %xmm2
+8108	mulsd %xmm2, %xmm0
+8112	cvttsd2si %xmm0, %eax
+8116	movsxd %eax, %rax
+8119	imul $0x8, %rax, %rax
+8123	addq  -0xe0(%rbp), %rax
+8130	movsdq  %xmm1, (%rax)
+8134	mov $0x1, %eax
+8139	addq  -0x88(%rbp), %rax
+8146	movq  %rax, -0x88(%rbp)
+8153	movq  -0x88(%rbp), %rax
+8160	movq  -0xd0(%rbp), %rdx
+8167	cmp %rdx, %rax
+8170	jnl 0x1f0f
+8176	movq  -0xd0(%rbp), %rax
+8183	imul $0x8, %rax, %rax
+8187	addq  -0xe8(%rbp), %rax
+8194	movsdq  (%rax), %xmm0
+8198	movq  -0xd0(%rbp), %rax
+8205	imul $0x8, %rax, %rax
+8209	addq  -0xf0(%rbp), %rax
+8216	movsdq  (%rax), %xmm1
+8220	movq  -0xd0(%rbp), %rax
+8227	imul $0x8, %rax, %rax
+8231	addq  -0xf8(%rbp), %rax
+8238	movsdq  (%rax), %xmm2
+8242	movq  -0x88(%rbp), %rax
+8249	imul $0x8, %rax, %rax
+8253	addq  -0xe8(%rbp), %rax
+8260	movsdq  (%rax), %xmm3
+8264	movq  -0x88(%rbp), %rax
+8271	imul $0x8, %rax, %rax
+8275	addq  -0xf0(%rbp), %rax
+8282	movsdq  (%rax), %xmm4
+8286	movq  -0x88(%rbp), %rax
+8293	imul $0x8, %rax, %rax
+8297	addq  -0xf8(%rbp), %rax
+8304	movsdq  (%rax), %xmm5
+8308	callq  0x50ac <_ZN5Utils10distanceSQEdddddd>
+8313	movsdq  %xmm0, -0x80(%rbp)
+8318	jmp 0x1f5d
+8323	nop 

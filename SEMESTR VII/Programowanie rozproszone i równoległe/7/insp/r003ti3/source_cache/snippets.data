@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippets>
+  <file name="/home/imiolek_1102507/Materialy/PRiR/6/Minimum.cpp" md5="">
+    <snippet line="45">
+      <line line="42">    double* tSumY;</line>
+      <line line="43">    double* tSumV;</line>
+      <line line="44">#pragma omp parallel</line>
+      <line line="45">    {</line>
+      <line line="46">        struct drand48_data buffer;</line>
+    </snippet>
+  </file>
+  <file name="/home/imiolek_1102507/Materialy/PRiR/6/main.cpp" md5="">
+    <snippet line="25">
+      <line line="22">}</line>
+      <line line="23"/>
+      <line line="24">int main( int ac, char **av ) {</line>
+      <line line="25"/>
+      <line line="26">   for ( int i = 1; i &lt; MAX_THREADS; i++ ) {</line>
+    </snippet>
+  </file>
+</snippets>

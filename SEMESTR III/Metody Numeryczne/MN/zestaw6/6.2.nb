@@ -1,0 +1,434 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     15405,        424]
+NotebookOptionsPosition[     14303,        382]
+NotebookOutlinePosition[     14650,        397]
+CellTagsIndexPosition[     14607,        394]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{"Bogdan", " ", "Chwali\:0144ski"}], "\[IndentingNewLine]", 
+ RowBox[{"Zestaw", " ", "6", " ", "zadanie", " ", "2"}]}], "Input",
+ CellChangeTimes->{{3.599648306334337*^9, 3.599648317781992*^9}, {
+  3.5996484043389425`*^9, 3.5996484368208003`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "x_", "]"}], ":=", 
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"Sinh", "[", "x", "]"}], ")"}], "3"], 
+    RowBox[{"(", 
+     RowBox[{
+      SuperscriptBox["x", "2"], "-", "1"}], ")"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.59964827998983*^9, 3.599648297331822*^9}, {
+  3.5996489040535245`*^9, 3.5996489058186255`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"MetodaSiecznych", "[", 
+    RowBox[{"start_", ",", "end_", ",", "iteracje_"}], "]"}], ":=", 
+   RowBox[{"Module", "[", "\[IndentingNewLine]", "\t\t\t\t\t", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"x", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"0", "&"}], ",", 
+          RowBox[{"{", "iteracje", "}"}]}], "]"}]}], ",", 
+       "\[IndentingNewLine]", "\t\t\t\t\t", "x1", ",", "\[IndentingNewLine]", 
+       "\t\t\t\t\t", "x2", ",", "\[IndentingNewLine]", "\t\t\t\t\t", "i", ",",
+        " ", "\[IndentingNewLine]", "\t\t\t\t\t", 
+       RowBox[{"rand", "=", 
+        RowBox[{"Random", "[", 
+         RowBox[{"Real", ",", 
+          RowBox[{"{", 
+           RowBox[{"start", ",", "end"}], "}"}]}], "]"}]}]}], "}"}], " ", ",",
+      "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Print", "[", 
+       RowBox[{"\"\<Warunek zgodnosci pochodnych: \>\"", ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"f", "'"}], "[", "rand", "]"}], "*", 
+         RowBox[{
+          RowBox[{"f", "''"}], "[", "rand", "]"}]}]}], "]"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"f", "'"}], "[", "rand", "]"}], "*", 
+           RowBox[{
+            RowBox[{"f", "''"}], "[", "rand", "]"}]}], ">=", "0"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"x1", "=", "start"}], ";", "\[IndentingNewLine]", 
+          RowBox[{"Print", "[", 
+           RowBox[{"\"\<x1= \>\"", ",", "x1"}], "]"}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Print", "[", 
+           RowBox[{"\"\<x2=\>\"", ",", " ", 
+            RowBox[{"x2", "=", 
+             RowBox[{"N", "[", 
+              RowBox[{"x1", "-", 
+               RowBox[{
+                FractionBox[
+                 RowBox[{"f", "[", "x1", "]"}], 
+                 RowBox[{
+                  RowBox[{"f", "[", "end", "]"}], "-", 
+                  RowBox[{"f", "[", "x1", "]"}]}]], 
+                RowBox[{"(", 
+                 RowBox[{"end", "-", "x1"}], ")"}]}]}], "]"}]}]}], "]"}], ";",
+           "\[IndentingNewLine]", "\[IndentingNewLine]", 
+          RowBox[{
+           SubscriptBox["x", 
+            RowBox[{"\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]], 
+           "=", "x1"}], ";", "\[IndentingNewLine]", 
+          RowBox[{
+           SubscriptBox["x", 
+            RowBox[{"\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}]], 
+           "=", "x2"}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"For", "[", 
+            RowBox[{
+             RowBox[{"i", "=", "3"}], ",", 
+             RowBox[{"i", "\[LessEqual]", "iteracje"}], ",", 
+             RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+             RowBox[{
+              SubscriptBox["x", 
+               RowBox[{
+               "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}]], "=", 
+              RowBox[{
+               SubscriptBox["x", 
+                RowBox[{"\[LeftDoubleBracket]", 
+                 RowBox[{"i", "-", "1"}], "\[RightDoubleBracket]"}]], "-", 
+               FractionBox[
+                RowBox[{
+                 RowBox[{"f", "[", 
+                  SubscriptBox["x", 
+                   RowBox[{"\[LeftDoubleBracket]", 
+                    RowBox[{"i", "-", "1"}], "\[RightDoubleBracket]"}]], 
+                  "]"}], 
+                 RowBox[{"(", 
+                  RowBox[{
+                   SubscriptBox["x", 
+                    RowBox[{"\[LeftDoubleBracket]", 
+                    RowBox[{"i", "-", "1"}], "\[RightDoubleBracket]"}]], "-", 
+                   SubscriptBox["x", 
+                    RowBox[{"\[LeftDoubleBracket]", 
+                    RowBox[{"i", "-", "2"}], "\[RightDoubleBracket]"}]]}], 
+                  ")"}]}], 
+                RowBox[{
+                 RowBox[{"f", "[", 
+                  SubscriptBox["x", 
+                   RowBox[{"\[LeftDoubleBracket]", 
+                    RowBox[{"i", "-", "1"}], "\[RightDoubleBracket]"}]], 
+                  "]"}], "-", 
+                 RowBox[{"f", "[", 
+                  SubscriptBox["x", 
+                   RowBox[{"\[LeftDoubleBracket]", 
+                    RowBox[{"i", "-", "2"}], "\[RightDoubleBracket]"}]], 
+                  "]"}]}]]}]}]}], "\[IndentingNewLine]", "]"}], 
+           "\[IndentingNewLine]", 
+           RowBox[{"Print", "[", 
+            RowBox[{"\"\<Miejsce zerowe z dokladnoscia do: x= \>\"", ",", 
+             SubscriptBox["x", 
+              RowBox[{
+              "\[LeftDoubleBracket]", "iteracje", 
+               "\[RightDoubleBracket]"}]]}], "]"}]}]}], ",", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"x1", "=", "end"}], ";", "\[IndentingNewLine]", 
+          RowBox[{"Print", "[", 
+           RowBox[{"\"\<x1= \>\"", ",", "x1"}], "]"}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Print", "[", 
+           RowBox[{"\"\<x2=\>\"", ",", " ", 
+            RowBox[{"x2", "=", 
+             RowBox[{"N", "[", 
+              RowBox[{"x1", "-", 
+               RowBox[{
+                FractionBox[
+                 RowBox[{"f", "[", "x1", "]"}], 
+                 RowBox[{
+                  RowBox[{"f", "[", "start", "]"}], "-", 
+                  RowBox[{"f", "[", "x1", "]"}]}]], 
+                RowBox[{"(", 
+                 RowBox[{"start", "-", "x1"}], ")"}]}]}], "]"}]}]}], "]"}], 
+          ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+          RowBox[{
+           SubscriptBox["x", 
+            RowBox[{"\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]], 
+           "=", "x1"}], ";", "\[IndentingNewLine]", 
+          RowBox[{
+           SubscriptBox["x", 
+            RowBox[{"\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}]], 
+           "=", "x2"}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"For", "[", 
+            RowBox[{
+             RowBox[{"i", "=", "3"}], ",", 
+             RowBox[{"i", "\[LessEqual]", "iteracje"}], ",", 
+             RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+             RowBox[{
+              SubscriptBox["x", 
+               RowBox[{
+               "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}]], "=", 
+              RowBox[{
+               SubscriptBox["x", 
+                RowBox[{"\[LeftDoubleBracket]", 
+                 RowBox[{"i", "-", "1"}], "\[RightDoubleBracket]"}]], "-", 
+               FractionBox[
+                RowBox[{
+                 RowBox[{"f", "[", 
+                  SubscriptBox["x", 
+                   RowBox[{"\[LeftDoubleBracket]", 
+                    RowBox[{"i", "-", "1"}], "\[RightDoubleBracket]"}]], 
+                  "]"}], 
+                 RowBox[{"(", 
+                  RowBox[{
+                   SubscriptBox["x", 
+                    RowBox[{"\[LeftDoubleBracket]", 
+                    RowBox[{"i", "-", "1"}], "\[RightDoubleBracket]"}]], "-", 
+                   SubscriptBox["x", 
+                    RowBox[{"\[LeftDoubleBracket]", 
+                    RowBox[{"i", "-", "2"}], "\[RightDoubleBracket]"}]]}], 
+                  ")"}]}], 
+                RowBox[{
+                 RowBox[{"f", "[", 
+                  SubscriptBox["x", 
+                   RowBox[{"\[LeftDoubleBracket]", 
+                    RowBox[{"i", "-", "1"}], "\[RightDoubleBracket]"}]], 
+                  "]"}], "-", 
+                 RowBox[{"f", "[", 
+                  SubscriptBox["x", 
+                   RowBox[{"\[LeftDoubleBracket]", 
+                    RowBox[{"i", "-", "2"}], "\[RightDoubleBracket]"}]], 
+                  "]"}]}]]}]}]}], "\[IndentingNewLine]", "]"}], 
+           "\[IndentingNewLine]", 
+           RowBox[{"Print", "[", 
+            RowBox[{"\"\<Miejsce zerowe z dokladnoscia do: x= \>\"", ",", 
+             SubscriptBox["x", 
+              RowBox[{
+              "\[LeftDoubleBracket]", "iteracje", 
+               "\[RightDoubleBracket]"}]]}], "]"}]}]}]}], 
+        "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", 
+       RowBox[{"Return", "[", "]"}]}], ";"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.5996484500015545`*^9, 3.599648510896037*^9}, {
+  3.5996485583187494`*^9, 3.599648706179207*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MetodaSiecznych", "[", 
+   RowBox[{"0.00001", ",", " ", "0.09", ",", " ", "20"}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.5996487213900766`*^9, 3.5996487608743353`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Warunek zgodnosci pochodnych: \"\>", "\[InvisibleSpace]", 
+   "0.0008016162898450467`"}],
+  SequenceForm["Warunek zgodnosci pochodnych: ", 0.0008016162898450467],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.599648744884421*^9, 3.5996487618713923`*^9}, 
+   3.5996489161372156`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"x1= \"\>", "\[InvisibleSpace]", "0.00001`"}],
+  SequenceForm["x1= ", 0.00001],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.599648744884421*^9, 3.5996487618713923`*^9}, 
+   3.5996489161422157`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"x2=\"\>", "\[InvisibleSpace]", "9.999999876051747`*^-6"}],
+  SequenceForm["x2=", 9.999999876051747*^-6],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.599648744884421*^9, 3.5996487618713923`*^9}, 
+   3.5996489161472163`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Miejsce zerowe z dokladnoscia do: x= \"\>", 
+   "\[InvisibleSpace]", "5.7771808593649296`*^-8"}],
+  SequenceForm[
+  "Miejsce zerowe z dokladnoscia do: x= ", 5.7771808593649296`*^-8],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.599648744884421*^9, 3.5996487618713923`*^9}, 
+   3.5996489161512165`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MetodaSiecznych", "[", 
+   RowBox[{"0.00001", ",", " ", "0.999", ",", " ", "20"}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.5996487713149323`*^9, 3.5996488357166157`*^9}, 
+   3.5996489216025286`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Warunek zgodnosci pochodnych: \"\>", "\[InvisibleSpace]", 
+   "0.17658661169410836`"}],
+  SequenceForm["Warunek zgodnosci pochodnych: ", 0.17658661169410836`],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.599648791098064*^9, 3.599648836011633*^9}, {
+  3.5996489185943565`*^9, 3.5996489218605433`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"x1= \"\>", "\[InvisibleSpace]", "0.00001`"}],
+  SequenceForm["x1= ", 0.00001],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.599648791098064*^9, 3.599648836011633*^9}, {
+  3.5996489185943565`*^9, 3.5996489218655434`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"x2=\"\>", "\[InvisibleSpace]", "9.99999969088301`*^-6"}],
+  SequenceForm["x2=", 9.99999969088301*^-6],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.599648791098064*^9, 3.599648836011633*^9}, {
+  3.5996489185943565`*^9, 3.5996489218705435`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Miejsce zerowe z dokladnoscia do: x= \"\>", 
+   "\[InvisibleSpace]", "5.777180790318489`*^-8"}],
+  SequenceForm["Miejsce zerowe z dokladnoscia do: x= ", 5.777180790318489*^-8],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.599648791098064*^9, 3.599648836011633*^9}, {
+  3.5996489185943565`*^9, 3.599648921874544*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MetodaSiecznych", "[", 
+   RowBox[{"0.000025", ",", "0.879", ",", "20"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.5996488675124345`*^9, 3.5996488873395686`*^9}, 
+   3.5996489255767555`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Warunek zgodnosci pochodnych: \"\>", "\[InvisibleSpace]", 
+   "2.7541996610993444`"}],
+  SequenceForm["Warunek zgodnosci pochodnych: ", 2.7541996610993444`],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.599648875704903*^9, 3.5996488876725874`*^9}, 
+   3.5996489259217753`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"x1= \"\>", "\[InvisibleSpace]", "0.000025`"}],
+  SequenceForm["x1= ", 0.000025],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.599648875704903*^9, 3.5996488876725874`*^9}, 
+   3.5996489259247756`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"x2=\"\>", "\[InvisibleSpace]", "0.0000249999999389815`"}],
+  SequenceForm["x2=", 0.0000249999999389815],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.599648875704903*^9, 3.5996488876725874`*^9}, 
+   3.599648925928776*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Miejsce zerowe z dokladnoscia do: x= \"\>", 
+   "\[InvisibleSpace]", "1.4442952192239753`*^-7"}],
+  SequenceForm[
+  "Miejsce zerowe z dokladnoscia do: x= ", 1.4442952192239753`*^-7],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.599648875704903*^9, 3.5996488876725874`*^9}, 
+   3.599648925929776*^9}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{707, 637},
+WindowMargins->{{Automatic, 184}, {-120, Automatic}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 270, 4, 52, "Input"],
+Cell[830, 26, 401, 12, 33, "Input"],
+Cell[1234, 40, 8381, 196, 833, "Input"],
+Cell[CellGroupData[{
+Cell[9640, 240, 213, 5, 31, "Input"],
+Cell[CellGroupData[{
+Cell[9878, 249, 337, 7, 23, "Print"],
+Cell[10218, 258, 253, 6, 23, "Print"],
+Cell[10474, 266, 279, 6, 23, "Print"],
+Cell[10756, 274, 357, 8, 23, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11162, 288, 242, 6, 31, "Input"],
+Cell[CellGroupData[{
+Cell[11429, 298, 357, 7, 23, "Print"],
+Cell[11789, 307, 276, 6, 23, "Print"],
+Cell[12068, 315, 300, 6, 23, "Print"],
+Cell[12371, 323, 372, 7, 23, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12792, 336, 230, 5, 31, "Input"],
+Cell[CellGroupData[{
+Cell[13047, 345, 332, 7, 23, "Print"],
+Cell[13382, 354, 255, 6, 23, "Print"],
+Cell[13640, 362, 277, 6, 23, "Print"],
+Cell[13920, 370, 355, 8, 23, "Print"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

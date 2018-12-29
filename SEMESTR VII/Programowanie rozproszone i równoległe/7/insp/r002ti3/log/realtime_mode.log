@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feedback>
+ <message severity="info">Analysis started...</message>
+ <nop/>
+ <message severity="info">Result file: /home/imiolek_1102507/Materialy/PRiR/7/insp/r002ti3/r002ti3.inspxe </message>
+ <nop/>
+ <message severity="info">Found target process /home/imiolek_1102507/Materialy/PRiR/6/a.out (PID = 6386). Analysis started... </message>
+ <nop/>
+ <message severity="info">Loaded module: /home/imiolek_1102507/Materialy/PRiR/6/a.out. </message>
+ <nop/>
+ <message severity="info">Loaded module: /lib64/ld-linux-x86-64.so.2. </message>
+ <nop/>
+ <message severity="info">Loaded module: /usr/lib/x86_64-linux-gnu/libstdc++.so.6. </message>
+ <nop/>
+ <message severity="info">Loaded module: /lib/x86_64-linux-gnu/libm.so.6. </message>
+ <nop/>
+ <message severity="info">Loaded module: /usr/lib/x86_64-linux-gnu/libgomp.so.1. </message>
+ <nop/>
+ <message severity="warning">Inspector does not support the GNU OpenMP Runtime module and may report false positives. Refer to the product release notes. </message>
+ <nop/>
+ <message severity="info">Loaded module: /lib/x86_64-linux-gnu/libgcc_s.so.1. </message>
+ <nop/>
+ <message severity="info">Loaded module: /lib/x86_64-linux-gnu/libpthread.so.0. </message>
+ <nop/>
+ <message severity="info">Loaded module: /lib/x86_64-linux-gnu/libc.so.6. </message>
+ <nop/>
+ <message severity="info">Loaded module: /lib/x86_64-linux-gnu/librt.so.1. </message>
+ <nop/>
+ <message severity="warning">One or more threads in the application accessed the stack of another thread. This may indicate one or more bugs in your application. Setting the Inspector to detect data races on stack accesses and running another analysis may help you locate these and other bugs.</message>
+ <nop/>
+ <message severity="info">Application exit code: 137 </message>
+ <nop/>
+ <message severity="info">Result file: /home/imiolek_1102507/Materialy/PRiR/7/insp/r002ti3/r002ti3.inspxe </message>
+ <nop/>
+ <message severity="info">Analysis canceled by user</message>
+ <nop/>
+</feedback>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="index.xsl"?>
+<?xml-stylesheet type="text/css" href="style.css"?>
+
+<cennik>
+    <samochrod>
+        <marka>Nissan</marka>
+        <model>GT-R</model>
+        <rocznik>2013</rocznik>
+        <numer_katalogowy>1</numer_katalogowy>
+        <cena>48300</cena>
+    </samochrod>
+    <samochrod>
+        <marka>Porsche</marka>
+        <model>SUV Cayenne</model>
+        <rocznik>2015</rocznik>
+        <numer_katalogowy>2</numer_katalogowy>
+        <cena>332500</cena>
+    </samochrod>
+    <samochrod>
+        <marka>Audi</marka>
+        <model>S8</model>
+        <rocznik>2013</rocznik>
+        <numer_katalogowy>3</numer_katalogowy>
+        <cena>722500</cena>
+    </samochrod>
+    <samochrod>
+        <marka>Hyundai</marka>
+        <model>IONIQ</model>
+        <rocznik>2016</rocznik>
+        <numer_katalogowy>4</numer_katalogowy>
+        <cena>130300</cena>
+    </samochrod>
+    <samochrod>
+        <marka>Mercedes-Benz</marka>
+        <model>S</model>
+        <rocznik>2013</rocznik>
+        <numer_katalogowy>5</numer_katalogowy>
+        <cena>377300</cena>
+    </samochrod>
+</cennik>

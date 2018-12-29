@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON test</title>
+    <link rel="stylesheet" href="Project/css/materialize.css">
+
+</head>
+<body>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script type="text/javascript">
+
+    var root = "http://cors.io/?u=http://www.nbp.pl";
+    $.ajax({
+        url: root + "/kursy/xml/a102z160530.xml",
+        dataType: "xml",
+        method: "GET"
+    }).success(function(data){
+        console.log(data);
+        $("#kursy").append("<tr><td>Nazwa</td><td>Kod</td><td>Kurs</td></tr>");
+        $(data).find("pozycja").each(function(){
+            var nazwa   = $(this).find("nazwa_waluty").text();
+            var wartosc = $(this).find("kurs_sredni").text();
+            var kod     = $(this).find("kod_waluty").text();
+            $("#kursy").append("<tr><td>"+nazwa+"</td>"+"<td>"+kod+"</td>"+"<td>"+wartosc+"</td></tr>");
+        });
+
+
+    });
+</script>
+
+
+<div id="document">
+    <table id="kursy">
+
+
+    </table>
+</div>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+#nav a{
+    margin: 0px 80px;
+    font-size: 36px;
+}
+#nav a:hover{
+    text-decoration: underline;
+}
+#nav > ul > li > img{
+    height: 120px;
+}
+
+.mainContent{
+    margin-top: 7%;
+}
+
+.figureHobby{
+    max-width: 400px !important;
+    font-size: 1.5em;
+}
+h1{
+    font-size: 4em;
+}
+h2{
+    font-size: 3.5em;
+}
+h3{
+    font-size: 3em;
+}
+.row p, .contentAboutMe p, .contentContact p{
+    font-size: 2.5em;
+}
+.btn{
+    font-size: 3em;
+    margin: 20px;
+}

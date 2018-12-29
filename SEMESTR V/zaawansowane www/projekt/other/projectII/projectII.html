@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projekt II by Kris Kozubek</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Vollkorn:400,700' rel='stylesheet' type='text/css'>
+
+</head>
+<script type="text/javascript">
+    function Helper(){
+
+        //licz średnią
+        this._getAverage = function(sum, amo) {
+            return (sum / amo).toPrecision(3);
+        };
+
+        //sortowanie po nazwisku
+        this._sortByName = function(students) {
+            for(var i = 0; i < students.length; i++){
+                for(var j = 0; j < students.length - 1; j++){
+                    if(students[j].last_name > students[j + 1].last_name){
+                        var temp = students[j + 1];
+                        students[j + 1] = students[j];
+                        students[j] = temp;
+                    }
+                }
+            }
+            return students;
+        };
+
+        // wypisz nazwisko + imie dla obiektu w array
+        this._getName = function(students){
+            var array = students.slice(0);
+            for(var i = 0; i < students.length; i++){
+                array[i] = array[i].last_name + " " + array[i].first_name;
+            }
+            return array;
+        };
+
+        // wypisz liste studentow nazwiskami
+        this.getStudentList = function(students){
+            var sortStudents = this._sortByName(students);
+            return this._getName(sortStudents);
+        };
+
+        // licz srednia dla studenta we wszystkich latach
+        this.getAvarageForStudentAllYears = function(student) {
+            var sum = 0;
+            var amo = 0;
+
+            for(var year in student.courses){
+                for(var course in student.courses[year]){
+
+                    var array = student.courses[year][course].grades.exercices;
+                    for(var i = 0; i < array.length; i++){
+                        sum += array[i];
+                        amo++;
+                    }
+
+                    var array = student.courses[year][course].grades.lecture;
+                    for(var i = 0; i < array.length; i++){
+                        sum += array[i];
+                        amo++;
+                    }
+                }
+            }
+            return this._getAverage(sum, amo);
+        };
+
+        // licz srednia dla studenta w danym roku
+        this.getAvarageForStudentInYear = function(student, year) {
+            var sum = 0;
+            var amo = 0;
+
+            for(var CourseName in student.courses[year]){
+                var array = student.courses[year][CourseName].grades.exercices;
+                for(var i=0; i < array.length; i++){
+                    sum += array[i];
+                    amo++;
+                }
+                var array = student.courses[year][CourseName].grades.lecture;
+                for(var i=0; i < array.length; i++){
+                    sum += array[i];
+                    amo++;
+                }
+            }
+
+            return this._getAverage(sum, amo);
+        };
+
+        // licz srednia dla kursu
+        this.getAverageForCourse = function(students, year, courseName) {
+            var sum = 0;
+            var amo = 0;
+
+            for (var student in students) {
+
+                var courses = students[student].courses;
+                var array = courses[year][courseName].grades.exercices;
+
+                for (var i = 0; i < array.length; i++) {
+                    sum = sum + array[i];
+                    amo++;
+                }
+
+                var array = courses[year][courseName].grades.lecture;
+                for (var i = 0; i < array.length; i++) {
+                    sum = sum + array[i];
+                    amo++;
+                }
+            }
+            return this._getAverage(sum, amo);
+        };
+
+        //wpisz studentów danego kursu
+        this.getStudentListForCourse = function(students, year, course){
+
+            var array1 = new Array();
+            var array2 = new Array();
+
+            for(var student in students){
+                if(typeof(students[student].courses[year][course]) !== "undefined"){
+                    array1.push(students[student]);
+                }
+            }
+
+            this._sortByName(array1);
+            for(var i in array1){
+                var obj = {
+                    "first_name": (array1[i].first_name).toString(),
+                    "last_name": (array1[i].last_name).toString(),
+                    "album_number": (array1[i].album_number).toString()
+                };
+                array2.push(obj);
+            }
+            return array2;
+        };
+    };
+
+
+    function ajax_get_json() {
+
+        var hr = new XMLHttpRequest();
+        hr.open("GET", "data.json", true);
+        hr.setRequestHeader("Content-type", "application/json", true);
+        hr.onreadystatechange = function asd() {
+            if (hr.readyState == 4 && hr.status == 200) {
+
+                var data    = JSON.parse(hr.responseText);
+                var gSL     = document.getElementById("getStudentList");
+                var gSLFC   = document.getElementById("getStudentListForCourse");
+                var gAFSIY  = document.getElementById("getAvarageForStudentInYear");
+                var gAFSAL  = document.getElementById("getAvarageForStudentAllYears");
+                var gAFC    = document.getElementById("getAverageForCourse");
+
+                var studentObj1 = data.s1;
+                var studentObj2 = data.s2;
+                var studentObj3 = data.s3;
+                var studentObj4 = data.s4;
+
+                var helper      = new Helper();
+                var studentList = [studentObj1, studentObj2, studentObj3, studentObj4];
+
+
+                var tmp = helper.getStudentList(studentList);
+                for (var i in tmp) {
+                    gSL.innerHTML += "<tr><td>" + tmp[i] + "</td></tr>";
+                }
+
+
+                var qwe = helper.getStudentListForCourse(studentList, "2013", "AlgorithmsI");
+                for (var a in qwe) {
+                    gSLFC.innerHTML += "<tr><td>" + qwe[a].last_name + "</td><td>" + qwe[a].first_name + "</td><td>" + qwe[a].album_number + "</td></tr>";
+                }
+
+
+                gAFSIY.innerHTML += "<tr><td>" + studentObj3.last_name + "</td><td>" + studentObj3.first_name + "</td><td>" + helper.getAvarageForStudentInYear(studentObj3, "2013") + "</td></tr>";
+                gAFSIY.innerHTML += "<tr><td>" + studentObj2.last_name + "</td><td>" + studentObj2.first_name + "</td><td>" + helper.getAvarageForStudentInYear(studentObj2, "2013") + "</td></tr>";
+                gAFSIY.innerHTML += "<tr><td>" + studentObj4.last_name + "</td><td>" + studentObj4.first_name + "</td><td>" + helper.getAvarageForStudentInYear(studentObj4, "2013") + "</td></tr>";
+                gAFSIY.innerHTML += "<tr><td>" + studentObj1.last_name + "</td><td>" + studentObj1.first_name + "</td><td>" + helper.getAvarageForStudentInYear(studentObj1, "2013") + "</td></tr>";
+
+
+                gAFSAL.innerHTML += "<tr><td>" + studentObj3.last_name + "</td><td>" + studentObj3.first_name + "</td><td>" + helper.getAvarageForStudentAllYears(studentObj3, "2013") + "</td></tr>";
+                gAFSAL.innerHTML += "<tr><td>" + studentObj2.last_name + "</td><td>" + studentObj2.first_name + "</td><td>" + helper.getAvarageForStudentAllYears(studentObj2, "2013") + "</td></tr>";
+                gAFSAL.innerHTML += "<tr><td>" + studentObj4.last_name + "</td><td>" + studentObj4.first_name + "</td><td>" + helper.getAvarageForStudentAllYears(studentObj4, "2013") + "</td></tr>";
+                gAFSAL.innerHTML += "<tr><td>" + studentObj1.last_name + "</td><td>" + studentObj1.first_name + "</td><td>" + helper.getAvarageForStudentAllYears(studentObj1, "2013") + "</td></tr>";
+
+
+                gAFC.innerHTML += "<tr><td>" + "AlgorithmsI"    + "</td><td>" + helper.getAverageForCourse(studentList, "2013", "AlgorithmsI")      + "</td></tr>";
+                gAFC.innerHTML += "<tr><td>" + "BasicPhysicsI"  + "</td><td>" + helper.getAverageForCourse(studentList, "2013", "BasicPhysicsI")    + "</td></tr>";
+                gAFC.innerHTML += "<tr><td>" + "ProgrammingI"   + "</td><td>" + helper.getAverageForCourse(studentList, "2013", "ProgrammingI")     + "</td></tr>";
+            }
+
+        }
+        hr.send(null);
+    }
+</script>
+<body>
+
+    <table id="getStudentList">
+        <tr>
+            <th><h1 class="description">List of all students</h1></th>
+        </tr>
+    </table>
+
+    <table id="getStudentListForCourse">
+        <tr>
+            <th colspan="3"><h1 class="description">List of students on Algorithms I in 2013 year</h1></th>
+        </tr>
+        <tr>
+            <th>LastName</th>
+            <th>FirstName</th>
+            <th>ID</th>
+        </tr>
+    </table>
+
+    <table id="getAvarageForStudentInYear">
+        <tr>
+            <th colspan="3"><h1 class="description">Avarage for Student in year 2013</h1></th>
+        </tr>
+        <tr>
+            <th>LastName</th>
+            <th>FirstName</th>
+            <th>Avarage</th>
+        </tr>
+    </table>
+
+    <table id="getAvarageForStudentAllYears">
+        <tr>
+            <th colspan="3"><h1 class="description">Avarage for Student in all years</h1></th>
+        </tr>
+        <tr>
+            <th>Lastname</th>
+            <th>Firstname</th>
+            <th>Avarage</th>
+        </tr>
+    </table>
+
+    <table id="getAverageForCourse">
+        <tr>
+            <th colspan="2"><h1 class="description">Avarage for Course</h1></th>
+        </tr>
+        <tr>
+            <th>Course</th>
+            <th>Avarage</th>
+        </tr>
+    </table>
+
+
+
+
+
+<script type="text/javascript">ajax_get_json();</script>
+
+</body>
+</html>

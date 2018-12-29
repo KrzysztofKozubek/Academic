@@ -1,0 +1,159 @@
+public class ParticipantInfoOnBadge {
+String participantID;
+String engFullName;
+String chiFullName;
+String engOrganizationName;
+String chiOrganizationName;
+String engOrganizationCountry;
+String chiOrganizationCountry; 
+
+
+ParticipantInfoOnBadge(String participantID) {
+this.participantID = participantID;
+loadInfoFromDB();
+}
+
+void loadInfoFromDB(){
+
+getParticipantFullNames();
+getOrganisationEmploying();
+}
+}
+
+
+void getParticipantFullNames(){
+ParticipantsInDB partsInDB = ParticipantsInDB.getInstance();
+Participant part = partsInDB.locateParticipant(participantID;);
+if (part != null) {
+engFullName = part.getELastName() + ", " + part.getEFirstName();
+chiFullName = part.getCLastName()+part.getCFirstName();
+}
+
+}
+void getOrganisationEmploying()
+{
+OrganizationsInDB orgsInDB = OrganizationsInDB.getInstance();
+String organisationID = orgsInDB.getOrganizationEmploying(participantID;);
+if (organisationID != null) {
+Organization org = orgsInDB.locateOrganization(organisationID);
+engOrganizationName = org.getEName();
+chiOrganizationName = org.getCName();
+engOrganizationCountry = org.getEAddress().getCountry();
+chiOrganizationCountry = org.getCAddress().getCountry();
+
+}
+
+}
+
+//////////
+
+zadanie1:
+
+class InchToPointConvertor {
+   //convert the quantity in inches to points.
+   static float parseInch(float inch) {
+      return inch * 72; //one inch contains 72 points.
+   }
+}
+
+
+zadanie2:
+
+class TokenStream {
+Vector v;  //a list of tokens parsed from br.
+int index; //index of the current token in v.
+BufferedReader br; //read the chars from here to parse the tokens.
+int currentChar;  //previous char read from br.
+//read the chars from the reader and parse the tokens.
+TokenStream(Reader read) {
+br = new BufferedReader(read);
+takeChar();
+v = parseFile();
+index=0;
+}
+//read the chars from br, parse the tokens and store them into a vector.
+Vector parseFile() {
+Vector v; //accumulate the tokens that have been parsed.
+...
+return v;
+}
+...
+}
+
+
+zadanie3:
+
+
+class Account {
+...
+//check if the password is complex enough, i.e.,
+//contains letter and digit/symbol.
+boolean isComplexPassword(String password){
+//found a digit or symbol?
+boolean dg_sym_found=false;
+//found a letter?
+boolean letter_found=false;
+for(int i=0; i<password.length(); i++){
+char c=password.charAt(i);
+if(Character.isLowerCase(c)||Character.isUpperCase(c))
+letter_found=true;
+else dg_sym_found=true;
+}
+return (letter_found) && (dg_sym_found);
+}
+}
+
+
+przykladowe rozwiazanie zadanie 1
+
+
+class InchToPointConvertor {
+   final static int POINTS_PER_INCH = 72;
+   static float parseInch(float inch) {
+      return inch * POINTS_PER_INCH;
+   }
+}
+
+przykladowe rozwiazanie zadanie 2
+
+class TokenStream {
+Vector parsedTokenList;
+int currentTokenIdxInList;
+BufferedReader charInputSourceForParsing;
+int previousCharReadFromSource;
+TokenStream(Reader reader) {
+charInputSourceForParsing = new BufferedReader(reader);
+takeChar();
+parsedTokenList = parseTokensFromInputSource();
+currentTokenIdxInList = 0;
+}
+Vector parseTokensFromInputSource() {
+Vector tokensParsedSoFar;
+...
+return tokensParsedSoFar;
+}
+...
+}
+
+przykladowe rozwiazanie zadanie 3
+
+class Account {
+...
+boolean isComplexPassword(String password){
+
+return containsLetter(password) && (containsDigit(password) || containsSymbol(password));
+
+}
+
+boolean dg_sym_found=false;
+//found a letter?
+boolean letter_found=false;
+for(int i=0; i<password.length(); i++){
+char c=password.charAt(i);
+if(Character.isLowerCase(c)||Character.isUpperCase(c))
+letter_found=true;
+else dg_sym_found=true;
+}
+return (letter_found) && (dg_sym_found);
+}
+}

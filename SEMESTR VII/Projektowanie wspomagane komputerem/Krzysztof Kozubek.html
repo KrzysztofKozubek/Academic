@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<!-- Krzysztof Kozubek -->
+<html>
+   <head>
+     <title>Krzysztof Kozubek</title>
+     <script src="https://d3js.org/d3.v4.min.js"></script>
+	 
+	 <style>
+	 .circle{
+		box-shadow: 10px 10px 5px #888888;
+		text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+	 }
+	 .rectangle{
+		box-shadow: 10px 10px 5px #888888;
+		text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+	 }
+	 H1{
+		color: rgb(25%,75%,75%);
+	 }
+	 </style>
+   </head>
+   <body style="max-width: 1000px; margin: 0 auto; padding: 100px;background-color:#222;">
+   
+   <script>
+   
+	var colors = ["#001f3f", "#0074D9", "#7FDBFF", "#39CCCC", "#3D9970", "#2ECC40", "#01FF70", "#FFDC00", "#FF851B", "#FF4136", "#01FF70", "#85144b", "#F012BE", "#B10DC9", "#111111", "#00FFFF", "#7CFC00", "#FFFAFA", "#8000ff"];
+	function getRandomInt(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
+   
+	function addTextToWebsite(text){
+	
+		var h = document.createElement("H1");
+		var t = document.createTextNode(text);
+		h.appendChild(t);
+		document.body.appendChild(h);
+	}
+   
+	function Zd1(sizex, sizey, size){
+	
+		var svgContainer = d3.select("body").append("svg")
+						.attr("width", sizex)
+						.attr("height", sizey);
+						
+		addTextToWebsite("Projekt 1, created by Krzysztof Kozubek");
+						
+		for(j = 0; j < 3000; j++) {	
+		
+			svgContainer.append("circle")
+			.attr("cx", getRandomInt(size, sizex - size))
+			.attr("cy", getRandomInt(size, sizey - size))
+			.attr("r", size)
+			.style("fill", colors[getRandomInt(0, colors.length - 1)])
+			.style("class", "circle");
+		}
+		
+	}
+     
+	function Zd2(sizex, sizey, size){
+		
+		var svgContainer = d3.select("body").append("svg")
+						.attr("width", sizex)
+						.attr("height", sizey);
+						
+		addTextToWebsite("Projekt 2, created by Krzysztof Kozubek");
+		
+		var x = sizex/2;
+		var y = sizey/2;
+		var svg = svgContainer;
+		
+		var color = getRandomInt(0, colors.length-1);
+		
+		var fun = function(size, x, y){
+		
+			svg.append("rect").attr("x", x).attr("y", y).attr("width", size).attr("height", size).style("fill", colors[color]).style("class", "rectangle").on("dblclick", function(d){
+				console.log("double clk");
+				fun(size * 2, sizex/2, sizey/2);
+			});
+			svg.append("rect").attr("x", x).attr("y", y).attr("width", size).attr("height", size).style("fill", colors[color]).style("class", "rectangle").on("click", function(d){
+		
+				var positionMouse = d3.mouse(this);
+				var xM = positionMouse[0];
+				var yM = positionMouse[1];
+				var distance = size + 5;
+				
+				if(yM < y + size / 4){
+					<!-- Up -->
+					console.log("Up");
+					fun(size, x, y - distance);
+				}else{
+				if(yM > y + size * 3 / 4){
+					<!-- Bottom -->
+					console.log("Bottom");
+					fun(size, x, y + distance);
+				}else{
+				if(xM < x + size / 4){
+					<!-- Left -->
+					console.log("Left");
+					fun(size, x - distance, y);
+				}else{
+				if(xM > x + size * 3 / 4){
+					<!-- Right -->
+					console.log("Right");
+					fun(size, x + distance, y);
+				}else{
+					color = getRandomInt(0, colors.length - 1);
+					fun(size, x, y);
+				}}}}
+			});
+		}
+		fun(size, sizex/2, sizey/2);
+	}
+	
+	var beauty = new Array(100);
+	for (i = 0; i <= 100; i++) { beauty[i] = new Array(100); }
+	for (i = 0; i <= 100; i++) { for(var j = 0; j < 100; j++) beauty[i][j] = -1; }
+	var currentX3 = 50;
+	var currentY3 = 50;
+	
+	function beautyToHW3(beauty){
+		
+		var symetric 	= 0;
+		var unsymetric 	= 0;
+		for(var y = 0; y < 100; y++){
+			for(var x = 0; x <= 50; x++){
+				if( (beauty[50 - x][y] != -1 || beauty[50 + x][y] != -1) && beauty[50 - x][y] == beauty[50 + x][y] ) symetric++;
+			}
+		}
+		for(var x = 0; x < 100; x++){
+			for(var y = 0; y <= 50; y++){
+				if( (beauty[x][50 - y] != -1 || beauty[x][50 + y] != -1) && beauty[x][50 - y] == beauty[x][50 + y] ) symetric++;
+			}
+		}
+		console.log("beauty:", symetric);
+		return symetric;
+	}
+	
+	var color = getRandomInt(0, colors.length - 1);
+	
+	function Zd3(sizex, sizey, size){
+	
+		var svgContainer = d3.select("body").append("svg")
+						.attr("width", sizex)
+						.attr("height", sizey);
+						
+		addTextToWebsite("Projekt 3, created by Krzysztof Kozubek(Beauty result is present in console log)");
+		
+		var x = sizex/2;
+		var y = sizey/2;
+		var svg = svgContainer;
+		var fun = function(size, x, y){
+		
+			beauty[currentX3][currentY3] = color;
+			beautyToHW3(beauty);
+			
+			svg.append("rect").attr("x", x).attr("y", y).attr("width", size).attr("height", size).attr("color", color).attr("currentX", currentX3).attr("currentY", currentY3).style("fill", colors[color]).style("class", "rectangle").on("click", function(d){
+		
+				var cx = parseFloat(this.getAttribute("currentX"));
+				var cy = parseFloat(this.getAttribute("currentY"));
+				var positionMouse = d3.mouse(this);
+				var xM = positionMouse[0];
+				var yM = positionMouse[1];
+				var distance = size + 5;
+				
+				if(yM < y + size / 4){
+					<!-- Up -->
+					currentX3 = cx;
+					currentY3 = cy - 1;
+					fun(size, x, y - distance);
+				}else{
+				if(yM > y + size * 3 / 4){
+					<!-- Bottom -->
+					currentX3 = cx;
+					currentY3 = cy + 1;
+					fun(size, x, y + distance);
+				}else{
+				if(xM < x + size / 4){
+					<!-- Left -->
+					currentY3 = cy;
+					currentX3 = cx - 1;
+					fun(size, x - distance, y);
+				}else{
+				if(xM > x + size * 3 / 4){
+					<!-- Right -->
+					currentY3 = cy;
+					currentX3 = cx + 1;
+					fun(size, x + distance, y);
+				}else{
+					currentX3 = cx;
+					currentY3 = cy;
+					color = getRandomInt(0, colors.length - 1);
+					fun(size, x, y);
+				}}}}
+			});
+		}
+		fun(size, sizex/2, sizey/2);
+	}
+	
+	function get1DArray(toArray, x)			{ toArray = new Array(x); for(var i = 0; i < x; i++) { toArray[i] = -1; 							} return toArray; }
+	function get2DArray(toArray, x, y)		{ toArray = new Array(x); for(var i = 0; i < x; i++) { toArray[i] = get1DArray(toArray, y); 		} return toArray; }
+	function get3DArray(toArray, x, y, z)	{ toArray = new Array(x); for(var i = 0; i < x; i++) { toArray[i] = get2DArray(toArray, y, z); 		} return toArray; }
+	function get4DArray(toArray, x, y, z, w){ toArray = new Array(x); for(var i = 0; i < x; i++) { toArray[i] = get3DArray(toArray, y, z, w); 	} return toArray; }
+	
+	
+	// START tworzenie tablicy 4 wymiarowej // 1w - generacja, 2w - figura, 3 i 4 w - wartosci x i y.
+	var maxGeneration 		= 4;
+	var zd4NElement 		= 100;
+	var sizeMartix 			= 50;
+	var currentGeneration 	= 0;
+	
+	var nElementsOnShape 	= 1000;
+	
+	var generationShapes = new Array(maxGeneration+1);
+	for(var q = 0;q <= maxGeneration; q++){generationShapes[q] = new Array(maxGeneration+1);for(var w = 0; w < zd4NElement; w++){generationShapes[q][w] = new Array(maxGeneration+1);for(var e = 0;e < sizeMartix; e++){generationShapes[q][w][e] = new Array(maxGeneration+1);for(var r = 0; r < sizeMartix; r++){generationShapes[q][w][e][r] = -1;}}}}
+	//get4DArray(generationShapes, maxGeneration + 1, zd4NElement, sizeMartix, sizeMartix);
+	// END
+	
+	//indeksy ~ srodek matrycy
+	var currentX = sizeMartix/2;
+	var currentY = sizeMartix/2;
+	var firstTime = 1;
+	
+	var max1 = -1, max2 = -1, i1=-1, i2=-1;
+	var bestChild;
+	
+	function beautyToHW4(beauty){
+		
+		var symetric 	= 0;
+		var unsymetric 	= 0;
+
+		for(var y = 0; y < sizeMartix; y++){
+			for(var x = 0; x < sizeMartix/2; x++){
+				if( (beauty[sizeMartix/2 - x][y] != -1 || beauty[sizeMartix/2 + x][y] != -1 ) && beauty[sizeMartix/2 - x][y] == beauty[sizeMartix/2 + x][y] ) symetric++;
+			}
+		}
+		for(var x = 0; x < sizeMartix; x++){
+			for(var y = 0; y < sizeMartix/2; y++){
+				if( (beauty[x][sizeMartix/2 - y] != -1 || beauty[x][sizeMartix/2 + y] != -1) && beauty[x][sizeMartix/2 - y] == beauty[x][sizeMartix/2 + y] ) symetric++;
+			}
+		}
+		return symetric;
+	}
+	
+	function generateGramma(element, fromX, toX, fromY, toY){
+	
+		var randX = getRandomInt(fromX, toX);
+		var randY = getRandomInt(fromY, toY);
+		
+		for(var j = 0; j < nElementsOnShape; j++) {
+		
+			if(randX > 0 && randY > 0 && element[randX][randY] != undefined)
+				element[randX][randY] = getRandomInt(0, colors.length - 1);
+			
+			var move = getRandomInt(0, 4);
+			
+			if(move == 0) randX++;
+			if(move == 1) randX--;
+			if(move == 2) randY--;
+			if(move == 3) randX++;
+			
+			if(randX <= 0) randX = toX;
+			if(randX > toX) randX = 0;
+			if(randY <= 0) randY = toY;
+			if(randY > toY) randY = 0;
+		}
+	}
+	
+	function zd4Generation(sizex, sizey, fromX, toX, fromY, toY) {
+		
+		//srodek rysowania na ekranie
+		var centerx = sizex/2;
+		var centery = sizey/2;
+		
+		//generacje
+		if(firstTime == 1) {
+			//generowanie losowych colorow w losowych miejscach
+			//for(var i = 0; i < zd4NElement; i++) { for(var j = 0; j < nElementsOnShape; j++) { generationShapes[currentGeneration][i][getRandomInt(fromX, toX)][getRandomInt(fromY, toY)] = getRandomInt(0, colors.length - 1); }}
+			for(var i = 0; i < zd4NElement; i++) generateGramma(generationShapes[currentGeneration][i], fromX, toX, fromY, toY);
+			firstTime = 0; zd4Generation(sizex, sizey, fromX, toX, fromY, toY);
+		}else{
+			//mutacje
+			
+			//wyliczenie pieknosci dla kazdego elementu
+			for(var i = 0; i < zd4NElement; i++) { generationShapes[currentGeneration][i].beauty = beautyToHW4(generationShapes[currentGeneration][i]); }
+		
+			//znajdz the best
+			var beauty = new Array(zd4NElement);
+			for(var i = 0; i < zd4NElement; i++) beauty[i] = generationShapes[currentGeneration][i].beauty;
+			//najpiekniejszy 
+			for(var i = 0; i < zd4NElement; i++) if(max1 < beauty[i]) { max1 = beauty[i]; i1 = i; }
+			//2 najpiekniejszy
+			for(var i = 0; i < zd4NElement; i++) if(max2 < beauty[i] && i != i1) { max2 = beauty[i]; i2 = i; }
+			//console.log(max1, max2, i1, i2);
+			
+			//przepisanie do nowej generacji
+			var mutate = 0;
+			for(var element = 0; element < zd4NElement; element++){
+				for(var x = 0; x < sizeMartix; x++){
+					for(var y = 0; y < sizeMartix; y++){
+						if(mutate%3==0){
+							generationShapes[currentGeneration+1][element][x][y] = generationShapes[currentGeneration][element][x][y];
+							mutate = -1;
+							}
+						mutate++;
+					}
+				}
+			}
+			//mutacja
+			for(var x = 0; x < sizeMartix; x++){
+				for(var y = 0; y < sizeMartix; y++){
+					if(generationShapes[currentGeneration][i2][x][y] != -1)
+						generationShapes[currentGeneration+1][i1][x][y] = generationShapes[currentGeneration+1][i2][x][y];
+				}
+			}
+			//wyliczenie pieknosci dla nowej 
+			generationShapes[currentGeneration+1][i1].beauty = beautyToHW4(generationShapes[currentGeneration+1][i1]);
+		}
+		
+		if(currentGeneration < maxGeneration-1) { currentGeneration++; zd4Generation(sizex, sizey, fromX, toX, fromY, toY);}
+		bestChild = generationShapes[currentGeneration][i1];
+	}
+	
+	function Zd4(sizex, sizey, size){
+		
+		var svgContainer = d3.select("body").append("svg")
+						.attr("width", sizex)
+						.attr("height", sizey);
+						
+		addTextToWebsite("Projekt 4, created by Krzysztof Kozubek");	
+		
+		var distance = size + 5;
+		var nX = sizeMartix/2-1;//sizex / size;
+		var nY = sizeMartix/2-1;//sizey / size;
+		
+		zd4Generation(sizex, sizey, sizeMartix/2 - nX, sizeMartix/2 + nX, sizeMartix/2 - nY, sizeMartix/2 + nY);
+		
+		console.log("best child: ", bestChild.beauty);
+		for(var i = 0; i < sizeMartix; i++){
+			for(var j = 0; j < sizeMartix; j++){
+				var cneteri = sizeMartix/2 - i;
+				var cneterj = sizeMartix/2 - j; 
+				var centerX = sizex/2;
+				var centerY = sizey/2;
+				//rysowanie najlepszego
+				if(bestChild[i][j] != -1){
+				//console.log(centerX+(distance*i), centerY+(distance*j));
+				svgContainer.append("rect").attr("x", centerX+(distance*cneteri)).attr("y", centerY+(distance*cneterj)).attr("width", size).attr("height", size).attr("color", bestChild[i][j]).attr("currentX", currentX).attr("currentY", currentY).style("fill", colors[bestChild[i][j]]).style("class", "rectangle");
+				}
+			}
+		}
+	}
+	 
+	 
+	var sizeX = 1000;
+	var sizeY = 500;
+	 
+	//struktura
+	var structur = new Array(sizeX);
+	for(var x = 0; x < sizeX; x++){
+		structur[x] = new Array(sizeY);
+		for(var y = 0; y < sizeY; y++){
+			structur[x][y] = [];
+		}
+	}
+	 
+	function getRectangle(x, y, sizex, sizey, color){
+	
+		var rectangle = [];
+		rectangle.shape 	= "rect";
+		rectangle.x 		= x;
+		rectangle.y 		= y;
+		rectangle.width 	= sizex;
+		rectangle.height 	= sizey;
+		rectangle.class 	= "rectangle";
+		rectangle.fill 		= colors[color];
+		rectangle.color 	= color;
+		
+		structur[x][y].push(rectangle);
+	}
+	
+	function getCircle(x, y, r, color){
+	
+		var circle = [];
+		circle.shape 		= "circle";
+		circle.cx 			= x;
+		circle.cy 			= y;
+		circle.r 			= r;
+		circle.class 		= "circle";
+		circle.fill 		= colors[color];
+		circle.color 		= color;
+		
+		structur[x][y].push(circle);
+	}
+	 
+	function Zd5(sizeX, sizeY){
+	
+		var grass 		= getRectangle(0, 0, sizeX, sizeY, 6);
+		
+		var fenceWest	= getRectangle(5, 5, 5, sizeY - 10, 14);
+		var fenceEast	= getRectangle(sizeX - 10, 5, 5, sizeY - 10, 14);
+		var fenceNorth	= getRectangle(5, 5, sizeX - 10, 5, 14);
+		var fenceSouth	= getRectangle(5, sizeY - 10, sizeX - 10, 5, 14);
+		
+		var hasuse		= getRectangle(200, 150, 600, 300, 9);
+		var chimney		= getRectangle(250, 200, 50, 50, 14);
+		var tree		= getCircle(sizeX - 100, 100, 70, 4);
+			
+		var svgContainer = d3.select("body").append("svg")
+						.attr("width", sizeX)
+						.attr("height", sizeY);
+						
+		addTextToWebsite("Projekt 5, created by Krzysztof Kozubek");	
+		
+		for(var i = 0; i < structur.length; i++){
+			for(var j = 0; j < structur[i].length; j++){
+				for(var k = 0; k < structur[i][j].length; k++){
+					var tmp = structur[i][j][k];
+					//console.log(tmp);
+					if(tmp.shape == "rect")
+						svgContainer.append(tmp.shape).attr("x", tmp.x).attr("y", tmp.y).attr("width", tmp.width).attr("height", tmp.height).style("fill", tmp.fill).style("class", tmp.class);
+					if(tmp.shape == "circle")
+						svgContainer.append(tmp.shape).attr("cx", tmp.cx).attr("cy", tmp.cy).attr("r", tmp.r).style("fill", tmp.fill).style("class", tmp.class);
+				}
+			}
+		}
+		
+		
+		for(var i = 0; i < colors.length; i++){
+		//paleta kolorów.. 
+			//svgContainer.append("rect").attr("x", 0).attr("y", i*15).attr("width", 100).attr("height", 100).style("fill", colors[i]).style("class", "rectangle");
+		}
+	}
+	 
+<!-- Zd1(szerokosc bloku, wysokosc bloku, rozmiar kół) -->
+   Zd1(1000, 500, 10);
+   
+<!-- Zd2(szerokosc bloku, wysokosc bloku, rozmiar ściany kwadratów) -->
+   Zd2(1000, 500, 100);
+   
+<!-- Zd3(szerokosc bloku, wysokosc bloku, rozmiar ściany kwadratów) -->
+   Zd3(1000, 500, 100);
+   
+<!-- Zd4(szerokosc bloku, wysokosc bloku, rozmiar ściany kwadratów) -->
+   Zd4(1000, 500, 10);
+   
+<!-- Zd5(szerokosc bloku, wysokosc bloku, rozmiar ściany kwadratów) -->
+   Zd5(sizeX, sizeY);
+   
+   </script>
+   </body>
+</html>

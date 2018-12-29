@@ -1,0 +1,32 @@
+FILM {
+    background-color: #64cc33;
+    color: #000000;
+    padding: 20px;
+    margin: 3px 300px 5px 300px;
+    border-bottom: solid 1px #000000;
+    box-shadow: 2px 2px #909090;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: 10000000000000;
+    animation-direction: reverse;
+}
+
+#tytul {
+    font-size: 30px;
+    text-align: center;
+    display: block;
+    color: #3f469f;
+    text-shadow: 2px 2px #89929f;
+    animation-name: examplee;
+    animation-duration: 2s;
+    animation-iteration-count: 10000000000;
+    animation-direction: reverse;
+}
+#ocena{
+    display: block;
+    color: #89929f;
+}
+#opis{
+    display: block;
+    color: #9f2633;
+}

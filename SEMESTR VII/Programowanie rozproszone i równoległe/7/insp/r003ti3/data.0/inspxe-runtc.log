@@ -1,0 +1,1439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<log version="1.0" tool="runtool">
+
+<msg id="1" tool="runtool">
+  <type>log-start</type>
+  <arg>2017/01/17 10:47:52</arg>
+</msg>
+<msg id="2" tool="runtool">
+  <type>collector-starts</type>
+</msg>
+<msg id="3" tool="runtool">
+  <type>marker-file</type>
+  <arg>/home/imiolek_1102507/Materialy/PRiR/7/insp/r003ti3/r003ti3.inspxe</arg>
+</msg>
+<msg id="4" tool="tc">
+  <type>START</type>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:47:53 2017</timestamp>
+</msg>
+<msg id="5" tool="tc">
+  <type>EXEC_OF_INTEREST</type>
+  <arg>/home/imiolek_1102507/Materialy/PRiR/6/a.out</arg>
+  <arg>6556</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:47:53 2017</timestamp>
+</msg>
+<msg id="6" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>/home/imiolek_1102507/Materialy/PRiR/6/a.out</arg>
+  <arg>0x400000</arg>
+  <arg>0x6047ff</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:47:53 2017</timestamp>
+</msg>
+<msg id="7" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib64/ld-linux-x86-64.so.2</arg>
+  <arg>0x7fa7e25fe000</arg>
+  <arg>0x7fa7e281f1c7</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:47:53 2017</timestamp>
+</msg>
+<msg id="8" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>/app/intel/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libimf.so</arg>
+  <arg>0x7fa7ce1c8000</arg>
+  <arg>0x7fa7ce6bfc2f</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:47:53 2017</timestamp>
+</msg>
+<msg id="9" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>/app/intel/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libsvml.so</arg>
+  <arg>0x7fa7cd2eb000</arg>
+  <arg>0x7fa7ce1a9f17</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:47:53 2017</timestamp>
+</msg>
+<msg id="10" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>/app/intel/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libirng.so</arg>
+  <arg>0x7fa7cd0ba000</arg>
+  <arg>0x7fa7cd2c18d7</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:47:53 2017</timestamp>
+</msg>
+<msg id="11" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libm.so.6</arg>
+  <arg>0x7fa7ccddb000</arg>
+  <arg>0x7fa7cd05c0e7</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:47:53 2017</timestamp>
+</msg>
+<msg id="12" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>/app/intel/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libiomp5.so</arg>
+  <arg>0x7fa7cca9a000</arg>
+  <arg>0x7fa7ccddabdf</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:47:53 2017</timestamp>
+</msg>
+<msg id="13" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>/usr/lib/x86_64-linux-gnu/libstdc++.so.6</arg>
+  <arg>0x7fa7cc790000</arg>
+  <arg>0x7fa7cca964bf</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:47:53 2017</timestamp>
+</msg>
+<msg id="14" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libgcc_s.so.1</arg>
+  <arg>0x7fa7cc575000</arg>
+  <arg>0x7fa7cc78a677</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:47:53 2017</timestamp>
+</msg>
+<msg id="15" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>/app/intel/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libintlc.so.5</arg>
+  <arg>0x7fa7cc316000</arg>
+  <arg>0x7fa7cc574a9f</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:47:53 2017</timestamp>
+</msg>
+<msg id="16" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libpthread.so.0</arg>
+  <arg>0x7fa7cc0fa000</arg>
+  <arg>0x7fa7cc31539f</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:47:53 2017</timestamp>
+</msg>
+<msg id="17" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libc.so.6</arg>
+  <arg>0x7fa7cbd69000</arg>
+  <arg>0x7fa7cc0f5837</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:47:53 2017</timestamp>
+</msg>
+<msg id="18" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libdl.so.2</arg>
+  <arg>0x7fa7cbb61000</arg>
+  <arg>0x7fa7cbd640ff</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:47:53 2017</timestamp>
+</msg>
+<msg id="19" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>/app/intel/inspector_xe_2016.1.0.423441/lib64/runtime/libittnotify.so</arg>
+  <arg>0x7fa7caae4000</arg>
+  <arg>0x7fa7cacf08df</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:47:54 2017</timestamp>
+</msg>
+<msg id="20" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6556</arg>
+  <arg>0</arg>
+  <arg>35967</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:47:54 2017</timestamp>
+</msg>
+<msg id="21" tool="tc">
+  <type>THREADNAME</type>
+  <arg>6556</arg>
+  <arg>OMP Master Thread #0</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:47:55 2017</timestamp>
+</msg>
+<msg id="22" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6556</arg>
+  <arg>0</arg>
+  <arg>3608926</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:47:55 2017</timestamp>
+</msg>
+<msg id="23" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6556</arg>
+  <arg>0</arg>
+  <arg>12620005</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:47:56 2017</timestamp>
+</msg>
+<msg id="24" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6556</arg>
+  <arg>0</arg>
+  <arg>12676766</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:47:57 2017</timestamp>
+</msg>
+<msg id="25" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6556</arg>
+  <arg>0</arg>
+  <arg>12632643</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:47:58 2017</timestamp>
+</msg>
+<msg id="26" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6556</arg>
+  <arg>0</arg>
+  <arg>12590409</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:47:59 2017</timestamp>
+</msg>
+<msg id="27" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6556</arg>
+  <arg>0</arg>
+  <arg>12566152</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:00 2017</timestamp>
+</msg>
+<msg id="28" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6556</arg>
+  <arg>0</arg>
+  <arg>12568604</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:01 2017</timestamp>
+</msg>
+<msg id="29" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6556</arg>
+  <arg>0</arg>
+  <arg>12590205</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:02 2017</timestamp>
+</msg>
+<msg id="30" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6556</arg>
+  <arg>0</arg>
+  <arg>12601316</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:03 2017</timestamp>
+</msg>
+<msg id="31" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6556</arg>
+  <arg>0</arg>
+  <arg>12701853</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:04 2017</timestamp>
+</msg>
+<msg id="32" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6556</arg>
+  <arg>0</arg>
+  <arg>25368192</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:05 2017</timestamp>
+</msg>
+<msg id="33" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6556</arg>
+  <arg>0</arg>
+  <arg>12610354</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:06 2017</timestamp>
+</msg>
+<msg id="34" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6556</arg>
+  <arg>0</arg>
+  <arg>12697801</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:07 2017</timestamp>
+</msg>
+<msg id="35" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6556</arg>
+  <arg>0</arg>
+  <arg>25249898</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:08 2017</timestamp>
+</msg>
+<msg id="36" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6556</arg>
+  <arg>0</arg>
+  <arg>12662585</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:09 2017</timestamp>
+</msg>
+<msg id="37" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6556</arg>
+  <arg>0</arg>
+  <arg>12720336</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:10 2017</timestamp>
+</msg>
+<msg id="38" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6556</arg>
+  <arg>0</arg>
+  <arg>12715880</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:11 2017</timestamp>
+</msg>
+<msg id="39" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6556</arg>
+  <arg>0</arg>
+  <arg>12719085</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:12 2017</timestamp>
+</msg>
+<msg id="40" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6556</arg>
+  <arg>0</arg>
+  <arg>12722747</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:13 2017</timestamp>
+</msg>
+<msg id="41" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6556</arg>
+  <arg>0</arg>
+  <arg>25429808</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:14 2017</timestamp>
+</msg>
+<msg id="42" tool="tc">
+  <type>CTSA_NO_STACK</type>
+  <severity>WARNING</severity>
+  <timestamp>Tue Jan 17 10:48:14 2017</timestamp>
+</msg>
+<msg id="43" tool="tc">
+  <type>THREADNAME</type>
+  <arg>6579</arg>
+  <arg>OMP Worker Thread #1</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:15 2017</timestamp>
+</msg>
+<msg id="44" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6579,6578,6556</arg>
+  <arg>0,1,0</arg>
+  <arg>1753364,207,6839431</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:15 2017</timestamp>
+</msg>
+<msg id="45" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6579,6578,6556</arg>
+  <arg>0,1,0</arg>
+  <arg>6895598,36,6867263</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:16 2017</timestamp>
+</msg>
+<msg id="46" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6579,6578,6556</arg>
+  <arg>0,1,0</arg>
+  <arg>9340309,45,9349302</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:17 2017</timestamp>
+</msg>
+<msg id="47" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6579,6578,6556</arg>
+  <arg>0,1,0</arg>
+  <arg>9353851,45,9369820</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:18 2017</timestamp>
+</msg>
+<msg id="48" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6579,6578,6556</arg>
+  <arg>0,1,0</arg>
+  <arg>9327605,45,9333583</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:19 2017</timestamp>
+</msg>
+<msg id="49" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6579,6578,6556</arg>
+  <arg>0,1,0</arg>
+  <arg>9354607,45,9364397</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:20 2017</timestamp>
+</msg>
+<msg id="50" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6579,6578,6556</arg>
+  <arg>0,1,0</arg>
+  <arg>9347795,45,9361357</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:21 2017</timestamp>
+</msg>
+<msg id="51" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6579,6578,6556</arg>
+  <arg>0,1,0</arg>
+  <arg>9351380,45,9348052</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:22 2017</timestamp>
+</msg>
+<msg id="52" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6579,6578,6556</arg>
+  <arg>0,1,0</arg>
+  <arg>9302276,45,9326741</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:23 2017</timestamp>
+</msg>
+<msg id="53" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6579,6578,6556</arg>
+  <arg>0,1,0</arg>
+  <arg>9362178,45,18701930</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:24 2017</timestamp>
+</msg>
+<msg id="54" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6579,6578,6556</arg>
+  <arg>0,1,0</arg>
+  <arg>9161381,45,27965109</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:25 2017</timestamp>
+</msg>
+<msg id="55" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6579,6578,6556</arg>
+  <arg>0,1,0</arg>
+  <arg>9225356,45,37223364</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:26 2017</timestamp>
+</msg>
+<msg id="56" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6579,6578,6556</arg>
+  <arg>0,1,0</arg>
+  <arg>18440673,45,9245919</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:27 2017</timestamp>
+</msg>
+<msg id="57" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6579,6578,6556</arg>
+  <arg>0,1,0</arg>
+  <arg>9298907,45,9321244</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:28 2017</timestamp>
+</msg>
+<msg id="58" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6579,6578,6556</arg>
+  <arg>0,1,0</arg>
+  <arg>9342493,45,9380766</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:29 2017</timestamp>
+</msg>
+<msg id="59" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6579,6578,6556</arg>
+  <arg>0,1,0</arg>
+  <arg>9362653,45,9392527</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:30 2017</timestamp>
+</msg>
+<msg id="60" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6579,6578,6556</arg>
+  <arg>0,1,0</arg>
+  <arg>9345320,45,9364884</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:31 2017</timestamp>
+</msg>
+<msg id="61" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6579,6578,6556</arg>
+  <arg>0,1,0</arg>
+  <arg>9356269,45,9381794</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:32 2017</timestamp>
+</msg>
+<msg id="62" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6579,6578,6556</arg>
+  <arg>0,1,0</arg>
+  <arg>9350726,45,9369769</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:33 2017</timestamp>
+</msg>
+<msg id="63" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6579,6578,6556</arg>
+  <arg>0,1,0</arg>
+  <arg>9283504,45,9319561</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:34 2017</timestamp>
+</msg>
+<msg id="64" tool="tc">
+  <type>THREADNAME</type>
+  <arg>6597</arg>
+  <arg>OMP Worker Thread #2</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:35 2017</timestamp>
+</msg>
+<msg id="65" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6597,6579,6578,6556</arg>
+  <arg>0,0,1,0</arg>
+  <arg>2591473,10891662,45,8208819</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:35 2017</timestamp>
+</msg>
+<msg id="66" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6597,6579,6578,6556</arg>
+  <arg>0,0,1,0</arg>
+  <arg>9018171,19939443,45,9060521</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:36 2017</timestamp>
+</msg>
+<msg id="67" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6597,6579,6578,6556</arg>
+  <arg>0,0,1,0</arg>
+  <arg>9064035,9079264,45,9083798</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:37 2017</timestamp>
+</msg>
+<msg id="68" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6597,6579,6578,6556</arg>
+  <arg>0,0,1,0</arg>
+  <arg>9050190,9054516,45,9063458</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:38 2017</timestamp>
+</msg>
+<msg id="69" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6597,6579,6578,6556</arg>
+  <arg>0,0,1,0</arg>
+  <arg>9084852,9099591,45,9094164</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:39 2017</timestamp>
+</msg>
+<msg id="70" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6597,6579,6578,6556</arg>
+  <arg>0,0,1,0</arg>
+  <arg>9076575,9071559,45,18166873</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:40 2017</timestamp>
+</msg>
+<msg id="71" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6597,6579,6578,6556</arg>
+  <arg>0,0,1,0</arg>
+  <arg>9085449,9083064,45,9075514</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:41 2017</timestamp>
+</msg>
+<msg id="72" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6597,6579,6578,6556</arg>
+  <arg>0,0,1,0</arg>
+  <arg>9063116,9073397,45,9070581</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:42 2017</timestamp>
+</msg>
+<msg id="73" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6597,6579,6578,6556</arg>
+  <arg>0,0,1,0</arg>
+  <arg>9058843,9058157,45,9058551</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:43 2017</timestamp>
+</msg>
+<msg id="74" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6597,6579,6578,6556</arg>
+  <arg>0,0,1,0</arg>
+  <arg>9063816,18118982,45,9054538</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:44 2017</timestamp>
+</msg>
+<msg id="75" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6597,6579,6578,6556</arg>
+  <arg>0,0,1,0</arg>
+  <arg>9074370,9012105,45,9031377</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:45 2017</timestamp>
+</msg>
+<msg id="76" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6597,6579,6578,6556</arg>
+  <arg>0,0,1,0</arg>
+  <arg>9079602,9072225,45,9074419</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:46 2017</timestamp>
+</msg>
+<msg id="77" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6597,6579,6578,6556</arg>
+  <arg>0,0,1,0</arg>
+  <arg>9067578,9070618,45,9072494</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:47 2017</timestamp>
+</msg>
+<msg id="78" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6597,6579,6578,6556</arg>
+  <arg>0,0,1,0</arg>
+  <arg>8988728,9063045,45,9049625</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:48 2017</timestamp>
+</msg>
+<msg id="79" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6597,6579,6578,6556</arg>
+  <arg>0,0,1,0</arg>
+  <arg>9052233,9083466,45,9074143</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:49 2017</timestamp>
+</msg>
+<msg id="80" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6597,6579,6578,6556</arg>
+  <arg>0,0,1,0</arg>
+  <arg>9044846,18140113,45,9056064</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:50 2017</timestamp>
+</msg>
+<msg id="81" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6597,6579,6578,6556</arg>
+  <arg>0,0,1,0</arg>
+  <arg>18111083,9072735,45,9076139</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:51 2017</timestamp>
+</msg>
+<msg id="82" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6597,6579,6578,6556</arg>
+  <arg>0,0,1,0</arg>
+  <arg>9065554,9082026,45,18151011</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:52 2017</timestamp>
+</msg>
+<msg id="83" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6597,6579,6578,6556</arg>
+  <arg>0,0,1,0</arg>
+  <arg>9055048,9067485,45,9069470</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:53 2017</timestamp>
+</msg>
+<msg id="84" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6597,6579,6578,6556</arg>
+  <arg>0,0,1,0</arg>
+  <arg>9048555,9026929,45,9046568</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:54 2017</timestamp>
+</msg>
+<msg id="85" tool="tc">
+  <type>THREADNAME</type>
+  <arg>6608</arg>
+  <arg>OMP Worker Thread #3</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:55 2017</timestamp>
+</msg>
+<msg id="86" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,1,0</arg>
+  <arg>2104812,8312724,8809683,45,15995401</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:55 2017</timestamp>
+</msg>
+<msg id="87" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,1,0</arg>
+  <arg>8776270,8732665,17714938,45,8904692</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:56 2017</timestamp>
+</msg>
+<msg id="88" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,1,0</arg>
+  <arg>8725244,8823605,8877715,45,17816543</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:57 2017</timestamp>
+</msg>
+<msg id="89" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,1,0</arg>
+  <arg>8873471,8751522,8920761,45,8758234</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:58 2017</timestamp>
+</msg>
+<msg id="90" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,1,0</arg>
+  <arg>17728818,8881448,8872708,45,8776911</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:48:59 2017</timestamp>
+</msg>
+<msg id="91" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,1,0</arg>
+  <arg>8732090,8840298,8748470,45,8762281</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:00 2017</timestamp>
+</msg>
+<msg id="92" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,1,0</arg>
+  <arg>8746103,8883345,8913136,45,8832424</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:01 2017</timestamp>
+</msg>
+<msg id="93" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,1,0</arg>
+  <arg>8736092,8873563,8894933,45,17750053</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:02 2017</timestamp>
+</msg>
+<msg id="94" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,1,0</arg>
+  <arg>8773546,8798609,8904292,45,8825557</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:03 2017</timestamp>
+</msg>
+<msg id="95" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,1,0</arg>
+  <arg>8865118,8896118,8846936,45,17674922</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:04 2017</timestamp>
+</msg>
+<msg id="96" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,1,0</arg>
+  <arg>8871343,8893019,8748955,45,26597188</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:05 2017</timestamp>
+</msg>
+<msg id="97" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,1,0</arg>
+  <arg>8870698,8899670,8691061,45,35399038</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:06 2017</timestamp>
+</msg>
+<msg id="98" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,1,0</arg>
+  <arg>17734921,8886545,8721983,45,8908562</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:07 2017</timestamp>
+</msg>
+<msg id="99" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,1,0</arg>
+  <arg>26602459,8841516,8778496,45,8906043</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:08 2017</timestamp>
+</msg>
+<msg id="100" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,1,0</arg>
+  <arg>8823948,8883663,8747813,45,8913520</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:09 2017</timestamp>
+</msg>
+<msg id="101" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,1,0</arg>
+  <arg>8719484,8854444,8905585,45,8915343</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:10 2017</timestamp>
+</msg>
+<msg id="102" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,1,0</arg>
+  <arg>8857167,8716331,8914112,45,8910770</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:11 2017</timestamp>
+</msg>
+<msg id="103" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,1,0</arg>
+  <arg>8789560,17428086,8888637,45,8866640</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:12 2017</timestamp>
+</msg>
+<msg id="104" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,1,0</arg>
+  <arg>8867037,8900241,8764933,45,8876677</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:13 2017</timestamp>
+</msg>
+<msg id="105" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,1,0</arg>
+  <arg>8865295,8871959,8904380,45,8768456</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:14 2017</timestamp>
+</msg>
+<msg id="106" tool="tc">
+  <type>THREADNAME</type>
+  <arg>6616</arg>
+  <arg>OMP Worker Thread #4</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:15 2017</timestamp>
+</msg>
+<msg id="107" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,1,0</arg>
+  <arg>1709312,8580156,8325397,8752144,45,8719157</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:15 2017</timestamp>
+</msg>
+<msg id="108" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,1,0</arg>
+  <arg>6017220,6008620,8885281,8810352,45,8605264</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:16 2017</timestamp>
+</msg>
+<msg id="109" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,1,0</arg>
+  <arg>6018909,6010579,8891900,8805656,45,8730680</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:17 2017</timestamp>
+</msg>
+<msg id="110" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,1,0</arg>
+  <arg>6019655,6010748,17783399,8665785,45,8869098</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:18 2017</timestamp>
+</msg>
+<msg id="111" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,1,0</arg>
+  <arg>6024902,6013784,8880306,8754420,45,8777216</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:19 2017</timestamp>
+</msg>
+<msg id="112" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,1,0</arg>
+  <arg>6018965,6014496,8885293,8845502,45,8677776</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:20 2017</timestamp>
+</msg>
+<msg id="113" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,1,0</arg>
+  <arg>6024123,6013324,17745247,8849473,45,8699578</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:21 2017</timestamp>
+</msg>
+<msg id="114" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,1,0</arg>
+  <arg>6412918,6381658,8709219,8471555,45,17174555</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:22 2017</timestamp>
+</msg>
+<msg id="115" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,1,0</arg>
+  <arg>8873665,8742578,8757280,6020819,45,6029256</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:23 2017</timestamp>
+</msg>
+<msg id="116" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,1,0</arg>
+  <arg>17430680,8416243,8859260,12341207,45,12307950</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:24 2017</timestamp>
+</msg>
+<msg id="117" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,1,0</arg>
+  <arg>5987847,6013345,8785680,8802984,45,8863255</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:25 2017</timestamp>
+</msg>
+<msg id="118" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,1,0</arg>
+  <arg>6263283,6268544,8217117,8276485,45,8896117</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:26 2017</timestamp>
+</msg>
+<msg id="119" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,1,0</arg>
+  <arg>8779184,8862858,6050704,6045462,45,8894062</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:27 2017</timestamp>
+</msg>
+<msg id="120" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,1,0</arg>
+  <arg>8709936,8831810,6023422,6358450,45,8538724</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:28 2017</timestamp>
+</msg>
+<msg id="121" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,1,0</arg>
+  <arg>8733148,8823557,6028361,8823402,45,6030246</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:29 2017</timestamp>
+</msg>
+<msg id="122" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,1,0</arg>
+  <arg>8850273,8823699,6028329,8701712,45,6033938</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:30 2017</timestamp>
+</msg>
+<msg id="123" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,1,0</arg>
+  <arg>8794354,8830140,6031050,8749312,45,6035579</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:31 2017</timestamp>
+</msg>
+<msg id="124" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,1,0</arg>
+  <arg>8694809,8819411,6030128,8856143,45,6033219</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:32 2017</timestamp>
+</msg>
+<msg id="125" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,1,0</arg>
+  <arg>8738724,8789381,6027198,8601173,45,6289930</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:33 2017</timestamp>
+</msg>
+<msg id="126" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,1,0</arg>
+  <arg>8832080,8722481,12044573,6030514,45,15118625</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:34 2017</timestamp>
+</msg>
+<msg id="127" tool="tc">
+  <type>THREADNAME</type>
+  <arg>6627</arg>
+  <arg>OMP Worker Thread #5</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:35 2017</timestamp>
+</msg>
+<msg id="128" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,1,0</arg>
+  <arg>1691895,8016100,8706647,6007104,6041154,45,8855023</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:35 2017</timestamp>
+</msg>
+<msg id="129" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,1,0</arg>
+  <arg>6649884,6067665,8459041,6013971,6017749,45,8262424</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:36 2017</timestamp>
+</msg>
+<msg id="130" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,1,0</arg>
+  <arg>15536652,6077801,8700759,6012290,6010485,45,6040407</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:37 2017</timestamp>
+</msg>
+<msg id="131" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,1,0</arg>
+  <arg>8897576,6075538,8719859,6011861,6017766,45,6036004</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:38 2017</timestamp>
+</msg>
+<msg id="132" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,1,0</arg>
+  <arg>8426127,6072684,8518527,6017244,6452251,45,6287479</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:39 2017</timestamp>
+</msg>
+<msg id="133" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,1,0</arg>
+  <arg>6053579,6051982,6047542,6044380,8759769,45,8776642</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:40 2017</timestamp>
+</msg>
+<msg id="134" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,1,0</arg>
+  <arg>8477189,6405285,6047368,5998953,6057397,45,8691174</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:41 2017</timestamp>
+</msg>
+<msg id="135" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,1,0</arg>
+  <arg>6052502,8764055,12127993,6025340,8549769,45,6247467</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:42 2017</timestamp>
+</msg>
+<msg id="136" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,1,0</arg>
+  <arg>6049355,17513251,6033842,6020338,8830703,45,6049011</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:43 2017</timestamp>
+</msg>
+<msg id="137" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,1,0</arg>
+  <arg>6052185,26306248,6032755,6026690,8761792,45,6050355</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:44 2017</timestamp>
+</msg>
+<msg id="138" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,1,0</arg>
+  <arg>6051490,8667861,6032425,6025602,8681270,45,6051471</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:45 2017</timestamp>
+</msg>
+<msg id="139" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,1,0</arg>
+  <arg>6652011,8707074,6047103,8154527,6039426,45,6011907</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:46 2017</timestamp>
+</msg>
+<msg id="140" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,1,0</arg>
+  <arg>6051716,17310258,6051368,8849451,12049059,45,6011290</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:47 2017</timestamp>
+</msg>
+<msg id="141" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,1,0</arg>
+  <arg>6431424,8743166,6047222,8482965,6016344,45,6016769</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:48 2017</timestamp>
+</msg>
+<msg id="142" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,1,0</arg>
+  <arg>8753986,17621439,6027251,14515646,6020135,45,6011307</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:49 2017</timestamp>
+</msg>
+<msg id="143" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,1,0</arg>
+  <arg>8399647,8485849,6165153,6136106,6014516,45,6007658</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:50 2017</timestamp>
+</msg>
+<msg id="144" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,1,0</arg>
+  <arg>6042688,6041277,8368636,8623891,6451597,45,6016215</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:51 2017</timestamp>
+</msg>
+<msg id="145" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,1,0</arg>
+  <arg>6046552,12084260,6029470,8844275,8705107,45,6033968</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:52 2017</timestamp>
+</msg>
+<msg id="146" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,1,0</arg>
+  <arg>6095617,6039174,6030901,8808809,8684884,45,6035486</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:53 2017</timestamp>
+</msg>
+<msg id="147" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,1,0</arg>
+  <arg>8600488,6038762,6030057,6445778,8397110,45,6035683</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:54 2017</timestamp>
+</msg>
+<msg id="148" tool="tc">
+  <type>THREADNAME</type>
+  <arg>6635</arg>
+  <arg>OMP Worker Thread #6</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:55 2017</timestamp>
+</msg>
+<msg id="149" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6635,6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,0,1,0</arg>
+  <arg>1679379,16584965,6665944,6050559,7992574,6004621,45,6010120</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:55 2017</timestamp>
+</msg>
+<msg id="150" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6635,6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,0,1,0</arg>
+  <arg>8169332,5954368,6277399,6004754,6012555,5990060,45,6006688</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:56 2017</timestamp>
+</msg>
+<msg id="151" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6635,6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,0,1,0</arg>
+  <arg>16480692,5958183,6144053,6005903,6000795,6247500,45,6018103</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:57 2017</timestamp>
+</msg>
+<msg id="152" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6635,6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,0,1,0</arg>
+  <arg>6043380,6021145,12152782,6004583,5912979,8688800,45,6011316</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:58 2017</timestamp>
+</msg>
+<msg id="153" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6635,6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,0,1,0</arg>
+  <arg>6042159,6021265,6011541,6005325,6012800,8660000,45,6013991</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:49:59 2017</timestamp>
+</msg>
+<msg id="154" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6635,6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,0,1,0</arg>
+  <arg>6046725,6017614,6008388,6097111,6017219,8482046,45,6066412</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:50:00 2017</timestamp>
+</msg>
+<msg id="155" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6635,6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,0,1,0</arg>
+  <arg>6040098,6013297,6007358,8095062,5918212,6613382,45,6011259</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:50:01 2017</timestamp>
+</msg>
+<msg id="156" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6635,6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,0,1,0</arg>
+  <arg>6041785,6016315,6001167,8397597,5898851,6316822,45,6019921</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:50:02 2017</timestamp>
+</msg>
+<msg id="157" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6635,6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,0,1,0</arg>
+  <arg>6051219,6113422,6001722,6004730,5994874,8567365,45,6026517</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:50:03 2017</timestamp>
+</msg>
+<msg id="158" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6635,6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,0,1,0</arg>
+  <arg>6050803,6021124,6008156,6005898,5990295,8648407,45,6024317</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:50:04 2017</timestamp>
+</msg>
+<msg id="159" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6635,6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,0,1,0</arg>
+  <arg>6051164,6021013,6016425,5994928,6008707,8641029,45,6026449</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:50:05 2017</timestamp>
+</msg>
+<msg id="160" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6635,6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,0,1,0</arg>
+  <arg>6090122,6018575,6014401,6004267,5995342,8365300,45,6219678</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:50:06 2017</timestamp>
+</msg>
+<msg id="161" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6635,6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,0,1,0</arg>
+  <arg>6057819,6022291,6015658,12033022,5978829,8218650,45,6434596</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:50:07 2017</timestamp>
+</msg>
+<msg id="162" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6635,6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,0,1,0</arg>
+  <arg>6057494,6023236,6010429,6031383,5948664,8587491,45,6088296</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:50:08 2017</timestamp>
+</msg>
+<msg id="163" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6635,6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,0,1,0</arg>
+  <arg>6059860,6135184,5987361,6028039,5994872,8544445,45,6008430</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:50:09 2017</timestamp>
+</msg>
+<msg id="164" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6635,6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,0,1,0</arg>
+  <arg>6057111,6020267,6012345,6031052,5997127,8646336,45,6007365</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:50:10 2017</timestamp>
+</msg>
+<msg id="165" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6635,6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,0,1,0</arg>
+  <arg>6061940,6020864,6009395,6024501,5994998,8692774,45,6007023</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:50:11 2017</timestamp>
+</msg>
+<msg id="166" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6635,6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,0,1,0</arg>
+  <arg>6057059,6022302,6013328,6062117,5993195,8639256,45,6007169</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:50:12 2017</timestamp>
+</msg>
+<msg id="167" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6635,6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,0,1,0</arg>
+  <arg>6314588,6023285,6014429,6021235,5992814,8456666,45,6006889</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:50:13 2017</timestamp>
+</msg>
+<msg id="168" tool="tc">
+  <type>HEARTBEAT</type>
+  <arg>6635,6627,6616,6608,6597,6579,6578,6556</arg>
+  <arg>0,0,0,0,0,0,1,0</arg>
+  <arg>12636631,12049733,6009290,6020586,5994528,8432935,45,6008918</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:50:14 2017</timestamp>
+</msg>
+<msg id="169" tool="tc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/home/imiolek_1102507/Materialy/PRiR/6/a.out</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:50:15 2017</timestamp>
+</msg>
+<msg id="170" tool="tc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib64/ld-linux-x86-64.so.2</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:50:15 2017</timestamp>
+</msg>
+<msg id="171" tool="tc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/app/intel/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libimf.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:50:15 2017</timestamp>
+</msg>
+<msg id="172" tool="tc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/app/intel/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libsvml.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:50:15 2017</timestamp>
+</msg>
+<msg id="173" tool="tc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/app/intel/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libirng.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:50:15 2017</timestamp>
+</msg>
+<msg id="174" tool="tc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libm.so.6</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:50:15 2017</timestamp>
+</msg>
+<msg id="175" tool="tc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/app/intel/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libiomp5.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:50:15 2017</timestamp>
+</msg>
+<msg id="176" tool="tc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/usr/lib/x86_64-linux-gnu/libstdc++.so.6</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:50:15 2017</timestamp>
+</msg>
+<msg id="177" tool="tc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libgcc_s.so.1</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:50:15 2017</timestamp>
+</msg>
+<msg id="178" tool="tc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/app/intel/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libintlc.so.5</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:50:15 2017</timestamp>
+</msg>
+<msg id="179" tool="tc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libpthread.so.0</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:50:15 2017</timestamp>
+</msg>
+<msg id="180" tool="tc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libc.so.6</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:50:15 2017</timestamp>
+</msg>
+<msg id="181" tool="tc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libdl.so.2</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:50:15 2017</timestamp>
+</msg>
+<msg id="182" tool="tc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/app/intel/inspector_xe_2016.1.0.423441/lib64/runtime/libittnotify.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:50:15 2017</timestamp>
+</msg>
+<msg id="183" tool="tc">
+  <type>PROCESS_TERMINATE</type>
+  <arg>/home/imiolek_1102507/Materialy/PRiR/6/a.out</arg>
+  <arg>6556</arg>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:50:15 2017</timestamp>
+</msg>
+<msg id="184" tool="tc">
+  <type>ANALYSIS_COMPLETE</type>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:50:15 2017</timestamp>
+</msg>
+<msg id="185" tool="tc">
+  <type>STOP</type>
+  <severity>INFO</severity>
+  <timestamp>Tue Jan 17 10:50:15 2017</timestamp>
+</msg>
+<msg id="186" tool="runtool">
+  <type>app-exit-code</type>
+  <arg>0</arg>
+</msg>
+<msg id="187" tool="runtool">
+  <type>marker-file</type>
+  <arg>/home/imiolek_1102507/Materialy/PRiR/7/insp/r003ti3/r003ti3.inspxe</arg>
+</msg>
+<msg id="188" tool="runtool">
+  <type>collector-done</type>
+</msg>
+<msg id="189" tool="runtool">
+  <type>log-end</type>
+  <arg>2017/01/17 10:50:19</arg>
+</msg>
+
+</log>
+

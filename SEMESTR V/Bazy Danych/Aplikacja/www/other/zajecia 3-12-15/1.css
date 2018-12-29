@@ -1,0 +1,46 @@
+body nav {
+    background-color: gray;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+body nav ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0 20px;
+    /*padding-left: 60%;*/
+}
+body nav ul li {
+    float: left;
+    display: inline;
+}
+body nav a:link, body nav a:visited {
+    color: white;
+    font-size: 16px;
+    font-family: Verdana, serif;
+    display: inline-block;
+    padding: 10px 24px;
+}
+body nav a:hover, body nav a:active,
+body nav .active a:link, body nav .active a:visited {
+    /*background-color: #ff9030;*/
+    text-shadow: none;
+}
+body nav ul li a {
+    /*border-radius: 5px;*/
+    /*-moz-border-radius: 5px;*/
+    /*-webkit-border-radius: 5px;*/
+    height: 20px;
+    text-align: center;
+
+    /*width: 60px;*/
+}
+
+a {
+    text-decoration: none; /* usuwa m.in. podkreślenia pod linkami klikalnymi */
+}
+
+.wazny{
+    background-color: #ff9030;
+}

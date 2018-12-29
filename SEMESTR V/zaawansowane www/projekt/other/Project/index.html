@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name='theme-color' , content='#2196F3'/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <title>Parallax Template - Materialize</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="http://kozubek.cba.pl/University/WeatherApi/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+    <script src="http://kozubek.cba.pl/University/WeatherApi/js/weather.js"></script>
+    <script src="http://kozubek.cba.pl/University/WeatherApi/js/Chart.min.js"></script>
+    <script src="http://kozubek.cba.pl/University/WeatherApi/js/myFunctions.js"></script>
+    <script src="http://kozubek.cba.pl/University/WeatherApi/js/modernizr.js"></script>
+
+    <link href="http://kozubek.cba.pl/University/WeatherApi/css/owfont-regular.css" rel="stylesheet" type="text/css">
+    <link href="http://kozubek.cba.pl/University/WeatherApi/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+
+    <script type="text/javascript">
+
+        $(function () {
+            $("input").change(function () {
+                buttonClick();
+            });
+            $("button").click(function () {
+                buttonClick();
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+<nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+        <a id="logo-container" href="#" class="brand-logo">Weather by Kris</a>
+
+    </div>
+</nav>
+
+<div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <br><br>
+            <h1 class="header center teal-text text-lighten-2">City Weather</h1>
+            <div class="row center">
+                <h5 class="header col s12 light">Type the name of the city to show weather</h5>
+            </div>
+
+            <div class="row center">
+
+                <div class="input-field">
+                    <input id="search" type="search" required>
+                    <label for="search"><i class="material-icons">search</i></label>
+                </div>
+
+                <button class="btn waves-effect waves-light">
+                    Search
+                </button>
+            </div>
+            <br><br>
+
+        </div>
+    </div>
+    <div class="parallax"><img src="background1.jpg" alt="Unsplashed background img 1"></div>
+</div>
+
+
+<div class="container">
+    <div class="section" id="charts">
+
+        <!--   Icon Section   -->
+        <div class="row" id="row">
+            <h5 class="center"> SIMPLECHART </h5>
+            <canvas id="SIMPLECHART" width="815" height="407" style="width: 815px; height: 407px;"></canvas>
+
+            <script>   $(function () {
+                var ctx = document.getElementById("SIMPLECHART");
+                var myChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ["05-23 00:00", "05-23 03:00", "05-23 06:00", "05-23 09:00", "05-23 12:00", "05-23 15:00", "05-23 18:00", "05-23 21:00", "05-24 00:00", "05-24 03:00", "05-24 06:00", "05-24 09:00", "05-24 12:00", "05-24 15:00", "05-24 18:00", "05-24 21:00", "05-25 00:00", "05-25 03:00", "05-25 06:00", "05-25 09:00", "05-25 12:00", "05-25 15:00", "05-25 18:00", "05-25 21:00", "05-26 00:00", "05-26 03:00", "05-26 06:00", "05-26 09:00", "05-26 12:00", "05-26 15:00", "05-26 18:00", "05-26 21:00", "05-27 00:00", "05-27 03:00", "05-27 06:00", "05-27 09:00", "05-27 12:00", "05-27 15:00", "05-27 18:00", "05-27 21:00",],
+                        datasets: [
+                            {
+                                label: 'Tem Moskwa',
+                                data: [10.020000000000039, 11.090000000000032, 13.28000000000003, 15.720000000000027, 16.985000000000014, 16.949000000000012, 14.297000000000025, 11.620000000000005, 8.986000000000047, 10.879000000000019, 17.093000000000018, 19.27000000000004, 19.685000000000002, 18.176000000000045, 16.162000000000035, 14.515000000000043, 13.40300000000002, 13.982000000000028, 14.257000000000005, 15.740000000000009, 17.266999999999996, 18.25600000000003, 15.649000000000001, 12.974000000000046, 11.04400000000004, 13.30400000000003, 18.739000000000033, 20.810000000000002, 22.076999999999998, 21.761000000000024, 18.42900000000003, 16.241000000000042, 14.890000000000043, 16.083000000000027, 21.40900000000005, 22.362000000000023, 22.822000000000003, 22.051000000000045, 19.661, 18.55200000000002,],
+                                backgroundColor: "rgba(197,34,169,0.4)",
+                            }, {
+                                label: 'Tem Kraków',
+                                data: [11.120000000000005, 7.9500000000000455, 14.840000000000032, 20.340000000000032, 22.27000000000004, 22.980000000000018, 21.07000000000005, 18.29000000000002, 16.100000000000023, 14.03000000000003, 17.590000000000032, 20.610000000000014, 21.920000000000016, 21.360000000000014, 18.939999999999998, 16.53000000000003, 14.860000000000014, 13.840000000000032, 17.40700000000004, 19.090000000000032, 21.16700000000003, 18.75600000000003, 18.049000000000035, 15.174000000000035, 14.745000000000005, 12.403999999999996, 17.989000000000033, 20.910000000000025, 18.92700000000002, 20.861000000000047, 19.028999999999996, 15.941000000000031, 15.265000000000043, 14.533000000000015, 17.90900000000005, 20.812000000000012, 21.022000000000048, 21.301000000000045, 19.661, 17.37700000000001,],
+                                backgroundColor: "rgba(00,150,136,0.4)",
+                            },
+                        ]
+                    },
+                    options: {scales: {yAxes: [{ticks: {beginAtZero: true}}]}}
+                });
+            });</script>
+        </div>
+
+    </div>
+</div>
+
+
+<div id="weatherRow" class="row">
+
+
+    <div id="weatherSection">
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!---->
+<!--<header>-->
+    <!--<h1>Weather</h1>-->
+<!--</header>-->
+
+<!--<div id='weatherSection'>-->
+    <!--<section id='cd-timeline' class='cd-container'>-->
+
+        <!--<div class='cd-timeline-block'>-->
+            <!--<div class='cd-timeline-img cd-picture'>-->
+                <!--<img src='img/black/FEW%20CLOUDS.png' alt='Picture'>-->
+            <!--</div> &lt;!&ndash; cd-timeline-img &ndash;&gt;-->
+
+            <!--<div class='cd-timeline-content'>-->
+                <!--<h2>FEW CLOUDS 18ºC</h2>-->
+                <!--<p>GrndLevel = 988.24</p>-->
+                <!--<p>Humidity = 68</p>-->
+                <!--<p>Pressure = 988.24</p>-->
+                <!--<p>SeaLevel = 1028.08</p>-->
+                <!--<p>TempKf = -2.71</p>-->
+                <!--<p>TempMax = 14.614000000000033</p>-->
+                <!--<p>TempMin = 11.900000000000034</p>-->
+                <!--<p>WeatherDescription = clear sky</p>-->
+                <!--<p>SpeedWind = 2.57</p>-->
+                <!--<p>DegreeWind = 102.503</p>-->
+                <!--<a class='cd-read-more'>Read more</a>-->
+                <!--<span class='cd-date'><h5>Jan 14</h5></span>-->
+            <!--</div> &lt;!&ndash; cd-timeline-content &ndash;&gt;-->
+        <!--</div> &lt;!&ndash; cd-timeline-block &ndash;&gt;-->
+
+
+    <!--</section> &lt;!&ndash; cd-timeline &ndash;&gt;-->
+<!--</div>-->
+
+
+
+<footer class="page-footer teal">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Informations about wether</h5>
+                <p class="grey-text text-lighten-4">BLA BLABLA BLABLA BLABLA BLABLA BLABLA BLABLA BLABLA BLABLA BLABLA
+                    BLABLA BLABLA BLABLA BLABLA BLABLA BLABLA BLABLA BLABLA BLABLA BLABLA BLABLA BLA.</p>
+
+
+            </div>
+
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            Made by <a class="brown-text text-lighten-3"
+                       href="https://www.linkedin.com/in/krzysztof-kozubek-4b2562b8?trk=nav_responsive_tab_profile_pic">Kris</a>
+        </div>
+    </div>
+</footer>
+
+
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="http://kozubek.cba.pl/University/WeatherApi/js/materialize.js"></script>
+<script src="http://kozubek.cba.pl/University/WeatherApi/js/init.js"></script>
+
+</body>
+</html>

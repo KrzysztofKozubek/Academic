@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <title>Parallax Template - Materialize</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/Chart.min.js"></script>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+
+    <script type="text/javascript">
+
+
+
+
+
+    function setWeatherNow($var) {
+            $("#now").html($var);
+        }
+
+        function setWeatherTomorrow($var) {
+            $("#tomorrow").html($var);
+        }
+
+        function setWeatherTwoDay($var) {
+            $("#twoDay").html($var);
+        }
+
+
+        //CHART FUNCTION
+
+        function getTemperatureToChart($data) {
+
+            var temperatures = [$data.length];
+
+            for (var i = 0, len = $data.length; i < len; i++) {
+                temperatures[i] = $data[i].main.temp - 273.15;
+            }
+
+            return temperatures;
+        }
+
+        function getTimeToChart($data) {
+
+            var time = [$data.length];
+
+            for (var i = 0, len = $data.length; i < len; i++) {
+                time[i] = $data[i].dt_txt;
+            }
+
+            return time;
+        }
+
+        function getGrndLevelToChart($data) {
+
+            var GrndLevel = [$data.length];
+
+            for (var i = 0, len = $data.length; i < len; i++) {
+                GrndLevel[i] = $data[i].main.grnd_level;
+            }
+            return GrndLevel;
+        }
+
+        function getHumidityToChart($data) {
+
+            var humidity = [$data.length];
+
+            for (var i = 0, len = $data.length; i < len; i++) {
+                humidity[i] = $data[i].main.humidity;
+            }
+            return humidity;
+        }
+
+        function getPressureToChart($data) {
+
+            var pressure = [$data.length];
+
+            for (var i = 0, len = $data.length; i < len; i++) {
+                pressure[i] = $data[i].main.pressure;
+            }
+            return pressure;
+        }
+
+        function getSeaLevelToChart($data) {
+
+            var seaLevel = [$data.length];
+
+            for (var i = 0, len = $data.length; i < len; i++) {
+                seaLevel[i] = $data[i].main.sea_level;
+            }
+            return seaLevel;
+        }
+
+        function getTempKfToChart($data) {
+
+            var tempKf = [$data.length];
+
+            for (var i = 0, len = $data.length; i < len; i++) {
+                tempKf[i] = $data[i].main.temp_kf;
+            }
+            return tempKf;
+        }
+
+        function getTempMaxToChart($data) {
+
+            var tempMax = [$data.length];
+
+            for (var i = 0, len = $data.length; i < len; i++) {
+                tempMax[i] = $data[i].main.temp_max - 273.15;;
+            }
+            return tempMax;
+        }
+
+        function getTempMinToChart($data) {
+
+            var tempMin = [$data.length];
+
+            for (var i = 0, len = $data.length; i < len; i++) {
+                tempMin[i] = $data[i].main.temp_min - 273.15;;
+            }
+            return tempMin;
+        }
+
+
+        function getWeatherDescriptionToChart($data) {
+
+            var WeatherDescription = [$data.length];
+
+            for (var i = 0, len = $data.length; i < len; i++) {
+                WeatherDescription[i] = $data[i].weather[0].description;
+            }
+            retu4
+            WeatherDescription;
+        }
+
+        function getSpeedWindToChart($data) {
+
+            var SpeedWind = [$data.length];
+
+            for (var i = 0, len = $data.length; i < len; i++) {
+                SpeedWind[i] = $data[i].wind.speed;
+            }
+            return SpeedWind;
+        }
+
+        function getDegreeWindToChart($data) {
+
+            var DegreeWind = [$data.length];
+
+            for (var i = 0, len = $data.length; i < len; i++) {
+                DegreeWind[i] = $data[i].wind.deg;
+            }
+            return DegreeWind;
+        }
+
+        //END CHART FUNCTION
+
+
+        function getTextToWeather($temperature, $conditions) {
+            return "Temperature: " + $temperature + "<br /> Conditions: " + $conditions;
+        }
+
+        function getWeather($city) {
+
+
+//            GrndLevel
+//            Humidity
+//            Pressure
+//            SeaLevel
+//            TempKf
+//            TempMax
+//            TempMin
+//            WeatherDescription
+//            SpeedWind
+//            DegreeWind
+
+            var chartsShow = ["Temperature", "Pressure", "TempMin", "SpeedWind"];
+
+            Weather.getForecast($city, function (forecast) {
+
+                var temperature = Weather.kelvinToCelsius(forecast.high());
+                //var conditions = forecast.conditions();
+
+                var weather = forecast.data.list;
+
+                getShowChart(getTemperatureToChart(weather), getTimeToChart(weather), chartsShow[0]);
+                getShowChart(getPressureToChart(weather), getTimeToChart(weather), chartsShow[1]);
+                getShowChart(getTempMinToChart(weather), getTimeToChart(weather), chartsShow[2]);
+                getShowChart(getSpeedWindToChart(weather), getTimeToChart(weather), chartsShow[3]);
+
+            });
+
+
+        }
+
+
+        function buttonClick() {
+
+            var searchValue = $("#search").val();
+
+            getWeather(searchValue);
+        }
+
+
+        $(function () {
+            $("button").click(function () {
+                buttonClick();
+            });
+        });
+
+
+        function getShowChart($data, $date, $nameChart) {
+
+            var $sData = "";
+            var $sDate = "";
+
+            for (var i = 0, len = $data.length, lenn = $date.length; i < lenn && i < len; i++){
+                if($data[i] != "undefined" && $date[i] != "undefined"){
+                    $sData += $data[i] + ", ";
+                    $sDate += "\"" + $date[i] + "\", ";
+                }
+            }
+
+            var script = "<script>" +
+                    "$(function() {" +
+                    "var ctx = document.getElementById(\"" + $nameChart + "\");" +
+                    "var myChart = new Chart(ctx, {" +
+                    "type: 'line'," +
+                    "" +
+                    "data: {" +
+                    "labels: [" + $sDate + "]," +
+                    "datasets: [{" +
+                    "label: '# of Votes'," +
+                    "data: [" + $sData + "]" +
+                    "}]" +
+                    "}," +
+                    "" +
+                    "options: {" +
+                    "scales: {" +
+                    "yAxes: [{" +
+                    "ticks: {" +
+                    "beginAtZero: true" +
+                    "}" +
+                    "}]" +
+                    "}" +
+                    "}" +
+                    "});" +
+                    "});" +
+                    ""+
+
+                    "<\/script>";
+
+            $("div#row").before("<h5 class=\"center\">"+$nameChart+"</h5><canvas id=\""+$nameChart+"\" width=\"400\" height=\"200\"></canvas>");
+            $("canvas#"+$nameChart).after(script);
+
+        }
+
+    </script>
+
+</head>
+<body>
+
+<nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+        <a id="logo-container" href="#" class="brand-logo">Weather by Kris</a>
+
+    </div>
+</nav>
+
+<div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <br><br>
+            <h1 class="header center teal-text text-lighten-2">City Weather</h1>
+            <div class="row center">
+                <h5 class="header col s12 light">Type the name of the city to show weather</h5>
+            </div>
+
+            <div class="row center">
+
+                <div class="input-field">
+                    <input id="search" type="search" required>
+                    <label for="search"><i class="material-icons">search</i></label>
+                </div>
+
+                <button class="btn waves-effect waves-light">
+                    Search
+                </button>
+            </div>
+            <br><br>
+
+        </div>
+    </div>
+    <div class="parallax"><img src="background1.jpg" alt="Unsplashed background img 1"></div>
+</div>
+
+
+<div class="container">
+    <div class="section">
+
+        <!--   Icon Section   -->
+        <div class="row" id="row">
+
+        </div>
+
+    </div>
+</div>
+
+
+<footer class="page-footer teal">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Informations about wether</h5>
+                <p class="grey-text text-lighten-4">BLA BLABLA BLABLA BLABLA BLABLA BLABLA BLABLA BLABLA BLABLA BLABLA
+                    BLABLA BLABLA BLABLA BLABLA BLABLA BLABLA BLABLA BLABLA BLABLA BLABLA BLABLA BLA.</p>
+
+
+            </div>
+
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            Made by <a class="brown-text text-lighten-3"
+                       href="https://www.linkedin.com/in/krzysztof-kozubek-4b2562b8?trk=nav_responsive_tab_profile_pic">Kris</a>
+        </div>
+    </div>
+</footer>
+
+
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/init.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      2804,         88]
+NotebookOptionsPosition[      2524,         74]
+NotebookOutlinePosition[      2869,         89]
+CellTagsIndexPosition[      2826,         86]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{"Bogdan", " ", "Chwali\:0144ski"}], "\[IndentingNewLine]", 
+ RowBox[{"Zestaw", " ", "6", " ", "zadanie", " ", "4"}]}], "Input",
+ CellChangeTimes->{{3.599649073010188*^9, 3.59964908142667*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"f", "[", "x_", "]"}], ":=", 
+    RowBox[{
+     SuperscriptBox["x", "3"], "+", 
+     RowBox[{"3", 
+      SuperscriptBox["x", "2"]}], "-", 
+     RowBox[{"5", "x"}], "+", "3"}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"MetodaOdNewtona", "[", "z_", "]"}], "=", 
+    RowBox[{"z", "-", 
+     RowBox[{
+      RowBox[{"f", "[", "z", "]"}], "/", 
+      RowBox[{
+       RowBox[{"f", "'"}], "[", "z", "]"}]}]}]}], ";"}], 
+  "\n"}], "\[IndentingNewLine]", 
+ RowBox[{"ListDensityPlot", "[", 
+  RowBox[{
+   RowBox[{"Table", "[", "\[IndentingNewLine]", "\t", 
+    RowBox[{
+     RowBox[{"-", 
+      RowBox[{"Length", "[", 
+       RowBox[{"FixedPointList", "[", 
+        RowBox[{"MetodaOdNewtona", ",", 
+         RowBox[{"N", "[", 
+          RowBox[{"a", "+", 
+           RowBox[{"b", " ", "I"}]}], "]"}], ",", "50"}], "]"}], "]"}]}], ",",
+      "\[IndentingNewLine]", "\t", 
+     RowBox[{"{", 
+      RowBox[{"b", ",", 
+       RowBox[{"-", "2"}], ",", "2", ",", ".01"}], "}"}], ",", 
+     "\[IndentingNewLine]", "\t", 
+     RowBox[{"{", 
+      RowBox[{"a", ",", 
+       RowBox[{"-", "2"}], ",", "2", ",", ".01"}], "}"}]}], "]"}], ",", 
+   "\[IndentingNewLine]", "\t    ", 
+   RowBox[{"Mesh", "\[Rule]", "False"}]}], "\[IndentingNewLine]", 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.599649136832839*^9, 3.599649200531482*^9}, 
+   3.5996493039883995`*^9, {3.5996493819638596`*^9, 3.5996493995018625`*^9}, {
+   3.5996494311856747`*^9, 3.599649486266825*^9}, {3.5996498645784636`*^9, 
+   3.599649865775532*^9}, 3.5996499928438*^9, {3.599650033835144*^9, 
+   3.5996500385894165`*^9}, {3.5996501025170727`*^9, 3.5996501230932493`*^9}, 
+   3.599650169101881*^9}]
+},
+WindowSize->{707, 637},
+WindowMargins->{{420, Automatic}, {Automatic, 40}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 216, 3, 52, "Input"],
+Cell[776, 25, 1744, 47, 212, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

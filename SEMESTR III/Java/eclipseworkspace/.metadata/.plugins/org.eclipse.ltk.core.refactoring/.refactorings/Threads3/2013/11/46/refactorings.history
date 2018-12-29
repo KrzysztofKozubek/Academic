@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 1 elements(s) to &apos;Threads4/src/(default package)&apos;&#x0A;- Original project: &apos;Threads3&apos;&#x0A;- Destination element: &apos;Threads4/src/(default package)&apos;&#x0A;- Original element: &apos;Watek3.java&apos;" description="Copy compilation unit" destination="=Threads4/src&lt;" element1="/src&lt;{Watek3.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1384332358469" units="1" version="1.0"/>
+</session>

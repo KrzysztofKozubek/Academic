@@ -1,0 +1,52 @@
+
+#nav{
+    position: absolute;
+}
+#nav a{
+    font-size: 20px;
+}
+#nav ul:hover .first, #nav li{
+    border-bottom: solid 1px #484848!important;
+}
+#nav li {
+    display: block!important;
+}
+
+h1{
+    font-size: 1.5em;
+}
+h2{
+    font-size: 1em;
+}
+
+.style1{
+    background-color: #fff !important;
+    background-image: none !important;
+}
+
+.content {
+    background-image: none ;
+    background-color: #303030 !important;
+}
+
+.mainContent {
+    text-align: center;
+    line-height: 25px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    margin: 155px 0 3% 0 !important;
+}
+
+.contentHobby, .contentAboutMe{
+    line-height: 2em;
+}
+.box{
+    background-color: #131313;
+}
+.mainfooter {
+    background-color: #131313!important;
+}
+.figureHobby{
+    max-width: 100px !important;
+}

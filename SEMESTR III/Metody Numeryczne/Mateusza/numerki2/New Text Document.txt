@@ -1,0 +1,11 @@
+m = Table[Random[], {2}, {2}];
+For[n = 10000, n <= 90000, n *= 10,
+  Print[
+   Print[n " = "]
+    Timing[
+     m = Table[Random[], {n}, {n}];
+     vEig = Eigenvectors[m];
+     Inverse[Transpose[vEig]].m.Transpose[vEig];
+     ]
+   ]
+  ];

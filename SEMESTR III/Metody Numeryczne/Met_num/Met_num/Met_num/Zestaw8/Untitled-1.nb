@@ -1,0 +1,237 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      8009,        228]
+NotebookOptionsPosition[      7465,        204]
+NotebookOutlinePosition[      7809,        219]
+CellTagsIndexPosition[      7766,        216]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["3N", "Section",
+ CellChangeTimes->{{3.53587965428125*^9, 3.5358796546875*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "x_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"Sin", "[", 
+     FractionBox[
+      RowBox[{"1", "+", 
+       SqrtBox["x"]}], 
+      RowBox[{"1", "+", 
+       RowBox[{"x", 
+        SqrtBox["2"]}]}]], "]"}], 
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{"-", "x"}]]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.535826723484375*^9, 3.535826769828125*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"Romberg", "[", 
+     RowBox[{"a_", ",", "b_", ",", "prec_"}], "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"reg", "[", "x_", "]"}], ":=", 
+        RowBox[{"Module", "[", 
+         RowBox[{
+          RowBox[{"{", "k", "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"h", "=", 
+            FractionBox["h", "2"]}], ";", 
+           RowBox[{"(*", 
+            RowBox[{
+            "tego", " ", "warunku", " ", "zabraklo", " ", "w", " ", 
+             "poprzednim", " ", "rozwiazaniu"}], "*)"}], 
+           "\[IndentingNewLine]", 
+           RowBox[{
+            SubscriptBox["R", 
+             RowBox[{"\[LeftDoubleBracket]", 
+              RowBox[{
+               RowBox[{"x", "+", "1"}], ",", "1"}], 
+              "\[RightDoubleBracket]"}]], "=", 
+            RowBox[{
+             FractionBox[
+              SubscriptBox["R", 
+               RowBox[{"\[LeftDoubleBracket]", 
+                RowBox[{"x", ",", "1"}], "\[RightDoubleBracket]"}]], "2"], 
+             "+", 
+             RowBox[{
+              FractionBox["h", "2"], 
+              RowBox[{
+               UnderoverscriptBox["\[Sum]", 
+                RowBox[{"k", "=", "1"}], "m"], 
+               RowBox[{"f", "[", 
+                RowBox[{"a", "+", 
+                 RowBox[{
+                  FractionBox["h", "2"], " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"2", " ", "k"}], "-", "1"}], ")"}]}]}], 
+                "]"}]}]}]}]}], ";", " ", "\[IndentingNewLine]", 
+           RowBox[{"m", "=", 
+            RowBox[{"2", " ", "m"}]}], ";"}]}], "]"}]}], ";", " ", 
+       "\[IndentingNewLine]", 
+       RowBox[{"h", "=", 
+        RowBox[{"b", "-", "a"}]}], ";", " ", "\[IndentingNewLine]", 
+       RowBox[{"m", "=", "1"}], ";", " ", "\[IndentingNewLine]", 
+       RowBox[{"j", "=", "1"}], ";", " ", "\[IndentingNewLine]", " ", 
+       RowBox[{"R", "=", 
+        RowBox[{"{", 
+         RowBox[{"{", "0", "}"}], "}"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        SubscriptBox["R", 
+         RowBox[{"\[LeftDoubleBracket]", 
+          RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]], " ", "=", " ", 
+        RowBox[{
+         FractionBox[
+          RowBox[{"h", " "}], "2"], 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"f", "[", "a", "]"}], " ", "+", " ", 
+           RowBox[{"f", "[", "b", "]"}]}], ")"}]}]}], ";", " ", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Print", "[", " ", 
+        SubscriptBox["R", 
+         RowBox[{"\[LeftDoubleBracket]", "j", "\[RightDoubleBracket]"}]], " ",
+         "]"}], ";", " ", "\[IndentingNewLine]", 
+       RowBox[{"While", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"j", "\[LessEqual]", "11"}], " ", "&&", " ", 
+          RowBox[{"prec", "<", "1"}]}], ",", " ", 
+         RowBox[{
+          RowBox[{"j", "++"}], ";", " ", "\[IndentingNewLine]", 
+          RowBox[{"R", " ", "=", " ", 
+           RowBox[{"Append", "[", " ", 
+            RowBox[{"R", ",", 
+             RowBox[{"Table", "[", 
+              RowBox[{"0", ",", 
+               RowBox[{"{", "j", "}"}]}], "]"}]}], " ", "]"}]}], ";", " ", 
+          "\[IndentingNewLine]", 
+          RowBox[{"reg", "[", 
+           RowBox[{"j", "-", "1"}], "]"}], ";", "\[IndentingNewLine]", 
+          RowBox[{"For", "[", " ", 
+           RowBox[{
+            RowBox[{"k", "=", "1"}], ",", " ", 
+            RowBox[{"k", "\[LessEqual]", 
+             RowBox[{"j", "-", "1"}]}], ",", " ", 
+            RowBox[{"k", "++"}], ",", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{
+              SubscriptBox["R", 
+               RowBox[{"\[LeftDoubleBracket]", 
+                RowBox[{"j", ",", 
+                 RowBox[{"k", "+", "1"}]}], "\[RightDoubleBracket]"}]], "=", 
+              RowBox[{
+               SubscriptBox["R", 
+                RowBox[{"\[LeftDoubleBracket]", 
+                 RowBox[{"j", ",", "k"}], "\[RightDoubleBracket]"}]], "+", 
+               FractionBox[
+                StyleBox[
+                 RowBox[{
+                  SubscriptBox["R", 
+                   RowBox[{"\[LeftDoubleBracket]", 
+                    RowBox[{"j", ",", "k"}], "\[RightDoubleBracket]"}]], "-", 
+                  SubscriptBox["R", 
+                   RowBox[{"\[LeftDoubleBracket]", 
+                    RowBox[{
+                    RowBox[{"j", "-", "1"}], ",", "k"}], 
+                    "\[RightDoubleBracket]"}]]}],
+                 FontSize->12], 
+                RowBox[{
+                 SuperscriptBox["4", "k"], "-", "1"}]]}]}], ";"}]}], " ", 
+           "]"}]}]}], "  ", "]"}], ";", " ", "\[IndentingNewLine]", 
+       RowBox[{"Return", "[", " ", 
+        RowBox[{"Print", "[", 
+         RowBox[{"\"\<Przyblizona wartosc calki wynosi: \>\"", ",", 
+          SubscriptBox["R", 
+           RowBox[{"\[LeftDoubleBracket]", 
+            RowBox[{"j", ",", "j"}], "\[RightDoubleBracket]"}]]}], "]"}], 
+        "]"}], ";"}]}], " ", "]"}]}], ";"}], " "}]], "Input",
+ CellChangeTimes->{{3.53582697721875*^9, 3.535827087*^9}, {
+  3.535827139921875*^9, 3.535827202359375*^9}, {3.5358272438125*^9, 
+  3.5358272524375*^9}, {3.535827332703125*^9, 3.535827333046875*^9}, {
+  3.535827389296875*^9, 3.53582743990625*^9}, {3.535827541296875*^9, 
+  3.535827606546875*^9}, {3.535827643296875*^9, 3.5358276590625*^9}, {
+  3.5358277985625*^9, 3.535827872625*^9}, {3.53582795428125*^9, 
+  3.53582796903125*^9}, {3.536255590276413*^9, 3.5362556300750713`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"a", "=", 
+   RowBox[{"Romberg", "[", 
+    RowBox[{"0.0", ",", "100", ",", "0.00000001"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.53582802125*^9, 3.535828029609375*^9}, 
+   3.535879674859375*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"{", "42.073549240394826`", "}"}]], "Print",
+ CellChangeTimes->{3.535879682234375*^9, 3.5362555918546085`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Przyblizona wartosc calki wynosi: \"\>", "\[InvisibleSpace]", 
+   "0.8071411382704766`"}],
+  SequenceForm["Przyblizona wartosc calki wynosi: ", 0.8071411382704766],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.535879682234375*^9, 3.5362555918858604`*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{608, 617},
+WindowMargins->{{43, Automatic}, {Automatic, 0}},
+FrontEndVersion->"7.0 for Microsoft Windows (32-bit) (February 18, 2009)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 84, 1, 71, "Section"],
+Cell[654, 25, 412, 14, 58, "Input"],
+Cell[1069, 41, 5623, 134, 469, "Input"],
+Cell[CellGroupData[{
+Cell[6717, 179, 238, 6, 31, "Input"],
+Cell[CellGroupData[{
+Cell[6980, 189, 133, 2, 23, "Print"],
+Cell[7116, 193, 309, 6, 23, "Print"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

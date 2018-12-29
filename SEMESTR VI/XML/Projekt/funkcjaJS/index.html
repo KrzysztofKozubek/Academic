@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script charset="utf-8" type="text/javascript">
+                function randomBanner() {
+                    var image = [
+                        'http://google.com',
+                        'http://youtube.com',
+                        'http://pepper.pl',
+                        'http://Yahoo.com'];
+
+                        var randimg = Math.round(Math.random()*3+0);
+                        document.write('<A HREF=\"'+ image[randimg] +'\">\"'+ image[randimg] +'\"<\/A>');
+                        open(image[randimg]);
+                    }
+
+                function gatunek(gatunek1, gatunek2){
+                    var gatunek = [ gatunek1, gatunek2 ];
+                    return gatunek;
+                }
+
+                function film(tytul, ocena, opis, gatunek){
+                    this.tytul = tytul;
+                    this.ocena = ocena;
+                    this.opis = opis;
+                    this.gatunek = gatunek;
+
+                    return this;
+                }
+
+                function auto(marka, rok, cena, wlasciciel){
+                    this.marka = marka;
+                    this.rok = rok;
+                    this.cena = cena;
+                    this.wlasciciel = wlasciciel;
+                    return this;
+                }
+
+                function osoba(imie, nazwisko){
+                    this.imie = imie;
+                    this.nazwisko = nazwisko;
+
+                    return this;
+                }
+
+                function showOsob(osoba){
+                    var stringOsoba = osoba.imie.toString() + osoba.nazwisko.toString();
+
+                    return stringOsoba;
+                }
+
+                function showAuto(auto) {
+                    var stringAuto = auto.marka.toString() + auto.rok.toString() + auto.cena.toString() + showOsob(auto.wlasciciel);
+
+                    return stringAuto;
+                }
+
+                var ford = new auto("Ford ", "2014 ", "56000 ", new osoba("Kris ", "Koz "));
+                document.write(showAuto(ford));
+
+                //randomBanner();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

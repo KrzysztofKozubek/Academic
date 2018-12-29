@@ -1,0 +1,13 @@
+_.-COLOR T 10,10,10
+rectangle 0,0 210,297
+rectangle 119,184 139,205
+rotate 118,183 140,206 
+129,193 43.5
+rectangle 38,179.5 129,208.947
+circle 37,113 31
+circle 37,113 21
+line 37,153 37,73
+
+line 10,113 64,113
+
+text 35,20,12 13 0 Krzysztof Kozubek

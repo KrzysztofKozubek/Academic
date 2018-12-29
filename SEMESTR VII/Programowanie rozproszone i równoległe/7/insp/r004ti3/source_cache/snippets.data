@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippets>
+  <file name="/home/imiolek_1102507/Materialy/PRiR/7/Calculations.cpp" md5="">
+    <snippet line="36">
+      <line line="33">void Calculations::addPattern(int idx, double *x, double *y, double *z,</line>
+      <line line="34">        long size) {</line>
+      <line line="35">    histograms[idx] = new double[histogramSize];</line>
+      <line line="36">    clearHistogram(histograms[idx]);</line>
+      <line line="37">    calcHistogram( histograms[idx], x, y, z, size );</line>
+    </snippet>
+    <snippet line="38">
+      <line line="35">	histograms[idx] = new double[histogramSize];</line>
+      <line line="36">	clearHistogram(histograms[idx]);</line>
+      <line line="37">	calcHistogram( histograms[idx], x, y, z, size );</line>
+      <line line="38">	normalizeHistogram( histograms[idx] );</line>
+      <line line="39">}</line>
+    </snippet>
+    <snippet line="44">
+      <line line="41">// ta metoda MUSI zostac zrownoleglona</line>
+      <line line="42">void Calculations::calcHistogram( double *result, double *x, double *y, double *z, long size ) {</line>
+      <line line="43">#pragma omp parallel for schedule(guided)</line>
+      <line line="44">    for (long i = 0; i &lt; size; i++)</line>
+      <line line="45">        for (long j = 0; j &lt; i; j++) {</line>
+    </snippet>
+    <snippet line="47">
+      <line line="44">    for (long i = 0; i &lt; size; i++)</line>
+      <line line="45">        for (long j = 0; j &lt; i; j++) {</line>
+      <line line="46">            result[(int) (sqrt(</line>
+      <line line="47">                    Utils::distanceSQ(x[i], y[i], z[i], x[j], y[j], z[j]))</line>
+      <line line="48">                    * BINS_PER_LENTH_UNIT)]++;</line>
+    </snippet>
+    <snippet line="137">
+      <line line="134"/>
+      <line line="135">	cout &lt;&lt; "Order size " &lt;&lt; orders &lt;&lt; endl;</line>
+      <line line="136">#pragma omp parallel</line>
+      <line line="137">    {</line>
+      <line line="138">	srand48_r((unsigned)time(NULL), &amp;buffer);</line>
+    </snippet>
+    <snippet line="148">
+      <line line="145">            drand48_r(&amp;buffer, &amp;rand);</line>
+      <line line="146">            p = (int)(rand * RAND_MAX) % patterns;</line>
+      <line line="147">        } while ( order[ p ] == 0 );</line>
+      <line line="148">        //orders --;</line>
+      <line line="149">        order[ p ] --;</line>
+    </snippet>
+    <snippet line="150">
+      <line line="147">        } while ( order[ p ] == 0 );</line>
+      <line line="148">        //orders --;</line>
+      <line line="149">        order[ p ] --;</line>
+      <line line="150"/>
+      <line line="151">        drand48_r(&amp;buffer, &amp;rand);</line>
+    </snippet>
+  </file>
+  <file name="/home/imiolek_1102507/Materialy/PRiR/7/main.cpp" md5="">
+    <snippet line="56">
+      <line line="53">	c-&gt;setNumberOfPatterns(NUMBER_OF_PATTERNS);</line>
+      <line line="54">	for (int i = 0; i &lt; NUMBER_OF_PATTERNS; i++) {</line>
+      <line line="55">		c-&gt;addPattern(i, x[i], y[i], z[i], size[i]);</line>
+      <line line="56">	}</line>
+      <line line="57"/>
+    </snippet>
+    <snippet line="63">
+      <line line="60"/>
+      <line line="61">    long sizeM = size[0];</line>
+      <line line="62">    long *proportions = new long[NUMBER_OF_PATTERNS];</line>
+      <line line="63">    double *xMix, *yMix, *zMix;</line>
+      <line line="64"/>
+    </snippet>
+    <snippet line="97">
+      <line line="94">				&lt;&lt; endl;</line>
+      <line line="95"/>
+      <line line="96">		c-&gt;mixer(x, y, z, size, xMix, yMix, zMix, proportions,</line>
+      <line line="97">				NUMBER_OF_PATTERNS);</line>
+      <line line="98"/>
+    </snippet>
+  </file>
+</snippets>

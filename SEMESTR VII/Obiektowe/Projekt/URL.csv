@@ -1,0 +1,11 @@
+GET, /, routing.operation.GET, home, home
+GET, /allMovies, routing.operation.GET, getAll, allMovies
+GET, /movie, routing.operation.GET, getOne, allMovies
+GET, /contact, routing.operation.GET, contact, contact
+GET, /support, routing.operation.GET, support, support
+GET, /JSONMovies, routing.operation.GET, getJSONMovies
+POST, /, routing.operation.POST, getJSONEmpty
+POST, /search, routing.operation.POST, getJSONSearch
+POST, /movie, routing.operation.POST, getJSONMovie
+PUT, /movie, routing.operation.PUT, addMovie
+DELETE, /movie, routing.operation.DELETE, removeMovie

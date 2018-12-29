@@ -1,0 +1,451 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     19123,        442]
+NotebookOptionsPosition[     18383,        415]
+NotebookOutlinePosition[     18726,        430]
+CellTagsIndexPosition[     18683,        427]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.5976739950516434`*^9, 3.5976740424492645`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"AdjacencyGraph", "[", "   ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "0", " ", ",", "0", ",", " ", "0", " ", ",", "0", " ", ",", "0", " ", 
+       ",", "0", ",", " ", "0", " ", ",", "0", ",", " ", "0", " ", ",", "0", 
+       ",", " ", "0", " ", ",", "0"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", " ", "0", " ", ",", "0", " ", ",", "0", ",", " ", "0", " ", 
+       ",", "1", " ", ",", "0", " ", ",", "0", " ", ",", "0", " ", ",", "0", 
+       " ", ",", "0", " ", ",", "0"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", " ", ",", "0", ",", " ", "0", " ", ",", "0", " ", ",", "1", " ", 
+       ",", "1", " ", ",", "1", " ", ",", "0", " ", ",", "0", " ", ",", "0", 
+       " ", ",", "0", " ", ",", "0"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", " ", ",", "0", ",", " ", "0", ",", " ", "0", " ", ",", "0", ",", 
+       " ", "1", " ", ",", "0", ",", " ", "0", " ", ",", "0", ",", " ", "0", 
+       " ", ",", "0", ",", " ", "0"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", " ", ",", "0", ",", " ", "0", ",", " ", "1", ",", " ", "1", ",", 
+       " ", "1", " ", ",", "1", " ", ",", "1", " ", ",", "0", " ", ",", "0", 
+       " ", ",", "0", " ", ",", "0"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", " ", ",", "0", " ", ",", "0", " ", ",", "0", " ", ",", "0", " ", 
+       ",", "1", " ", ",", "0", " ", ",", "0", " ", ",", "0", " ", ",", "0", 
+       " ", ",", "0", " ", ",", "0"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", " ", ",", "0", " ", ",", "1", " ", ",", "1", " ", ",", "1", " ", 
+       ",", "1", ",", " ", "1", " ", ",", "1", " ", ",", "1", " ", ",", "0", 
+       " ", ",", "0", ",", " ", "0"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", 
+       " ", "1", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", 
+       ",", " ", "0", ",", " ", "0"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", " ", ",", "1", ",", " ", "1", " ", ",", "1", " ", ",", "1", ",", 
+       " ", "1", ",", " ", "1", ",", " ", "1", ",", " ", "1", ",", " ", "1", 
+       ",", " ", "0", ",", " ", "0"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", 
+       " ", "1", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", 
+       ",", " ", "0", ",", " ", "0"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", " ", ",", "1", " ", ",", "1", " ", ",", "1", " ", ",", "1", " ", 
+       ",", "1", " ", ",", "1", " ", ",", "1", " ", ",", "1", " ", ",", "1", 
+       " ", ",", "1", ",", " ", "0"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", " ", "0", ",", " ", "1", ",", 
+       " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", 
+       ",", " ", "0"}], "}"}]}], "}"}], "]"}], "\[IndentingNewLine]"}], "\n", 
+ RowBox[{"Eigensystem", "[", 
+  RowBox[{"A", ",", "2"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.597674048154416*^9, 3.5976742647008843`*^9}, {
+  3.5976790788307095`*^9, 3.597679079539298*^9}, {3.5976796103971806`*^9, 
+  3.5976796381648536`*^9}, {3.59802357821815*^9, 3.5980235815741224`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}, {
+      SparseArray[
+       Automatic, {12, 12}, 0, {
+        1, {{0, 0, 1, 4, 5, 10, 11, 18, 19, 28, 29, 40, 41}, {{6}, {5}, {6}, {
+          7}, {6}, {4}, {5}, {6}, {7}, {8}, {6}, {3}, {4}, {5}, {6}, {7}, {
+          8}, {9}, {6}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {6}, {
+          1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11}, {6}}}, {1, 
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}}], Null}, {
+      GraphLayout -> "CircularEmbedding", GraphStyle -> Automatic, 
+       ImageSize -> {838., Automatic}}]], Typeset`boxes, Typeset`boxes$s2d = 
+    GraphicsGroupBox[{{
+       Arrowheads[0.03384563758389261], 
+       Directive[
+        Opacity[0.7], 
+        Hue[0.6, 0.7, 0.5]], 
+       ArrowBox[{
+         DynamicLocation["VertexID$2", Automatic, Center], 
+         DynamicLocation["VertexID$6", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$3", Automatic, Center], 
+         DynamicLocation["VertexID$5", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$3", Automatic, Center], 
+         DynamicLocation["VertexID$6", Automatic, Center]}], 
+       ArrowBox[
+        BezierCurveBox[{
+          DynamicLocation[
+          "VertexID$3", Automatic, 
+           Center], {-0.11552296196542493`, -0.2000916395649643}, 
+          DynamicLocation["VertexID$7", Automatic, Center]}]], 
+       ArrowBox[{
+         DynamicLocation["VertexID$4", Automatic, Center], 
+         DynamicLocation["VertexID$6", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$5", Automatic, Center], 
+         DynamicLocation["VertexID$4", Automatic, Center]}], 
+       ArrowBox[
+        BezierCurveBox[{
+          DynamicLocation[
+          "VertexID$5", Automatic, 
+           Center], {-0.3284213664841377, -1.1306354429992675`}, \
+{-0.4115423478486797, -1.3994579045988156`}, {-0.5709090204156394, \
+-1.5040336854459815`}, {-1.0170768695359342`, -1.2464385576526227`}, \
+{-1.0061949229851739`, -1.056135080269456}, {-0.8149483328143695, \
+-0.8497389680204961}, 
+          DynamicLocation["VertexID$5", Automatic, Center]}, SplineDegree -> 
+         7]], 
+       ArrowBox[{
+         DynamicLocation["VertexID$5", Automatic, Center], 
+         DynamicLocation["VertexID$6", Automatic, Center]}], 
+       ArrowBox[
+        BezierCurveBox[{
+          DynamicLocation["VertexID$5", Automatic, Center], {
+          8.271161533457416*^-16, -0.7107446955662687}, 
+          DynamicLocation["VertexID$7", Automatic, Center]}]], 
+       ArrowBox[{
+         DynamicLocation["VertexID$5", Automatic, Center], 
+         DynamicLocation["VertexID$8", Automatic, Center]}], 
+       ArrowBox[
+        BezierCurveBox[{
+          DynamicLocation["VertexID$6", Automatic, Center], {
+          0.2808964749787714, -1.1433696992985078`}, {
+          0.34332282432935923`, -1.4177372708338543`}, {
+          0.2575951277933587, -1.587985889951574}, {-0.25759512779335886`, \
+-1.5879858899515737`}, {-0.3433228243293591, -1.4177372708338538`}, \
+{-0.2808964749787709, -1.1433696992985074`}, 
+          DynamicLocation["VertexID$6", Automatic, Center]}, SplineDegree -> 
+         7]], 
+       ArrowBox[
+        BezierCurveBox[{
+          DynamicLocation[
+          "VertexID$7", Automatic, 
+           Center], {-0.38447703803457445`, -0.6659337642194738}, 
+          DynamicLocation["VertexID$3", Automatic, Center]}]], 
+       ArrowBox[{
+         DynamicLocation["VertexID$7", Automatic, Center], 
+         DynamicLocation["VertexID$4", Automatic, Center]}], 
+       ArrowBox[
+        BezierCurveBox[{
+          DynamicLocation["VertexID$7", Automatic, Center], {
+          1.9984014443252818`*^-16, -1.0213061120026086`}, 
+          DynamicLocation["VertexID$5", Automatic, Center]}]], 
+       ArrowBox[{
+         DynamicLocation["VertexID$7", Automatic, Center], 
+         DynamicLocation["VertexID$6", Automatic, Center]}], 
+       ArrowBox[
+        BezierCurveBox[{
+          DynamicLocation["VertexID$7", Automatic, Center], {
+          0.8149483328143702, -0.8497389680204974}, {
+          1.0061949229851748`, -1.0561350802694578`}, {
+          1.0170768695359347`, -1.2464385576526245`}, {
+          0.5709090204156395, -1.5040336854459828`}, {
+          0.41154234784868005`, -1.3994579045988165`}, {
+          0.32842136648413844`, -1.130635442999268}, 
+          DynamicLocation["VertexID$7", Automatic, Center]}, SplineDegree -> 
+         7]], 
+       ArrowBox[{
+         DynamicLocation["VertexID$7", Automatic, Center], 
+         DynamicLocation["VertexID$8", Automatic, Center]}], 
+       ArrowBox[
+        BezierCurveBox[{
+          DynamicLocation["VertexID$7", Automatic, Center], {
+          0.6155229619654261, -0.3553723477831351}, 
+          DynamicLocation["VertexID$9", Automatic, Center]}]], 
+       ArrowBox[{
+         DynamicLocation["VertexID$8", Automatic, Center], 
+         DynamicLocation["VertexID$6", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$9", Automatic, Center], 
+         DynamicLocation["VertexID$2", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$9", Automatic, Center], 
+         DynamicLocation["VertexID$3", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$9", Automatic, Center], 
+         DynamicLocation["VertexID$4", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$9", Automatic, Center], 
+         DynamicLocation["VertexID$5", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$9", Automatic, Center], 
+         DynamicLocation["VertexID$6", Automatic, Center]}], 
+       ArrowBox[
+        BezierCurveBox[{
+          DynamicLocation["VertexID$9", Automatic, Center], {
+          0.8844770380345744, -0.5106530560013052}, 
+          DynamicLocation["VertexID$7", Automatic, Center]}]], 
+       ArrowBox[{
+         DynamicLocation["VertexID$9", Automatic, Center], 
+         DynamicLocation["VertexID$8", Automatic, Center]}], 
+       ArrowBox[
+        BezierCurveBox[{
+          DynamicLocation["VertexID$9", Automatic, Center], {
+          1.1433696992985076`, 0.28089647497877007`}, {1.417737270833854, 
+          0.3433228243293581}, {1.587985889951574, 0.2575951277933575}, {
+          1.5879858899515742`, -0.2575951277933595}, {
+          1.4177372708338543`, -0.3433228243293602}, {
+          1.1433696992985083`, -0.2808964749787726}, 
+          DynamicLocation["VertexID$9", Automatic, Center]}, SplineDegree -> 
+         7]], 
+       ArrowBox[{
+         DynamicLocation["VertexID$9", Automatic, Center], 
+         DynamicLocation["VertexID$10", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$10", Automatic, Center], 
+         DynamicLocation["VertexID$6", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$11", Automatic, Center], 
+         DynamicLocation["VertexID$1", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$11", Automatic, Center], 
+         DynamicLocation["VertexID$2", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$11", Automatic, Center], 
+         DynamicLocation["VertexID$3", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$11", Automatic, Center], 
+         DynamicLocation["VertexID$4", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$11", Automatic, Center], 
+         DynamicLocation["VertexID$5", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$11", Automatic, Center], 
+         DynamicLocation["VertexID$6", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$11", Automatic, Center], 
+         DynamicLocation["VertexID$7", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$11", Automatic, Center], 
+         DynamicLocation["VertexID$8", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$11", Automatic, Center], 
+         DynamicLocation["VertexID$9", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$11", Automatic, Center], 
+         DynamicLocation["VertexID$10", Automatic, Center]}], 
+       ArrowBox[
+        BezierCurveBox[{
+          DynamicLocation["VertexID$11", Automatic, Center], {
+          0.30029377275758734`, 1.0830548677789036`}, {0.33395762169779536`, 
+          1.3710014651861369`}, {0.4785963647622184, 1.5041307264239627`}, {
+          0.966343256368316, 1.302099348915397}, {0.9744816890158463, 
+          1.1056877094766229`}, {0.7946766332360593, 0.8782747819639147}, 
+          DynamicLocation["VertexID$11", Automatic, Center]}, SplineDegree -> 
+         7]], 
+       ArrowBox[{
+         DynamicLocation["VertexID$12", Automatic, Center], 
+         DynamicLocation["VertexID$6", Automatic, Center]}]}, {
+       Directive[
+        Hue[0.6, 0.2, 0.8], 
+        EdgeForm[
+         Directive[
+          GrayLevel[0], 
+          Opacity[0.7]]]], 
+       TagBox[
+        DiskBox[{-0.5000000000000007, 0.866025403784439}, 
+         0.02261146496815286], "DynamicName", BoxID -> "VertexID$1"], 
+       TagBox[
+        DiskBox[{-0.866025403784439, 0.5000000000000008}, 
+         0.02261146496815286], "DynamicName", BoxID -> "VertexID$2"], 
+       TagBox[
+        DiskBox[{-1., 1.0106430996148606`*^-15}, 0.02261146496815286], 
+        "DynamicName", BoxID -> "VertexID$3"], 
+       TagBox[
+        DiskBox[{-0.8660254037844383, -0.49999999999999933`}, 
+         0.02261146496815286], "DynamicName", BoxID -> "VertexID$4"], 
+       TagBox[
+        DiskBox[{-0.4999999999999995, -0.8660254037844379}, 
+         0.02261146496815286], "DynamicName", BoxID -> "VertexID$5"], 
+       TagBox[
+        DiskBox[{3.8285686989269494`*^-16, -1.}, 0.02261146496815286], 
+        "DynamicName", BoxID -> "VertexID$6"], 
+       TagBox[
+        DiskBox[{0.5000000000000006, -0.866025403784439}, 
+         0.02261146496815286], "DynamicName", BoxID -> "VertexID$7"], 
+       TagBox[
+        DiskBox[{0.8660254037844389, -0.5000000000000012}, 
+         0.02261146496815286], "DynamicName", BoxID -> "VertexID$8"], 
+       TagBox[
+        DiskBox[{1., -1.133107779529596*^-15}, 0.02261146496815286], 
+        "DynamicName", BoxID -> "VertexID$9"], 
+       TagBox[
+        DiskBox[{0.8660254037844384, 0.4999999999999992}, 
+         0.02261146496815286], "DynamicName", BoxID -> "VertexID$10"], 
+       TagBox[
+        DiskBox[{0.4999999999999996, 0.8660254037844379}, 
+         0.02261146496815286], "DynamicName", BoxID -> "VertexID$11"], 
+       TagBox[
+        DiskBox[{1.8369701987210297`*^-16, 1.}, 0.02261146496815286], 
+        "DynamicName", BoxID -> "VertexID$12"]}}], $CellContext`flag}, 
+    TagBox[
+     DynamicBox[GraphComputation`NetworkGraphicsBox[
+      3, Typeset`graph, Typeset`boxes, $CellContext`flag], {
+      CachedValue :> Typeset`boxes, SingleEvaluation -> True, 
+       SynchronousUpdating -> False, TrackedSymbols :> {$CellContext`flag}},
+      ImageSizeCache->{{13.500693309010085`, 
+       823.2393066909899}, {-482.2393066909899, 476.2393066909899}}],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False,
+    UnsavedVariables:>{$CellContext`flag}]],
+  DefaultBaseStyle->{
+   "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+  FrameTicks->None,
+  ImageSize->{838., Automatic}]], "Input",
+ CellChangeTimes->{{3.598023684536287*^9, 3.5980237280875654`*^9}, {
+   3.5980237683626657`*^9, 3.598023772135066*^9}, {3.598023815287022*^9, 
+   3.5980238388896885`*^9}, {3.598024078361831*^9, 3.598024088977405*^9}, {
+   3.598024171140289*^9, 3.5980241765827503`*^9}, 3.5980242215603166`*^9, 
+   3.5980243346439466`*^9}],
+
+Cell[BoxData[
+ RowBox[{"Eigensystem", "[", 
+  RowBox[{"A", ",", "2"}], "]"}]], "Output",
+ CellChangeTimes->{
+  3.5976790801889253`*^9, {3.597679617939665*^9, 3.597679640100542*^9}, 
+   3.598023582989395*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"3", ",", "1"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0", ",", 
+        RowBox[{"-", "1"}], ",", "0", ",", 
+        RowBox[{"-", "1"}], ",", "0", ",", 
+        RowBox[{"-", "2"}], ",", "0", ",", 
+        RowBox[{"-", "2"}], ",", "0", ",", 
+        RowBox[{"-", "3"}], ",", "0"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+        "0", ",", "0", ",", "0", ",", "1", ",", "0"}], "}"}]}], "}"}]}], 
+   "}"}], "\[IndentingNewLine]", "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.598023510374508*^9, 3.598023516815319*^9}, 
+   3.5980235728562574`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.598023571056676*^9, 3.598023571093665*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"AdjacencyGraph", "::", "matsq"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Argument \[NoBreak]\\!\\(A\\)\[NoBreak] at position \
+\[NoBreak]\\!\\(1\\)\[NoBreak] is not a non-empty square matrix. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/matsq\\\", \
+ButtonNote -> \\\"AdjacencyGraph::matsq\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.598023518151523*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.598023569334119*^9, 3.598023569370152*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.597679226706544*^9, 3.5976792277464848`*^9}, {
+  3.5976792666595097`*^9, 3.597679271741428*^9}, {3.5976796043066883`*^9, 
+  3.5976796061483393`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.5976795822928905`*^9, 3.5976795823449388`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.597679287529627*^9, 3.5976793134919677`*^9}, {
+  3.597679574330779*^9, 3.5976795796755342`*^9}}]
+},
+WindowSize->{1350, 631},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 96, 1, 31, "Input"],
+Cell[656, 23, 3561, 69, 292, "Input"],
+Cell[CellGroupData[{
+Cell[4242, 96, 11943, 253, 1000, InheritFromParent],
+Cell[16188, 351, 207, 5, 31, "Output"]
+}, Open  ]],
+Cell[16410, 359, 779, 21, 72, InheritFromParent],
+Cell[CellGroupData[{
+Cell[17214, 384, 92, 1, 31, InheritFromParent],
+Cell[17309, 387, 515, 10, 21, "Message"]
+}, Open  ]],
+Cell[17839, 400, 92, 1, 31, InheritFromParent],
+Cell[17934, 403, 198, 3, 31, "Input"],
+Cell[18135, 408, 96, 1, 31, "Input"],
+Cell[18234, 411, 145, 2, 31, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact name="Kolos_jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Kolos_jar</output-path>
+    <root id="root">
+      <element id="archive" name="Kolos.jar">
+        <element id="module-output" name="Kolos" />
+        <element id="archive" name="archive.jar" />
+      </element>
+    </root>
+  </artifact>
+</component>

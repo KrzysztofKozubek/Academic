@@ -1,0 +1,176 @@
+class Participant {
+   String id;
+   String name;
+   String telNo;
+   String address;
+}
+class SeminarRegistration {
+   String participantId;
+   String seminarId;
+   Date registrationDate;
+   boolean needSIDevice;
+}
+class SeminarRegistry {
+   SeminarRegistration registrations[];
+   void registerForSeminar(SeminarRegistration registration) {
+      //add registration to registrations.
+   }
+   boolean isRegisteredForSeminar(String participantId, String seminarId) {
+      ...
+   }
+   Date getSeminarRegistrationDate(String participantId, String seminarId) {
+      ...
+   }
+   boolean needSIDeviceForSeminar(String participantId, String seminarId) {
+      ...
+   }
+   SeminarRegistration[] getAllRegistrations(String participantId) {
+      ...
+   }
+}
+class ConferenceSystem {
+   Participant participants[];
+   SeminarRegistry seminarRegistry;
+  
+}
+
+
+///////////////////////////////////////
+
+class Participant {
+   String id;
+   String name;
+   String telNo;
+   String address;
+}
+class HotelBooking {
+   String participantId;
+   String hotelName;
+   Date checkInDate;
+   Date checkOutDate;
+   boolean isSingleRoom;
+}
+class HotelBookings {
+   HashMap mapFromPartIdToHotelBooking;
+   //Must provide participant's ID.
+   void addBooking(String participantId, HotelBooking booking) {
+      ...
+   }
+}
+
+class SeminarRegistration {
+   //String participantId;
+   String seminarId;
+   Date registrationDate;
+   boolean needSIDevice;
+}
+class SeminarRegistry {
+   SeminarRegistration registrations[];
+   void registerForSeminar(SeminarRegistration registration) {
+      //add registration to registrations.
+   }
+   boolean isRegistered (String participantId, String seminarId) {
+      ...
+   }
+   Date getRegistrationDate(String participantId, String seminarId) {
+      ...
+   }
+   boolean needSIDevice(String participantId, String seminarId) {
+      ...
+   }
+   SeminarRegistration[] getAllRegistrations(String participantId) {
+      ...
+   }
+}
+class ConferenceSystem {
+   Participant participants[];
+   HotelBookings hotelBookings;
+   SeminarRegistry seminarRegistry;
+}
+
+
+
+
+//////////////////////////////ZADANIA//////////////////
+
+Zad 1.
+public static String executeUpdateSQLStmt(String sqlStmt, String mode) {
+// mode value --> ADD, MOD, DEL
+    String outResult = "";
+    final String connName = "tmp";
+   DBConnectionManager connMgr = DBConnectionManager.getInstance();
+    Connection conP = connMgr.getConnection(connName);
+    Statement stmt = conP.createStatement();
+    int upd = stmt.executeUpdate(sqlStmt);
+    switch(upd) {
+       case 1:
+          if (mode.equalsIgnoreCase("ADD")) { outResult = "SUC Add"; }
+          else if (mode.equalsIgnoreCase("MOD")) { outResult = "SUC Mod";
+          else if (mode.equalsIgnoreCase("DEL")) { outResult = "SUC Del";
+       break;
+       case 0:
+          if (mode.equalsIgnoreCase("ADD")) { outResult = "Err Add"; }
+          else if (mode.equalsIgnoreCase("MOD")) { outResult = "Err Mod";
+          else if (mode.equalsIgnoreCase("DEL")) { outResult = "Err Del";
+       break;
+       default:
+          if (mode.equalsIgnoreCase("ADD")) { outResult = "Err Add"; }
+          else if (mode.equalsIgnoreCase("MOD")) { outResult = "Err Mod";
+          else if (mode.equalsIgnoreCase("DEL")) { outResult = "Err Del";
+       break;
+    }
+   stmt.close();
+   conP.close();
+    return outResult;
+}
+
+
+Zad 2.
+class Account {
+   final public int SAVING=0;
+   final public int CHEQUE=1;
+   final public int FIXED=2; //Portuguese currency
+   private int accountType;
+   private double balance;
+   public double getInterestRate(...) { // Some method;
+      ...
+   }
+   public Account(int accountType) {
+      this.accountType=accountType;
+   }
+   public double calcInterest() {
+      switch (accountType) {
+          case SAVING:
+             return balance*getInterestRate();
+          case CHEQUE:
+             return 0;
+          case FIXED:
+             return balance*(getInterestRate()+0.02);
+      }
+   }
+}
+
+
+
+Zad 3
+class Department{
+   final public int Account = 0;
+   final public int Marketing = 1;
+   final public int CustomerServices = 2;
+   protected int departmentCode;
+   public Department(int departmentCode){
+      this.departmentCode = departmentCode;
+   }
+   public String getDepartmentName(){
+      switch (departmentCode){
+         case Account:
+            return "Account";
+         case Marketing:
+            return "Marketing";
+         case CustomerServices:
+            return "Customer Services";
+      }
+   }
+}
+
+

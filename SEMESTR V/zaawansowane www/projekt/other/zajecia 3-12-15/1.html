@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="http://localhost/other/zajecia%203-12-15/1.js"></script>
+    <script src="http://localhost/other/zajecia%203-12-15/jquery-2.1.4.min.js"></script>
+    <link rel="stylesheet" href="http://localhost/other/zajecia%203-12-15/1.css" type="text/css">
+
+    <!--<script>-->
+        <!--$(document).ready(function () {-->
+            <!--alert('pierwsza operacja jQuery');-->
+        <!--});-->
+    <!--</script>-->
+    <title>Title</title>
+</head>
+<body>
+
+    <nav class="nav">
+        <ul>
+            <li><a href="#omnie">O mnie</a></li>
+            <li><a href="#zainteresowania">Zainteresowania</a></li>
+            <li class="last"><a href="#kontakt">Kontakt</a></li>
+        </ul>
+    </nav>
+    <br>
+    <br>
+
+    <div id="dataDiv"
+        style="width: 200px; height: 200px;">
+    </div>
+
+    <script>
+        $(function(){
+            $('#dataDiv').click(function(){
+                alert("Klikam w link");
+            });
+        });
+
+        $(function(){
+            $('#dataDiv').css('background', '#CCC000');
+        });
+
+        $(function zmienkolor(){
+            $('li').mouseover(function(){
+                $(this).addClass('wazny');
+            }).mouseout(function(){
+                $(this).removeClass('wazny');
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+<!-- Dokumentacja jQuery poczytać -->
+

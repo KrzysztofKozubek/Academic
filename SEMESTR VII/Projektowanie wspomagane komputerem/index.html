@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<!-- Krzysztof Kozubek -->
+<html>
+   <head>
+     <title>Krzysztof Kozubek</title>
+     <script src="https://d3js.org/d3.v4.min.js"></script>
+	 
+	 <style>
+	 .circle{
+		box-shadow: 10px 10px 5px #888888;
+		text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+	 }
+	 H1{
+		color: rgb(25%,75%,75%);
+	 }
+	 </style>
+   </head>
+   <body style="max-width: 1000px; margin: 0 auto; padding: 100px;background-color:#222;">
+   
+   <script>
+   
+	var colors = ["#001f3f", "#0074D9", "#7FDBFF", "#39CCCC", "#3D9970", "#2ECC40", "#01FF70", "#FFDC00", "#FF851B", "#FF4136", "#01FF70", "#85144b", "#F012BE", "#B10DC9", "#111111", "#00FFFF", "#7CFC00", "#FFFAFA", "#8000ff"];
+	function getRandomInt(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
+   
+	function addTextToWebsite(text){
+	
+		var h = document.createElement("H1");
+		var t = document.createTextNode(text);
+		h.appendChild(t);
+		document.body.appendChild(h);
+	}
+   
+	function Zd1(sizex, sizey, size){
+	
+		var svgContainer = d3.select("body").append("svg")
+						.attr("width", sizex)
+						.attr("height", sizey);
+						
+		addTextToWebsite("Projekt 1 by Krzysztof Kozubek");
+						
+		for(j = 0; j < 3000; j++) {	
+		
+			
+			svgContainer.append("circle")
+			.attr("cx", getRandomInt(size, sizex - size))
+			.attr("cy", getRandomInt(size, sizey - size))
+			.attr("r", size)
+			.style("fill", colors[getRandomInt(0, colors.length - 1)])
+			.style("class", "circle");
+		}
+		
+	}
+     
+	function Zd2(sizex, sizey, size){
+		
+		var svgContainer = d3.select("body").append("svg")
+						.attr("width", sizex)
+						.attr("height", sizey);
+						
+		addTextToWebsite("Projekt 2 by Krzysztof Kozubek");
+		
+		var x = sizex/2;
+		var y = sizey/2;
+		var r = size;
+		var svg = svgContainer;
+		
+		var color = getRandomInt(0, 6);
+		
+		var fun = function(size, x, y){
+		
+			svg.append("rect").attr("x", x).attr("y", y).attr("width", size).attr("height", size).style("fill", colors[color]).style("class", "rectangle").on("dblclick", function(d){
+				console.log("double clk");
+				fun(size * 2, sizex/2, sizey/2);
+			});
+			svg.append("rect").attr("x", x).attr("y", y).attr("width", size).attr("height", size).style("fill", colors[color]).style("class", "rectangle").on("click", function(d){
+		
+				var positionMouse = d3.mouse(this);
+				var xM = positionMouse[0];
+				var yM = positionMouse[1];
+				var distance = size + 5;
+				
+				if(yM < y + size / 4){
+					<!-- Up -->
+					console.log("Up");
+					fun(size, x, y - distance);
+				}else{
+				if(yM > y + size * 3 / 4){
+					<!-- Bottom -->
+					console.log("Bottom");
+					fun(size, x, y + distance);
+				}else{
+				if(xM < x + size / 4){
+					<!-- Left -->
+					console.log("Left");
+					fun(size, x - distance, y);
+				}else{
+				if(xM > x + size * 3 / 4){
+					<!-- Right -->
+					console.log("Right");
+					fun(size, x + distance, y);
+				}else{
+					color = getRandomInt(0, colors.length - 1);
+					fun(size, x, y);
+				}}}}
+			});
+		}
+		fun(size, sizex/2, sizey/2);
+	}
+	
+	var beauty = [];
+	var war = 0;
+	
+	function Zd3(sizex, sizey, size){
+	
+		var svgContainer = d3.select("body").append("svg")
+						.attr("width", sizex)
+						.attr("height", sizey)
+						.attr("id", "Zd3");
+						
+		addTextToWebsite("Projekt 3 by Krzysztof Kozubek (In console js is result beauty)");
+		
+		var index = 1;
+		var x = sizex/2;
+		var y = sizey/2;
+		var r = size;
+		var svg = svgContainer;
+		var color = getRandomInt(0, 6);
+		
+		var fun = function(size, x, y){
+		
+			svg.append("rect").attr("x", x).attr("y", y).attr("width", size).attr("height", size).attr("color", color).style("fill", colors[color]).style("class", "rectangle").attr("id", index++).on("click", function(d){
+				
+				var childs = [];
+				var allElements = document.getElementsByTagName('*');
+				for (var i = 0, n = allElements.length; i < n; i++){if (allElements[i].getAttribute("color") !== null){ childs.push(allElements[i]);}}
+				
+				for(var i = 0; i < childs.length; i++){
+					var change = false;
+					for(var j = 0; j < beauty.length && change == false; j++){if(childs[i].getAttribute("color") == beauty[j].color){ beauty[j].sum = beauty[j].sum + 1; change = true; }}
+					if(change == false){ var rect = {sum: 0, color: childs[i].getAttribute("color")}; beauty.push(rect); }
+				}
+				
+				var sum = 0;
+				for(var i = 0; i < beauty.length; i++){sum += beauty[i].sum;}
+				var avg = sum / beauty.length;
+				for(var i = 0; i < beauty.length; i++){ war += Math.pow(beauty[i].sum - avg, 2); }
+				
+				war = Math.sqrt(war);
+				var result = (1000-war);
+				if(result > 100) result = 100;
+				if(result < 0) result = 0;
+				result = Math.round(result, 0);
+				console.log("Result beauty: " + result + "/100");
+				
+				var positionMouse = d3.mouse(this);
+				var xM = positionMouse[0];
+				var yM = positionMouse[1];
+				var distance = size + 5;
+				
+				if(yM < y + size / 4){
+					<!-- Up -->
+					fun(size, x, y - distance);
+				}else{
+				if(yM > y + size * 3 / 4){
+					<!-- Bottom -->
+					fun(size, x, y + distance);
+				}else{
+				if(xM < x + size / 4){
+					<!-- Left -->
+					fun(size, x - distance, y);
+				}else{
+				if(xM > x + size * 3 / 4){
+					<!-- Right -->
+					fun(size, x + distance, y);
+				}else{
+					color = getRandomInt(0, colors.length - 1);
+					fun(size, x, y);
+				}}}}
+			});
+		}
+		
+		
+		fun(size, sizex/2, sizey/2);
+	}
+	
+	 
+<!-- Zd1(szerokosc bloku, wysokosc bloku, rozmiar kół) -->
+   Zd1(1000, 500, 10);
+   
+<!-- Zd2(szerokosc bloku, wysokosc bloku, rozmiar ściany kwadratów) -->
+   Zd2(1000, 500, 100);
+   
+<!-- Zd3(szerokosc bloku, wysokosc bloku, rozmiar ściany kwadratów) -->
+   Zd3(1000, 500, 100);
+   
+   </script>
+   </body>
+</html>

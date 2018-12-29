@@ -1,0 +1,180 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      6212,        171]
+NotebookOptionsPosition[      5583,        147]
+NotebookOutlinePosition[      6005,        163]
+CellTagsIndexPosition[      5962,        160]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"grad", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+    "\"\<C:\\\\Users\\\\asdflo\\\\Desktop\\grad.dat\>\"", ",", 
+     "\"\<Table\>\""}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"gauss", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+    "\"\<D:\\\\Uczelnia\\FIZYKA\\II Rok\\I \
+Semestr\\met_num\\Zestaw2\\gauss.dat\>\"", ",", "\"\<Table\>\""}], "]"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.537642928820772*^9, 3.537642979836397*^9}, {
+   3.537643061227022*^9, 3.537643069695772*^9}, 3.5988768639733105`*^9}],
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{
+   RowBox[{"ListPlot", "[", 
+    RowBox[{"grad", ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<liczba iteracji,\>\"", ",", 
+        "\"\<||\!\(\*SubscriptBox[\(x\), \(k\)]\)-\!\(\*SubscriptBox[\(x\), \
+\(k - 1\)]\)||\>\""}], "}"}]}], ",", 
+     RowBox[{"Joined", "\[Rule]", "True"}], ",", 
+     RowBox[{"Mesh", "\[Rule]", "All"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"PointSize", "[", "Large", "]"}], "}"}]}]}], "]"}], ",", 
+   RowBox[{"ListPlot", "[", 
+    RowBox[{"gauss", ",", 
+     RowBox[{"Joined", "\[Rule]", "True"}], ",", 
+     RowBox[{"Mesh", "\[Rule]", "All"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Red", ",", 
+        RowBox[{"PointSize", "[", "Large", "]"}]}], "}"}]}]}], "]"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.537642982039522*^9, 3.537643008227022*^9}, {
+  3.537643095602022*^9, 3.537643129680147*^9}, {3.537643163492647*^9, 
+  3.537643320648897*^9}, {3.537643360758272*^9, 3.537643366648897*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{GraphicsComplexBox[CompressedData["
+1:eJxTTMoPSmViYGBQBWIQDQEf7Ke58FVbzy21h/BFHFautF+++lMxlC/hEN3a
+cTz9URqUL+Mgv281/zSvRChfwUEnh8c8OCICyldySNirP0Hulw+Ur+Iwb/bb
+uc+UbaB8NYddP8q7XfdrQ/kaDsuOOX0POS8H5Ws5vGLW+lavKQzl6zi8Dl3n
+zMTBBeXrOTBFuUYe3/3fDsI3cJhT15H/NfsjlG/okCIrkPKD7RGUb+SwXP1z
+LNPWy1C+sUPt6h2ej7RPQPkmDnfKko8pTN8F5Zs6nLuxjX3SnEVQvpnDli/+
+U2syZ0D55g5rnvrKrY1uhPItHKqZDrGWpWZB+ZYOHG3pGxTbYqB8K4dDMd58
+Wy+FQPnWDvYfK215qn2hfBuH3bcat+10t4TybR0ahX8YtPKoQPl2Dlfklyyd
+bsoD5ds7rLP4vPnwM0Yo38Hh2eWmtTZd32zB3AYHhznrJbZ9iPoA4TM4Ohya
+dnL5kZW3oPKODjcU5wsWG5yAyjs5mDn3VP4U2w6Vd4LKr4DKOztMTal8WP93
+KlTe2UHq/hHHtOQu24TH/p5vNgo7wNIPAP8Loe4=
+    "], {{{}, {}, 
+      {Hue[0.67, 0.6, 0.6], PointSize[Large], 
+       LineBox[{37, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 
+        18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 
+        35, 36}]}}, {
+      {Hue[0.67, 0.6, 0.6], PointSize[Large], 
+       PointBox[{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 
+        18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 
+        35, 36, 37}]}, {}, {}}}], GraphicsComplexBox[CompressedData["
+1:eJxTTMoPSmViYGBQBmIQDQEf7JcdnL415mu/PYQv4/DypbfXlImVUL6Cwxud
+Qrn1S1OhfCWHU92cXz5OCYfyVRwkO0I51zL7QflqDoH/PTw4G1ygfA0H1xmn
+llmvtYHytRxYpvIvtQozgfJ1HH76pyfXSepC+XoOQTdnnzzwQwXKN3Do1RfV
+sc+Ug/INHW79aJqnqyUG5Rs5vH5wpMnWSgDKN3bQevy4+dktdijfxOHvxN+z
+3GcwQvmmDo/2Be+4y/HLDsI3c0jILQpICfgM5Zs71G+ymsuy6w2Ub+EgG/Lk
+AkPmUyjf0uFAYruV56/7UL6VQ80X7iu5b65D+dYO+/9VGmW+vQjl2zjcP9Gx
+ctqLU1C+rcMe1i227y2OQPl2Dnym7v8E8vdB+fYO87PlTzW93QblOzjEOxnd
+3Oy1EcJvcHDY8LnE4KH0Kqi8o0OLhrPY0V2LofKODkl9rqUyN+ZC5Z0cxCfv
+/W87fRpU3snhzyUVWz7ZiVB5Z4ecs1O86z51QuWdHaadr7zIv77Zzihk1Svl
+WRIOsPQBAEPpnuQ=
+    "], {{{}, {}, 
+      {RGBColor[1, 0, 0], PointSize[Large], 
+       LineBox[{35, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 
+        18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 
+        34}]}}, {
+      {RGBColor[1, 0, 0], PointSize[Large], 
+       PointBox[{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 
+        18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 
+        35}]}, {}, {}}}]},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesLabel->{
+    FormBox["\"liczba iteracji,\"", TraditionalForm], 
+    FormBox[
+    "\"||\\!\\(\\*SubscriptBox[\\(x\\), \
+\\(k\\)]\\)-\\!\\(\\*SubscriptBox[\\(x\\), \\(k - 1\\)]\\)||\"", 
+     TraditionalForm]},
+  AxesOrigin->{0, 0},
+  ImageSize->{502., Automatic},
+  PlotRange->{{0., 39.}, {0., 0.005276901575500001}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{
+    Scaled[0.02], 
+    Scaled[0.02]}]], "Input",
+ CellChangeTimes->{{3.537643413508272*^9, 3.537643415477022*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{"65", "*", 
+   RowBox[{"25", "/", "100"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.537644338242647*^9, 3.537644347414522*^9}}],
+
+Cell[BoxData["16.25`"], "Output",
+ CellChangeTimes->{{3.537644341867647*^9, 3.537644347805147*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{"19.25", "*", 
+   RowBox[{"100", "/", "25"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.537644361273897*^9, 3.537644366680147*^9}}],
+
+Cell[BoxData["77.`"], "Output",
+ CellChangeTimes->{3.537644367102022*^9}]
+}, Open  ]]
+},
+WindowSize->{615, 527},
+WindowMargins->{{366, Automatic}, {Automatic, 79}},
+PrivateNotebookOptions->{"VersionedStylesheet"->{"Default.nb"[8.] -> True}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 573, 15, 112, "Input"],
+Cell[1121, 37, 1102, 27, 92, "Input"],
+Cell[2226, 66, 2756, 55, 304, "Input"],
+Cell[CellGroupData[{
+Cell[5007, 125, 171, 4, 31, "Input"],
+Cell[5181, 131, 99, 1, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5317, 137, 174, 4, 31, "Input"],
+Cell[5494, 143, 73, 1, 30, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

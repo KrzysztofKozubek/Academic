@@ -1,0 +1,68 @@
+Zestaw1:
+
+Zad10: 1/1, ok – tyle, ¿e pomyli³ Pan macierz i rozwi¹za³ Gaussem to co mia³o byæ rozwi¹zane Shermanem-Morrisonem
+
+Zad12: 2/2, ok
+
+Zad13: 0,5/1 : czy funkcja inv odwraca macierz z definicji (co jest bardzo z³e) czy jakimœ numerycznym algorytmem (s¹ takie, np. algorytm Jordana)? Proszê to sprawdziæ np. w dokumentacji i skomentowaæ albo jawnie rozwi¹zaæ uk³ady równañ jednym z omawianych algorytmów.
+
+ 
+
+Zestaw2:
+
+5a: 2,5/3 ok, tylko by jednak siê przyda³ wykres – mo¿e po prostu wyeksportowaæ dane i je wrzuciæ na wykres w dowolnym programie Poprawa: ok 3/3
+
+5b: 1/1 ok – wreszcie ktoœ zaimplementowa³ to optymalnie :]
+
+ 
+
+Zestaw3:
+
+Zad8: 0/2 na razie ten kod jest doœæ w¹tpliwy. Znajduje Pan pierwszy wektor w³asny w zasadzie przypadkiem, bo akurat z takiego startuje – przecie¿ ustawia Pan zmienn¹ ‘iteracje’ na 0 zatem odpowiednia pêtla while tylko 1 raz siê oblicza. Nie bardzo rozumiem te¿ po co jest funkcja maxsize i czemu zmienn¹ L porównuje siê z precyzj¹. Wreszcie liczenie drugiego wektora w³asnego wymaga zastartowania z wektora pozbawionego rzutu na pierwszy wektor w³asny, a nigdzie nie widzê fragmentu który by tego rzutowania dokonywa³.
+
+Zad9: 3/3 œwietnie!
+
+Zad10: ok, 1/1
+
+Zad12: 1/2 Sposób liczenia normy jest dziwny – czemu brane s¹ 3 sk³adowe, skoro wektor ma sk³adowych 5? Choæ wyniki by³by prawid³owy po unormowaniu, to trzeba by poprawiæ ten fragment.
+
+ 
+
+Zestaw4:
+
+Zad6: 0/1 eh, b³¹d w wielomianie interpolacyjnym przy y2, zgubiony jeden czynnik
+
+Zad7: 1/1 dobrze, tylko nie ma sensu wyrysowywaæ funkcji poza przedzia³em [-1,1] bo tam mo¿emy tylko ekstrapolowaæ i wiadomo ¿e wielomiany Lagrange’a bêd¹ mocno odstawaæ od w³aœciwego przebiegu
+
+Zad8: 2/2 ok
+
+ 
+
+Zestaw6:
+
+Zad2: 1/2  jest metoda siecznych, a przyda³aby siê jeszcze odwrotna interpolacja. Zaczynanie z prawie tego samego miejsca bliskiego 0 nie obrazuje gdzie metoda mo¿e dotrzeæ (blisko 0 zawsze trafimy do 0)
+
+Zad4: 2/4  Hmm… Pana kod w istocie obrazuje tempo zbie¿noœci metody Newtona dla ró¿nych punktów startowych, zamiast rozpoznawaæ do jakiego rozwi¹zania siê ona zbiega. To bardzo ‘skondensowane’ i eleganckie rozwi¹zanie, choæ nie tego problemu, o który chodzi. Niemniej, mo¿na by wykorzystaæ Pana kod i po pewnym rozbudowaniu uzyskaæ w³aœciwe wyniki.
+
+ 
+
+Zestaw7:
+
+Zad5: 0.75/1 dobra implementacja metody Romberga, ale przedzia³em ca³kowania mia³o byæ od 0 do +inf, zatem musi Pan uwzglêdniæ tak¿e ca³kê po asymptotycznym ogonie  (jak to zrobiæ opisano w wyk³adzie)
+
+ 
+
+Zestaw8:
+
+Zad1: 1/2  splajn Pan ju¿ ma, to teraz trzeba metod¹ Brenta przeszukaæ go i znaleŸæ minima…
+
+Zad2: 2/3 sprytne rozwi¹zanie, choæ nie gwarantuje, ¿e zrozumia³ Pan dzia³anie algorytmów sk³adaj¹cych siê na metodê Levenberga-Marquardta  - pe³na punktacja by³aby za bardziej nisko-poziome rozwi¹zanie.
+...................................................................
+
+Zad 6: ok, 1/1
+
+Zestaw6:
+Zad5: 0.5/1 uwagi jak w zadaniu 4
+
+Zestaw 7:
+Zad6: 0.75/1 dobrze zaimplementowane kwadratury adaptacyjne, ale powinien byæ jeszcze wykres ca³ki oraz nale¿y uwzglêdniæ ca³ki po ogonach

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name='theme-color' , content='#2196F3'/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <title>Parallax Template - Materialize</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        function sendPost(){
+            $.ajax('http://jsonplaceholder.typicode.com/posts', {
+
+                method: 'POST',
+            data:  { title: 'foo', body: 'bar', userId: 1 }
+            }).then(function(data) {
+                console.log(data);
+            });
+        }
+
+        var root = 'http://jsonplaceholder.typicode.com';
+
+        var posts;
+        var scriptPost ="";
+
+        $.ajax({
+            url: root + '/posts',
+            method: 'GET'
+        }).then(function(data) {
+            console.log(data);
+            posts = data;
+
+            for(var i = 0, len = posts.length; i < len; i++){
+
+                scriptPost += "<tr>";
+                scriptPost += "<td>" + posts[i].id + "</td>";
+                scriptPost += "<td>" + posts[i].body + "</td>";
+                scriptPost += "<td>" + posts[i].title + "</td>";
+                scriptPost += "</tr>";
+            }
+
+            $("#tableBody").append(scriptPost);
+        });
+//
+//        $.ajax({
+//            url: root + '/comments',
+//            method: 'GET'
+//        }).then(function(data) {
+//            console.log(data);
+//        });
+//
+//
+//        $.ajax({
+//            url: root + '/albums',
+//            method: 'GET'
+//        }).then(function(data) {
+//            console.log(data);
+//        });
+//
+//
+//        $.ajax({
+//            url: root + '/photos',
+//            method: 'GET'
+//        }).then(function(data) {
+//            console.log(data);
+//        });
+//        $.ajax({
+//            url: root + '/todos',
+//            method: 'GET'
+//        }).then(function(data) {
+//            console.log(data);
+//        });
+//        $.ajax({
+//            url: root + '/users',
+//            method: 'GET'
+//        }).then(function(data) {
+//            console.log(data);
+//        });
+
+
+
+
+    </script>
+</head>
+<body>
+<div class="row">
+    <button id="send" class="btn waves-effect waves-light" type="submit" name="action" onclick="sendPost()">Submit
+        <i class="material-icons right">send</i>
+    </button>
+</div>
+<div id="posts">
+    <table>
+        <thead>
+        <tr>
+            <th data-field="body">body</th>
+            <th data-field="id">id</th>
+            <th data-field="title">title</th>
+        </tr>
+        </thead>
+        <tbody id="tableBody">
+
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

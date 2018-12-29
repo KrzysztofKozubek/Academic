@@ -1,0 +1,9 @@
+{
+  "type":"sqlite","pass":"","user":"root","url":"/home/redhat/IdeaProjects/Project1/","db":"dbsqlite.sqlite",
+  "type":"mysql","pass":"","user":"root","url":"//localhost","db":"movie","port":"3306",
+  "type":"postgresql","pass":"root","user":"root","url":"//localhost","db":"movie","port":"5432",
+  "type":"mongodb","pass":"","user":"root","url":"//localhost","db":"movie","port":"27017",
+  "type":"sqlite","pass":"","user":"","url":"./dbsqlite.sqlite",
+  "type":"mongodb","pass":"","user":"root","url":"//localhost","db":"movie","port":"27017",
+  "type":"mysql","pass":"","user":"root","url":"//localhost","db":"movie","port":"3306"
+}

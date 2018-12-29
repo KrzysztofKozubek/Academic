@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        .wazny {
+            text-align:center;
+            padding:15px 0;
+            border:3px solid #FDD700;
+            animation:szerokosc 5s ease-in-out 0s infinite alternate backwards,
+            tlo 500ms linear 5s infinite normal forwards;
+            -webkit-animation:szerokosc 5s ease-in-out 0s infinite alternate backwards,
+            tlo 500ms linear 5s infinite normal forwards;
+        }
+        @keyframes szerokosc
+        {
+            0% { width:150px; }
+            100% { width:350px; }
+        }
+        @keyframes tlo
+        {
+            0% { background-color:#FFF; }
+            100% { background-color:#F00; }
+        }
+        @-webkit-keyframes szerokosc
+        {
+            0% { width:150px; }
+            100% { width:350px; }
+        }
+        @-webkit-keyframes tlo
+        {
+            0% { background-color:#FFF; }
+            100% { background-color:#F00; }
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script type="text/javascript">
+
+
+        $(function () {
+            $('img').attr('src', 'obrazek.png');
+        });
+
+
+        $(document).ready(function(){
+//            alert("Pierwsza operacja jQuery");
+        });
+
+        $(function(){
+            $('#mojeID h2').click(function(){
+                alert("klikam h2");
+            });
+        });
+
+
+        $(function(){
+            $('#mojeID h2').mouseover(function(){
+                $('.hh').css('background', '#ccc');
+            }).mouseout(function(){
+                $('.hh').css('background', '#fff');
+            })
+        });
+
+        $(function(){
+            $('#tresc').mouseover(function(){
+                $('p').css('background', $(this).css('background­color'));
+            }).mouseout(function(){
+                $('p').css('background', 'white');
+            });
+        });
+
+        $(function (){
+            $('li').mouseover(function () {
+                $(this).addClass('wazny');
+            }).mouseout(function () {
+                $(this).removeClass('wazny');
+            });
+        });
+
+        $(function (){
+            $('.wazny').click(function () {
+                $('li').toggle(200);
+            });
+        });
+
+
+        $(function (){
+            $('.wazny').click(function () {
+                $('li').load("google.com");
+            });
+        });
+
+
+
+
+
+    </script>
+
+
+    <script type="text/javascript">
+        $(function(){
+            $('p').mouseover(function(){
+                $(this).addClass('wazny');
+            }).mouseout(function(){
+                $(this.removeClass('wazny');
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+<img src="" alt="obrazek"/>
+<table>
+<tr>
+    <td><img src="maly/obrazek-1.jpg"/></td>
+    <td><img src="maly/obrazek-2.jpg"/></td>
+    <td><img src="maly/obrazek-3.jpg"/></td>
+
+</tr>
+</table>
+<div>
+    <img src="duzy/obrazek-1.jpg" alt="obrazek"/>
+</div>
+
+<!--
+<p class="wazny">
+    ukrywanie
+</p>
+<p>
+    to bedzie kryte :D
+</p>
+<li>
+    text text
+</li>
+<li>
+    text2
+</li>
+
+<div id="mojeID">
+    <h2 class="hh">text</h2>
+</div>
+
+<div id="tresc" style="background-color:#1C5B8F; ">
+    <p>text</p>
+</div>
+-->
+</body>
+</html>

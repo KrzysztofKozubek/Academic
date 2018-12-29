@@ -1,0 +1,199 @@
+{
+    "s1": {
+          "first_name":"Jan",
+          "last_name": "Kowalski",
+          "birth_date":"29 AUG 1990",
+          "album_number": 13525123,
+          "year_of_study": 2,
+          "courses": {
+                "2013": {
+                  "AlgorithmsI":{
+                        "grades": {
+                            "exercices": [2, 4],
+                            "lecture": [2, 5]
+                            }
+                          },
+                  "BasicPhysicsI": {
+                        "grades": {
+                            "exercices": [4],
+                            "lecture": [5]
+                            }
+                          },
+                  "ProgrammingI": {
+                        "grades": {
+                            "exercices": [4.5],
+                            "lecture": [2,3.5]
+                            }
+                          }
+                },
+                "2014": {
+                  "ProgrammingII": {
+                        "grades": {
+                            "exercices": [5],
+                            "lecture": [5]
+                            }
+                          },
+                  "BasicPhysicsII": {
+                        "grades": {                            
+                            "exercices": [5],
+                            "lecture": [5]
+                            }                          
+                          },                  
+                  "AlgorithmsII": {
+                        "grades": {
+                            "exercices": [5],
+                            "lecture": [5]
+                            }
+                          }
+                }
+              }
+          },
+    "s2": {
+          "first_name":"Tomek",
+          "last_name": "Falus",
+          "birth_date":"29 AUG 1990",
+          "album_number": 12412412,
+          "year_of_study": 2,
+          "courses": {
+                "2013": {
+                  "AlgorithmsI":{
+                        "grades": {
+                            "exercices": [2, 3],
+                            "lecture": [2, 3]
+                            }
+                          },
+                  "BasicPhysicsI": {
+                        "grades": {
+                            "exercices": [4],
+                            "lecture": [3]
+                            }
+                          },
+                  "ProgrammingI": {
+                        "grades": {
+                            "exercices": [3.5],
+                            "lecture": [2,3.5]
+                            }
+                          }
+                },
+                "2014": {
+                  "ProgrammingII": {
+                        "grades": {
+                            "exercices": [5],
+                            "lecture": [3]
+                            }
+                          },
+                  "BasicPhysicsII": {
+                        "grades": {                            
+                            "exercices": [4],
+                            "lecture": [5]
+                            }                          
+                          },                  
+                  "AlgorithmsII": {
+                        "grades": {
+                            "exercices": [5],
+                            "lecture": [3]
+                            }
+                          }
+                }
+              }
+          },
+
+    "s3": {
+          "first_name":"Grzegorz",
+          "last_name": "Brzęczyszczykiewicz",
+          "birth_date":"29 AUG 1990",
+          "album_number": 45645645,
+          "year_of_study": 2,
+          "courses": {
+                "2013": {
+                  "AlgorithmsI":{
+                        "grades": {
+                            "exercices": [4],
+                            "lecture": [2, 3]
+                            }
+                          },
+                  "BasicPhysicsI": {
+                        "grades": {
+                            "exercices": [3],
+                            "lecture": [3]
+                            }
+                          },
+                  "ProgrammingI": {
+                        "grades": {
+                            "exercices": [4.5],
+                            "lecture": [2,3.5]
+                            }
+                          }
+                },
+                "2014": {
+                  "ProgrammingII": {
+                        "grades": {
+                            "exercices": [5],
+                            "lecture": [4]
+                            }
+                          },
+                  "BasicPhysicsII": {
+                        "grades": {                            
+                            "exercices": [3],
+                            "lecture": [5]
+                            }                          
+                          },                  
+                  "AlgorithmsII": {
+                        "grades": {
+                            "exercices": [5],
+                            "lecture": [2,4]
+                            }
+                          }
+                }
+              }
+          },
+    "s4": {
+          "first_name":"Mariusz",
+          "last_name": "Kolonko",
+          "birth_date":"29 AUG 1990",
+          "album_number": 78946546,
+          "year_of_study": 2,
+          "courses": {
+                "2013": {
+                  "AlgorithmsI":{
+                        "grades": {
+                            "exercices": [2, 3],
+                            "lecture": [2, 3]
+                            }
+                          },
+                  "BasicPhysicsI": {
+                        "grades": {
+                            "exercices": [4],
+                            "lecture": [3]
+                            }
+                          },
+                  "ProgrammingI": {
+                        "grades": {
+                            "exercices": [3.5],
+                            "lecture": [2,4.5]
+                            }
+                          }
+                },
+                "2014": {
+                  "ProgrammingII": {
+                        "grades": {
+                            "exercices": [2,3],
+                            "lecture": [5]
+                            }
+                          },
+                  "BasicPhysicsII": {
+                        "grades": {                            
+                            "exercices": [5],
+                            "lecture": [2,5]
+                            }                          
+                          },                  
+                  "AlgorithmsII": {
+                        "grades": {
+                            "exercices": [5],
+                            "lecture": [2,4]
+                            }
+                          }
+                }
+              }
+          }
+}

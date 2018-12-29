@@ -1,0 +1,34 @@
+public void findNext() {
+    String selection = txt.getSelectedText();
+    try
+    {
+      selection.equals("");
+    }
+    catch(NullPointerException e)
+    {
+      selection = textF.getText();
+      try
+      {
+        selection.equals("");
+      }
+      catch(NullPointerException e2)
+      {
+        selection = JOptionPane.showInputDialog("Find:");
+        textF.setText(selection);
+      }
+    }
+    try
+    {
+      int select_start = txt.getText().indexOf(selection, startIndex);
+      int select_end = select_start+selection.length();
+      txt.select(select_start, select_end);
+      startIndex = select_end+1;
+    
+      if(select_start == txt.getText().lastIndexOf(selection))
+      {
+        startIndex = 0;
+      }
+    }
+    catch(NullPointerException e)
+    {}
+ 

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var tab = [];
+        tab[0] = "Ala";
+        tab[1] = "Ola";
+        tab[2] = "Ewa";
+
+        for(n in tab){
+            document.write(tab[n] + "<br>");
+        }
+
+        var tab = ["ALA" , "OLA" , "EWA"];
+        document.write("<br>");
+        for(var i = 0; i < tab.length; i++){
+            document.write(tab[i] + "<br>");
+        }
+
+        function Dodaj(x, y){
+            return x+y;
+        }
+
+        function Wsp(x, y){
+            this.x = x;
+            this.y = y;
+            this.dodaj = x+y;
+            this.odejmij = function (x, y){
+                return x-y;
+            }
+        }
+
+
+        var pkt = new Wsp(29, 52);
+        document.write("<br>x; " + pkt.x + " <br>y; " + pkt.y + " <br>dodaj; " + pkt.dodaj + " <br>odejmowanie; " + pkt.odejmij(pkt.x, pkt.y));
+
+
+
+    </script>
+
+    <script>
+        alert(bla(23, 3));
+        function bla (a, b){
+            return (a / b).toPrecision(3);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

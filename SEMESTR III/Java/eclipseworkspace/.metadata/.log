@@ -1,0 +1,533 @@
+!SESSION 2013-10-09 09:01:43.230 -----------------------------------------------
+eclipse.buildId=M20100211-1343
+java.fullversion=GNU libgcj 4.4.5
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=pl_PL
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.jface.text 4 0 2013-10-09 09:10:53.628
+!MESSAGE Unexpected runtime error while computing a text hover
+!STACK 0
+java.lang.NullPointerException
+   at org.eclipse.ui.texteditor.DefaultMarkerAnnotationAccess.getLayer(DefaultMarkerAnnotationAccess.java:223)
+   at org.eclipse.jdt.internal.ui.text.java.hover.AbstractAnnotationHover.getHoverInfo2(AbstractAnnotationHover.java:678)
+   at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:129)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
+   at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+!SESSION 2013-10-30 08:42:03.663 -----------------------------------------------
+eclipse.buildId=M20100211-1343
+java.fullversion=GNU libgcj 4.4.5
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=pl_PL
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2013-10-30 09:05:11.008
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: java.io.InterruptedIOException: Read interrupted
+   at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:798)
+   at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1036)
+   at org.eclipse.jdt.internal.core.BinaryMethod.getAttachedJavadoc(BinaryMethod.java:558)
+   at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:555)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:512)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:495)
+   at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:129)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
+   at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+Caused by: java.io.InterruptedIOException: Read interrupted
+   at java.io.BufferedInputStream.refill(libgcj.so.10)
+   at java.io.BufferedInputStream.read(libgcj.so.10)
+   at gnu.java.net.LineInputStream.readLine(libgcj.so.10)
+   at gnu.java.net.protocol.http.Request.readResponse(libgcj.so.10)
+   at gnu.java.net.protocol.http.Request.dispatch(libgcj.so.10)
+   at gnu.java.net.protocol.http.HTTPURLConnection.connect(libgcj.so.10)
+   at gnu.java.net.protocol.http.HTTPURLConnection.getInputStream(libgcj.so.10)
+   at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:752)
+   ...9 more
+Caused by: java.io.InterruptedIOException: Read interrupted
+   at java.io.BufferedInputStream.refill(libgcj.so.10)
+   at java.io.BufferedInputStream.read(libgcj.so.10)
+   at gnu.java.net.LineInputStream.readLine(libgcj.so.10)
+   at gnu.java.net.protocol.http.Request.readResponse(libgcj.so.10)
+   at gnu.java.net.protocol.http.Request.dispatch(libgcj.so.10)
+   at gnu.java.net.protocol.http.HTTPURLConnection.connect(libgcj.so.10)
+   at gnu.java.net.protocol.http.HTTPURLConnection.getInputStream(libgcj.so.10)
+   at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:752)
+   at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1036)
+   at org.eclipse.jdt.internal.core.BinaryMethod.getAttachedJavadoc(BinaryMethod.java:558)
+   at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:555)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:512)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:495)
+   at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:129)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
+   at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+!SUBENTRY 1 org.eclipse.jdt.core 4 985 2013-10-30 09:05:11.271
+!MESSAGE Read interrupted
+!STACK 0
+java.io.InterruptedIOException: Read interrupted
+   at java.io.BufferedInputStream.refill(libgcj.so.10)
+   at java.io.BufferedInputStream.read(libgcj.so.10)
+   at gnu.java.net.LineInputStream.readLine(libgcj.so.10)
+   at gnu.java.net.protocol.http.Request.readResponse(libgcj.so.10)
+   at gnu.java.net.protocol.http.Request.dispatch(libgcj.so.10)
+   at gnu.java.net.protocol.http.HTTPURLConnection.connect(libgcj.so.10)
+   at gnu.java.net.protocol.http.HTTPURLConnection.getInputStream(libgcj.so.10)
+   at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:752)
+   at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1036)
+   at org.eclipse.jdt.internal.core.BinaryMethod.getAttachedJavadoc(BinaryMethod.java:558)
+   at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:555)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:512)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:495)
+   at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:129)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
+   at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+!SESSION 2013-11-06 08:42:20.399 -----------------------------------------------
+eclipse.buildId=M20100211-1343
+java.fullversion=GNU libgcj 4.4.5
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=pl_PL
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2013-11-06 09:17:24.190
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: java.io.InterruptedIOException: Read interrupted
+   at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:798)
+   at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1036)
+   at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:994)
+   at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:555)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:512)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:495)
+   at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:129)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
+   at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+Caused by: java.io.InterruptedIOException: Read interrupted
+   at java.io.BufferedInputStream.refill(libgcj.so.10)
+   at java.io.BufferedInputStream.read(libgcj.so.10)
+   at gnu.java.net.LineInputStream.readLine(libgcj.so.10)
+   at gnu.java.net.protocol.http.Request.readResponse(libgcj.so.10)
+   at gnu.java.net.protocol.http.Request.dispatch(libgcj.so.10)
+   at gnu.java.net.protocol.http.HTTPURLConnection.connect(libgcj.so.10)
+   at gnu.java.net.protocol.http.HTTPURLConnection.getInputStream(libgcj.so.10)
+   at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:752)
+   ...9 more
+Caused by: java.io.InterruptedIOException: Read interrupted
+   at java.io.BufferedInputStream.refill(libgcj.so.10)
+   at java.io.BufferedInputStream.read(libgcj.so.10)
+   at gnu.java.net.LineInputStream.readLine(libgcj.so.10)
+   at gnu.java.net.protocol.http.Request.readResponse(libgcj.so.10)
+   at gnu.java.net.protocol.http.Request.dispatch(libgcj.so.10)
+   at gnu.java.net.protocol.http.HTTPURLConnection.connect(libgcj.so.10)
+   at gnu.java.net.protocol.http.HTTPURLConnection.getInputStream(libgcj.so.10)
+   at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:752)
+   at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1036)
+   at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:994)
+   at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:555)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:512)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:495)
+   at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:129)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
+   at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+!SUBENTRY 1 org.eclipse.jdt.core 4 985 2013-11-06 09:17:24.314
+!MESSAGE Read interrupted
+!STACK 0
+java.io.InterruptedIOException: Read interrupted
+   at java.io.BufferedInputStream.refill(libgcj.so.10)
+   at java.io.BufferedInputStream.read(libgcj.so.10)
+   at gnu.java.net.LineInputStream.readLine(libgcj.so.10)
+   at gnu.java.net.protocol.http.Request.readResponse(libgcj.so.10)
+   at gnu.java.net.protocol.http.Request.dispatch(libgcj.so.10)
+   at gnu.java.net.protocol.http.HTTPURLConnection.connect(libgcj.so.10)
+   at gnu.java.net.protocol.http.HTTPURLConnection.getInputStream(libgcj.so.10)
+   at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:752)
+   at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1036)
+   at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:994)
+   at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:555)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:512)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:495)
+   at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:129)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
+   at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+!SESSION 2013-11-13 08:51:19.290 -----------------------------------------------
+eclipse.buildId=M20100211-1343
+java.fullversion=GNU libgcj 4.4.5
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=pl_PL
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.osgi 4 0 2013-11-13 08:51:33.720
+!MESSAGE Application error
+!STACK 1
+java.lang.OutOfMemoryError
+   <<No stacktrace available>>
+
+!ENTRY org.eclipse.osgi 2 0 2013-11-13 08:51:33.913
+!MESSAGE The following is a complete list of bundles which are not resolved, see the prior log entry for the root cause if it exists:
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-11-13 08:51:33.913
+!MESSAGE Bundle org.eclipse.jdt.apt.pluggable.core_1.0.201.R35x_v20090925-1100 [101] was not resolved.
+!SUBENTRY 2 org.eclipse.jdt.apt.pluggable.core 2 0 2013-11-13 08:51:33.913
+!MESSAGE Missing imported package org.eclipse.jdt.internal.compiler.tool_0.0.0.
+!SUBENTRY 2 org.eclipse.jdt.apt.pluggable.core 2 0 2013-11-13 08:51:33.913
+!MESSAGE Missing imported package org.eclipse.jdt.internal.compiler.apt.dispatch_0.0.0.
+!SUBENTRY 2 org.eclipse.jdt.apt.pluggable.core 2 0 2013-11-13 08:51:33.913
+!MESSAGE Missing imported package org.eclipse.jdt.internal.compiler.apt.model_0.0.0.
+!SUBENTRY 2 org.eclipse.jdt.apt.pluggable.core 2 0 2013-11-13 08:51:33.913
+!MESSAGE Missing imported package org.eclipse.jdt.internal.compiler.apt.util_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-11-13 08:51:33.913
+!MESSAGE Bundle org.eclipse.jdt.compiler.apt_1.0.201.R35x_v20090925-1100 [103] was not resolved.
+!SUBENTRY 2 org.eclipse.jdt.compiler.apt 2 0 2013-11-13 08:51:33.913
+!MESSAGE Missing imported package org.eclipse.jdt.internal.compiler.tool_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-11-13 08:51:33.914
+!MESSAGE Bundle org.eclipse.jdt.compiler.tool_1.0.100.v_981_R35x [104] was not resolved.
+!SESSION 2013-11-20 08:37:03.805 -----------------------------------------------
+eclipse.buildId=M20100211-1343
+java.fullversion=GNU libgcj 4.4.5
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=pl_PL
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2013-11-20 08:53:38.890
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: java.io.InterruptedIOException: Read interrupted
+   at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:798)
+   at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1036)
+   at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:994)
+   at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:555)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:512)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:495)
+   at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:129)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
+   at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+Caused by: java.io.InterruptedIOException: Read interrupted
+   at java.io.BufferedInputStream.refill(libgcj.so.10)
+   at java.io.BufferedInputStream.read(libgcj.so.10)
+   at gnu.java.net.LineInputStream.readLine(libgcj.so.10)
+   at gnu.java.net.protocol.http.Request.readResponse(libgcj.so.10)
+   at gnu.java.net.protocol.http.Request.dispatch(libgcj.so.10)
+   at gnu.java.net.protocol.http.HTTPURLConnection.connect(libgcj.so.10)
+   at gnu.java.net.protocol.http.HTTPURLConnection.getInputStream(libgcj.so.10)
+   at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:752)
+   ...9 more
+Caused by: java.io.InterruptedIOException: Read interrupted
+   at java.io.BufferedInputStream.refill(libgcj.so.10)
+   at java.io.BufferedInputStream.read(libgcj.so.10)
+   at gnu.java.net.LineInputStream.readLine(libgcj.so.10)
+   at gnu.java.net.protocol.http.Request.readResponse(libgcj.so.10)
+   at gnu.java.net.protocol.http.Request.dispatch(libgcj.so.10)
+   at gnu.java.net.protocol.http.HTTPURLConnection.connect(libgcj.so.10)
+   at gnu.java.net.protocol.http.HTTPURLConnection.getInputStream(libgcj.so.10)
+   at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:752)
+   at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1036)
+   at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:994)
+   at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:555)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:512)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:495)
+   at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:129)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
+   at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+!SUBENTRY 1 org.eclipse.jdt.core 4 985 2013-11-20 08:53:39.138
+!MESSAGE Read interrupted
+!STACK 0
+java.io.InterruptedIOException: Read interrupted
+   at java.io.BufferedInputStream.refill(libgcj.so.10)
+   at java.io.BufferedInputStream.read(libgcj.so.10)
+   at gnu.java.net.LineInputStream.readLine(libgcj.so.10)
+   at gnu.java.net.protocol.http.Request.readResponse(libgcj.so.10)
+   at gnu.java.net.protocol.http.Request.dispatch(libgcj.so.10)
+   at gnu.java.net.protocol.http.HTTPURLConnection.connect(libgcj.so.10)
+   at gnu.java.net.protocol.http.HTTPURLConnection.getInputStream(libgcj.so.10)
+   at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:752)
+   at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1036)
+   at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:994)
+   at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:555)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:512)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:495)
+   at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:129)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
+   at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2013-11-20 08:59:41.173
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: java.io.InterruptedIOException: Read interrupted
+   at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:798)
+   at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1036)
+   at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:994)
+   at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:555)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:512)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:495)
+   at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:129)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
+   at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+Caused by: java.io.InterruptedIOException: Read interrupted
+   at java.io.BufferedInputStream.refill(libgcj.so.10)
+   at java.io.BufferedInputStream.read(libgcj.so.10)
+   at gnu.java.net.LineInputStream.readLine(libgcj.so.10)
+   at gnu.java.net.protocol.http.Request.readResponse(libgcj.so.10)
+   at gnu.java.net.protocol.http.Request.dispatch(libgcj.so.10)
+   at gnu.java.net.protocol.http.HTTPURLConnection.connect(libgcj.so.10)
+   at gnu.java.net.protocol.http.HTTPURLConnection.getInputStream(libgcj.so.10)
+   at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:752)
+   ...9 more
+Caused by: java.io.InterruptedIOException: Read interrupted
+   at java.io.BufferedInputStream.refill(libgcj.so.10)
+   at java.io.BufferedInputStream.read(libgcj.so.10)
+   at gnu.java.net.LineInputStream.readLine(libgcj.so.10)
+   at gnu.java.net.protocol.http.Request.readResponse(libgcj.so.10)
+   at gnu.java.net.protocol.http.Request.dispatch(libgcj.so.10)
+   at gnu.java.net.protocol.http.HTTPURLConnection.connect(libgcj.so.10)
+   at gnu.java.net.protocol.http.HTTPURLConnection.getInputStream(libgcj.so.10)
+   at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:752)
+   at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1036)
+   at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:994)
+   at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:555)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:512)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:495)
+   at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:129)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
+   at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+!SUBENTRY 1 org.eclipse.jdt.core 4 985 2013-11-20 08:59:41.179
+!MESSAGE Read interrupted
+!STACK 0
+java.io.InterruptedIOException: Read interrupted
+   at java.io.BufferedInputStream.refill(libgcj.so.10)
+   at java.io.BufferedInputStream.read(libgcj.so.10)
+   at gnu.java.net.LineInputStream.readLine(libgcj.so.10)
+   at gnu.java.net.protocol.http.Request.readResponse(libgcj.so.10)
+   at gnu.java.net.protocol.http.Request.dispatch(libgcj.so.10)
+   at gnu.java.net.protocol.http.HTTPURLConnection.connect(libgcj.so.10)
+   at gnu.java.net.protocol.http.HTTPURLConnection.getInputStream(libgcj.so.10)
+   at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:752)
+   at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1036)
+   at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:994)
+   at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:555)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:512)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:495)
+   at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:129)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
+   at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+!SESSION 2013-12-11 08:47:53.852 -----------------------------------------------
+eclipse.buildId=M20100211-1343
+java.fullversion=GNU libgcj 4.4.5
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=pl_PL
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.core.jobs 4 2 2013-12-11 09:13:33.275
+!MESSAGE An internal error occurred during: "Building workspace".
+!STACK 0
+java.lang.InternalError: unknown return type in invokeXXX
+   at org.eclipse.jface.text.source.projection.ProjectionSummary$Summarizer.reset(ProjectionSummary.java:57)
+   at org.eclipse.jface.text.source.projection.ProjectionSummary.updateSummaries(ProjectionSummary.java:145)
+   at org.eclipse.jface.text.source.projection.ProjectionViewer$AnnotationModelListener.processModelChanged(ProjectionViewer.java:126)
+   at org.eclipse.jface.text.source.projection.ProjectionViewer$AnnotationModelListener.modelChanged(ProjectionViewer.java:115)
+   at org.eclipse.jface.text.source.AnnotationModel.fireModelChanged(AnnotationModel.java:612)
+   at org.eclipse.jface.text.source.AnnotationModel$InternalModelListener.modelChanged(AnnotationModel.java:261)
+   at org.eclipse.jface.text.source.AnnotationModel.fireModelChanged(AnnotationModel.java:612)
+   at org.eclipse.jface.text.source.AnnotationModel.fireModelChanged(AnnotationModel.java:578)
+   at org.eclipse.ui.texteditor.ResourceMarkerAnnotationModel.update(ResourceMarkerAnnotationModel.java:114)
+   at org.eclipse.ui.texteditor.ResourceMarkerAnnotationModel$ResourceChangeListener.resourceChanged(ResourceMarkerAnnotationModel.java:56)
+   at org.eclipse.core.internal.events.NotificationManager$2.run(NotificationManager.java:291)
+   at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+   at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+   at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+   at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:313)
+   at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1022)
+   at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:153)
+   at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:238)
+   at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2013-12-11 09:13:42.146
+!MESSAGE An internal error occurred during: "Requesting Java AST from selection".
+!STACK 0
+java.lang.InternalError: unknown return type in invokeXXX
+   at org.eclipse.jface.text.source.projection.ProjectionSummary$Summarizer.reset(ProjectionSummary.java:57)
+   at org.eclipse.jface.text.source.projection.ProjectionSummary.updateSummaries(ProjectionSummary.java:145)
+   at org.eclipse.jface.text.source.projection.ProjectionViewer$AnnotationModelListener.processModelChanged(ProjectionViewer.java:126)
+   at org.eclipse.jface.text.source.projection.ProjectionViewer$AnnotationModelListener.modelChanged(ProjectionViewer.java:115)
+   at org.eclipse.jface.text.source.AnnotationModel.fireModelChanged(AnnotationModel.java:612)
+   at org.eclipse.jface.text.source.AnnotationModel$InternalModelListener.modelChanged(AnnotationModel.java:261)
+   at org.eclipse.jface.text.source.AnnotationModel.fireModelChanged(AnnotationModel.java:612)
+   at org.eclipse.jface.text.source.AnnotationModel.fireModelChanged(AnnotationModel.java:578)
+   at org.eclipse.jface.text.source.AnnotationModel.replaceAnnotations(AnnotationModel.java:422)
+   at org.eclipse.jface.text.source.AnnotationModel.replaceAnnotations(AnnotationModel.java:387)
+   at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor$OccurrencesFinderJob.run(JavaEditor.java:3222)
+   at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.updateOccurrenceAnnotations(JavaEditor.java:3328)
+   at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor$7.selectionChanged(JavaEditor.java:3336)
+   at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:177)
+   at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$3.run(SelectionListenerWithASTManager.java:154)
+   at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ui 4 0 2013-12-11 09:13:44.425
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.InternalError: unknown return type in invokeXXX
+   at org.eclipse.jface.text.source.projection.ProjectionSummary$Summarizer.reset(ProjectionSummary.java:57)
+   at org.eclipse.jface.text.source.projection.ProjectionSummary.updateSummaries(ProjectionSummary.java:145)
+   at org.eclipse.jface.text.source.projection.ProjectionViewer$AnnotationModelListener.processModelChanged(ProjectionViewer.java:126)
+   at org.eclipse.jface.text.source.projection.ProjectionViewer$AnnotationModelListener.modelChanged(ProjectionViewer.java:115)
+   at org.eclipse.jface.text.source.AnnotationModel.fireModelChanged(AnnotationModel.java:612)
+   at org.eclipse.jface.text.source.AnnotationModel$InternalModelListener.modelChanged(AnnotationModel.java:261)
+   at org.eclipse.jface.text.source.AnnotationModel.fireModelChanged(AnnotationModel.java:612)
+   at org.eclipse.jface.text.source.AnnotationModel.fireModelChanged(AnnotationModel.java:578)
+   at org.eclipse.jface.text.source.AnnotationModel.replaceAnnotations(AnnotationModel.java:422)
+   at org.eclipse.jface.text.source.AnnotationModel.replaceAnnotations(AnnotationModel.java:387)
+   at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor$OccurrencesFinderJob.run(JavaEditor.java:3222)
+   at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.updateOccurrenceAnnotations(JavaEditor.java:3328)
+   at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor$ActivationListener.windowActivated(JavaEditor.java:1255)
+   at org.eclipse.ui.internal.Workbench$12.run(Workbench.java:823)
+   at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+   at org.eclipse.ui.internal.Workbench.fireWindowActivated(Workbench.java:821)
+   at org.eclipse.ui.internal.WorkbenchWindow$28.shellActivated(WorkbenchWindow.java:3083)
+   at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:82)
+   at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+   at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1176)
+   at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1200)
+   at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1181)
+   at org.eclipse.swt.widgets.Shell.filterProc(Shell.java:720)
+   at org.eclipse.swt.widgets.Display.filterProc(Display.java:1501)
+!SESSION 2014-01-15 08:31:40.073 -----------------------------------------------
+eclipse.buildId=M20100211-1343
+java.fullversion=GNU libgcj 4.4.5
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=pl_PL
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2014-01-15 08:43:03.435
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: java.io.InterruptedIOException: Read interrupted
+   at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:798)
+   at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1036)
+   at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:994)
+   at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:555)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:512)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:495)
+   at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:129)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
+   at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+Caused by: java.io.InterruptedIOException: Read interrupted
+   at java.io.BufferedInputStream.refill(libgcj.so.10)
+   at java.io.BufferedInputStream.read(libgcj.so.10)
+   at gnu.java.net.LineInputStream.readLine(libgcj.so.10)
+   at gnu.java.net.protocol.http.Request.readResponse(libgcj.so.10)
+   at gnu.java.net.protocol.http.Request.dispatch(libgcj.so.10)
+   at gnu.java.net.protocol.http.HTTPURLConnection.connect(libgcj.so.10)
+   at gnu.java.net.protocol.http.HTTPURLConnection.getInputStream(libgcj.so.10)
+   at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:752)
+   ...9 more
+Caused by: java.io.InterruptedIOException: Read interrupted
+   at java.io.BufferedInputStream.refill(libgcj.so.10)
+   at java.io.BufferedInputStream.read(libgcj.so.10)
+   at gnu.java.net.LineInputStream.readLine(libgcj.so.10)
+   at gnu.java.net.protocol.http.Request.readResponse(libgcj.so.10)
+   at gnu.java.net.protocol.http.Request.dispatch(libgcj.so.10)
+   at gnu.java.net.protocol.http.HTTPURLConnection.connect(libgcj.so.10)
+   at gnu.java.net.protocol.http.HTTPURLConnection.getInputStream(libgcj.so.10)
+   at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:752)
+   at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1036)
+   at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:994)
+   at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:555)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:512)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:495)
+   at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:129)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
+   at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+!SUBENTRY 1 org.eclipse.jdt.core 4 985 2014-01-15 08:43:03.674
+!MESSAGE Read interrupted
+!STACK 0
+java.io.InterruptedIOException: Read interrupted
+   at java.io.BufferedInputStream.refill(libgcj.so.10)
+   at java.io.BufferedInputStream.read(libgcj.so.10)
+   at gnu.java.net.LineInputStream.readLine(libgcj.so.10)
+   at gnu.java.net.protocol.http.Request.readResponse(libgcj.so.10)
+   at gnu.java.net.protocol.http.Request.dispatch(libgcj.so.10)
+   at gnu.java.net.protocol.http.HTTPURLConnection.connect(libgcj.so.10)
+   at gnu.java.net.protocol.http.HTTPURLConnection.getInputStream(libgcj.so.10)
+   at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:752)
+   at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1036)
+   at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:994)
+   at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:555)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:512)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:495)
+   at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:129)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
+   at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+!SESSION 2014-01-22 08:59:50.376 -----------------------------------------------
+eclipse.buildId=M20100211-1343
+java.fullversion=GNU libgcj 4.4.5
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=pl_PL
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2014-01-22 09:19:27.679
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: java.io.InterruptedIOException: Read interrupted
+   at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:798)
+   at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1036)
+   at org.eclipse.jdt.internal.core.BinaryMethod.getAttachedJavadoc(BinaryMethod.java:558)
+   at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:555)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:512)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:495)
+   at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:129)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
+   at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+Caused by: java.io.InterruptedIOException: Read interrupted
+   at java.io.BufferedInputStream.refill(libgcj.so.10)
+   at java.io.BufferedInputStream.read(libgcj.so.10)
+   at gnu.java.net.LineInputStream.readLine(libgcj.so.10)
+   at gnu.java.net.protocol.http.Request.readResponse(libgcj.so.10)
+   at gnu.java.net.protocol.http.Request.dispatch(libgcj.so.10)
+   at gnu.java.net.protocol.http.HTTPURLConnection.connect(libgcj.so.10)
+   at gnu.java.net.protocol.http.HTTPURLConnection.getInputStream(libgcj.so.10)
+   at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:752)
+   ...9 more
+Caused by: java.io.InterruptedIOException: Read interrupted
+   at java.io.BufferedInputStream.refill(libgcj.so.10)
+   at java.io.BufferedInputStream.read(libgcj.so.10)
+   at gnu.java.net.LineInputStream.readLine(libgcj.so.10)
+   at gnu.java.net.protocol.http.Request.readResponse(libgcj.so.10)
+   at gnu.java.net.protocol.http.Request.dispatch(libgcj.so.10)
+   at gnu.java.net.protocol.http.HTTPURLConnection.connect(libgcj.so.10)
+   at gnu.java.net.protocol.http.HTTPURLConnection.getInputStream(libgcj.so.10)
+   at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:752)
+   at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1036)
+   at org.eclipse.jdt.internal.core.BinaryMethod.getAttachedJavadoc(BinaryMethod.java:558)
+   at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:555)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:512)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:495)
+   at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:129)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
+   at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+!SUBENTRY 1 org.eclipse.jdt.core 4 985 2014-01-22 09:19:27.959
+!MESSAGE Read interrupted
+!STACK 0
+java.io.InterruptedIOException: Read interrupted
+   at java.io.BufferedInputStream.refill(libgcj.so.10)
+   at java.io.BufferedInputStream.read(libgcj.so.10)
+   at gnu.java.net.LineInputStream.readLine(libgcj.so.10)
+   at gnu.java.net.protocol.http.Request.readResponse(libgcj.so.10)
+   at gnu.java.net.protocol.http.Request.dispatch(libgcj.so.10)
+   at gnu.java.net.protocol.http.HTTPURLConnection.connect(libgcj.so.10)
+   at gnu.java.net.protocol.http.HTTPURLConnection.getInputStream(libgcj.so.10)
+   at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:752)
+   at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1036)
+   at org.eclipse.jdt.internal.core.BinaryMethod.getAttachedJavadoc(BinaryMethod.java:558)
+   at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:555)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:512)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:495)
+   at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:129)
+   at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
+   at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)

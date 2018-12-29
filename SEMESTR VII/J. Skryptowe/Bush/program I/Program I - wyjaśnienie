@@ -1,0 +1,14 @@
+#!/bin/bash 
+#Krzysztof Kozubek
+
+echo "
+getent passwd $USER"
+getent passwd $USER
+
+echo "
+getent passwd $USER | cut -d: -f5"
+getent passwd $USER | cut -d: -f5
+
+echo "
+getent passwd $USER | cut -d: -f5 | cut -d, -f1"
+getent passwd $USER | cut -d: -f5 | cut -d, -f1

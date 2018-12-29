@@ -1,0 +1,6 @@
+interface Generator {
+   void register( in string rmiServiceURL, out long userID );
+   void order( in long userID, in long averageOver, out long orderID );
+   boolean isReady( in long orderID );
+   float getAverage( in long orderID );
+};

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+ <connectionOption type="string"></connectionOption>
+ <rdmgr>
+  <timestamp type="u64_t">1484604596</timestamp>
+  <hostname type="string">kaseta05</hostname>
+  <os type="string">linux</os>
+  <product type="string">Intel® Inspector XE 2016</product>
+  <buildNumber type="s32_t">423441</buildNumber>
+  <logicalCPUCount type="s32_t">24</logicalCPUCount>
+  <CPUFrequency type="s64_t">1200000000</CPUFrequency>
+ </rdmgr>
+ <contextValues type="bag"/>
+ <All_Configurations-All_Platforms>
+  <searchDirs>
+   <searchCategory>
+    <category type="u8_t">1</category>
+   </searchCategory>
+   <searchCategory>
+    <category type="u8_t">2</category>
+   </searchCategory>
+   <searchCategory>
+    <category type="u8_t">3</category>
+   </searchCategory>
+   <searchCategory>
+    <category type="u8_t">4</category>
+   </searchCategory>
+  </searchDirs>
+  <target_settings>
+   <result_dir>
+    <localhost type="string">/home/imiolek_1102507/Materialy/PRiR/7/insp</localhost>
+   </result_dir>
+   <selected_workload>
+    <localhost type="string">launch</localhost>
+   </selected_workload>
+   <workloads>
+    <localhost>
+     <launch type="pointer" type_id="dasID_cctrl2::ApplicationWorkload" ptr_type="dasID_cctrl2::IWorkload">
+      <workload>
+       <targetName type="string">launch</targetName>
+       <use_app_dir_as_work_dir type="bool">true</use_app_dir_as_work_dir>
+       <launch_app.inherit_sys_environment type="bool">true</launch_app.inherit_sys_environment>
+       <result_directory.path type="string">/home/imiolek_1102507/Materialy/PRiR/7/insp/r@@@{at}</result_directory.path>
+       <launch.userapppath type="string">/home/imiolek_1102507/Materialy/PRiR/7/a.out</launch.userapppath>
+       <launch_app.app_to_launch type="string">/home/imiolek_1102507/Materialy/PRiR/7/a.out</launch_app.app_to_launch>
+       <launch_app.working_folder type="string">/home/imiolek_1102507/Materialy/PRiR/7</launch_app.working_folder>
+       <search_directories type="bag"/>
+       <context>
+        <contextValue>
+         <id type="string">appdebug</id>
+         <value type="string">off</value>
+        </contextValue>
+        <contextValue>
+         <id type="string">custom_debugger</id>
+         <value type="string"></value>
+        </contextValue>
+        <contextValue>
+         <id type="string">debug_this_problem</id>
+         <value type="string"></value>
+        </contextValue>
+        <contextValue>
+         <id type="string">debug_using</id>
+         <value type="string">gdb</value>
+        </contextValue>
+        <contextValue>
+         <id type="string">heartbeat</id>
+         <value type="bool">true</value>
+        </contextValue>
+        <contextValue>
+         <id type="string">modules_switch</id>
+         <value type="string">knob.modules_switch.include</value>
+        </contextValue>
+        <contextValue>
+         <id type="string">mrte_mode</id>
+         <value type="string">auto</value>
+        </contextValue>
+        <contextValue>
+         <id type="string">process_for_analysis</id>
+         <value type="string"></value>
+        </contextValue>
+        <contextValue>
+         <id type="string">suppressions</id>
+         <value type="string">delete</value>
+        </contextValue>
+        <contextValue>
+         <id type="string">targetType</id>
+         <value type="string">launch</value>
+        </contextValue>
+       </context>
+      </workload>
+     </launch>
+    </localhost>
+   </workloads>
+  </target_settings>
+  <analysis_type_settings>
+   <selected_analysis_type_path type="string">/app/intel/inspector_xe_2016.1.0.423441/config/analysis_type/ti3.cfg</selected_analysis_type_path>
+  </analysis_type_settings>
+ </All_Configurations-All_Platforms>
+ <suppressions type="bag"/>
+ <debugger_settings>
+  <debugger_mode type="string">off</debugger_mode>
+  <at_cliname type="string">ti3</at_cliname>
+ </debugger_settings>
+</root>
